@@ -1,6 +1,6 @@
 # CHARM Website
 
-Website project for **CHARM SERVICE DE NETTOYAGE s.e.n.c.**, a residential and condo cleaning business serving Saint-Laurent and nearby Montreal areas.
+Website project for **CHARM SERVICE DE NETTOYAGE s.e.n.c.**, a condo-building common-area cleaning business serving Saint-Laurent and nearby Montreal areas.
 
 The site is intended to be a simple, trustworthy, bilingual lead-generation website that helps the business win more direct clients instead of depending heavily on work from another company.
 
@@ -25,13 +25,13 @@ The following assumptions are guiding the initial plan and should be confirmed b
 4. The site will have full English and French content, written or reviewed manually rather than auto-translated at runtime.
 5. If the business does not have a public office, the site will emphasize service areas instead of publishing a full street address.
 6. Reviews/testimonials will be available to publish with client permission.
-7. Services are residential and condo-focused at launch. Commercial cleaning is out of scope unless confirmed later.
+7. Services are focused on recurring cleaning for condo buildings and shared spaces. Private home cleaning and building maintenance work are out of scope unless confirmed later.
 8. The public-facing brand can use `CHARM Service de Nettoyage`, while the footer and legal pages can use the full legal name `CHARM SERVICE DE NETTOYAGE s.e.n.c.`.
 
 ## Business Goals
 
 1. Reduce dependence on referral or subcontracted work from another company.
-2. Increase direct quote requests from local residential clients.
+2. Increase direct quote requests from condo syndicates, property managers, and building administrators.
 3. Present the business as professional, dependable, and easy to contact.
 4. Give potential clients enough information to decide whether to reach out.
 5. Support bilingual communication so English- and French-speaking visitors can use the site comfortably.
@@ -41,7 +41,7 @@ The following assumptions are guiding the initial plan and should be confirmed b
 Visitors should be able to answer the following questions within a few seconds:
 
 1. Is this a real, trustworthy local cleaning business?
-2. Do they clean condos or residential homes like mine?
+2. Do they clean condo common areas and building facilities like ours?
 3. Do they serve my area in Montreal?
 4. How do I contact them or request a quote?
 5. Can I communicate in English or French?
@@ -50,13 +50,13 @@ Visitors should be able to answer the following questions within a few seconds:
 
 Primary audience:
 
-1. Condo owners in Saint-Laurent and nearby Montreal areas.
-2. Tenants looking for reliable recurring or one-time cleaning help.
-3. Busy residents who want a straightforward, trustworthy cleaning service.
+1. Condo syndicates and condo boards in Saint-Laurent and nearby Montreal areas.
+2. Property managers and building administrators who need recurring cleaning for shared spaces.
+3. Owners or managers of multi-unit residential buildings who want reliable upkeep of common areas.
 
 Secondary audience:
 
-1. People moving in or out of condos or apartments, if that service is offered.
+1. Small apartment-building or mixed-use property managers if the service scope fits.
 2. Existing referrals who want to check legitimacy before making contact.
 
 ## Website Goals
@@ -64,7 +64,7 @@ Secondary audience:
 1. Create a professional first impression in under 10 seconds.
 2. Make contact options obvious on every important page.
 3. Keep the content structure simple enough for future updates without a full redesign.
-4. Support local SEO for Montreal and Saint-Laurent cleaning searches.
+4. Support local SEO for Montreal and Saint-Laurent condo-building cleaning searches.
 5. Work exceptionally well on mobile, since many leads will come from phones.
 
 ## Non-Goals For V1
@@ -90,7 +90,7 @@ Must include:
 1. Clear headline and short value proposition.
 2. Main CTA above the fold.
 3. Service summary.
-4. Trust signals such as testimonials, local focus, response promise, or years of experience if confirmed.
+4. Trust signals such as testimonials, recurring-service focus, response promise, or years of experience if confirmed.
 5. Brief explanation of English/French support.
 
 ### Services
@@ -101,8 +101,8 @@ Explain what types of cleaning are offered, who they are for, and what a potenti
 Must include:
 
 1. Service categories.
-2. What is included or commonly included.
-3. Types of properties served.
+2. What common areas are included or commonly included.
+3. Types of buildings and facilities served.
 4. Service area reminder.
 5. CTA to request a quote.
 
@@ -163,12 +163,14 @@ Recommended form fields for V1:
 1. Name
 2. Phone number
 3. Email
-4. Neighborhood or area
-5. Property type
-6. Type of cleaning needed
-7. Preferred language
-8. Preferred contact method
-9. Short message
+4. Building or organization name
+5. Property address or area
+6. Building type
+7. Areas to clean
+8. Cleaning frequency needed
+9. Preferred language
+10. Preferred contact method
+11. Short message
 
 Practical note:
 If the team is more comfortable following up in English than French, the preferred language field becomes operationally important, not just a UX detail.
@@ -212,7 +214,7 @@ The copy should avoid:
 
 The messaging should repeatedly communicate:
 
-1. Reliable residential and condo cleaning
+1. Reliable recurring cleaning for condo common areas
 2. Local service in Saint-Laurent and nearby Montreal areas
 3. Easy, direct communication
 4. Respectful and dependable service
@@ -228,7 +230,7 @@ Examples of claims to confirm before using:
 2. Bonded or insured status
 3. Eco-friendly products
 4. Satisfaction guarantee
-5. Move-in/move-out specialty
+5. Special handling for gyms, pool areas, or high-traffic common spaces
 
 ### Visual Direction
 
@@ -258,21 +260,26 @@ Preferred assets:
 
 Recommended stack for this project:
 
-1. **Next.js** for routing, SEO control, deployment flexibility, and a strong long-term foundation.
+1. **Astro** for a fast, static-first marketing site with full code ownership and minimal complexity.
 2. **TypeScript** for safer content structures and maintainable code.
 3. **Tailwind CSS** for fast, consistent UI development without heavy custom CSS overhead.
-4. **next-intl** or an equivalent i18n library for bilingual routing and translation management.
-5. **Zod** for validating form input and any structured content objects.
-6. **Vercel** for simple deployment, previews, and low-friction hosting.
-7. **Plausible** or **Google Analytics 4** for tracking quote requests and contact behavior.
-8. **Formspree**, **Resend**, or a simple server-side email flow for contact form delivery in V1.
+4. **Astro i18n routing** or a simple English/French route structure for bilingual support.
+5. **Structured content files** in TypeScript, JSON, or Markdown so copy can be updated later without rewriting components.
+6. **Zod** for validating form input and any structured content objects.
+7. **Vercel**, **Netlify**, or **Cloudflare Pages** for simple deployment without locking the project into a visual website builder.
+8. **Formspree**, **Resend**, or a lightweight serverless form flow for contact form delivery in V1.
 
 Why this stack:
 
-1. It is modern but still practical.
-2. It supports strong SEO.
-3. It handles bilingual routing well.
-4. It leaves room for future growth without overengineering the first release.
+1. It keeps the project custom-coded and fully portable.
+2. It supports strong SEO and static performance.
+3. It handles bilingual routing without forcing a large app framework.
+4. It is easier to maintain than raw vanilla HTML for a bilingual multi-page site.
+
+Alternative note:
+
+1. **Next.js** is still a valid option if the project later grows into a more app-like experience.
+2. **Vanilla HTML/CSS/JS** would work for a very small brochure site, but it is not the best choice here because bilingual page duplication and future updates will become repetitive quickly.
 
 ## SEO Goals
 
@@ -280,7 +287,7 @@ The SEO strategy should stay local and practical.
 
 Primary goals:
 
-1. Rank for local intent searches related to residential and condo cleaning in Montreal.
+1. Rank for local intent searches related to condo-building cleaning, common-area cleaning, and janitorial support in Montreal.
 2. Make each page clear about service type and service area.
 3. Ensure English and French pages are discoverable and not treated as messy duplicates.
 
@@ -297,11 +304,11 @@ SEO requirements:
 
 Keyword directions to support:
 
-1. Montreal cleaning service
-2. Saint-Laurent cleaning service
-3. Condo cleaning Montreal
-4. Residential cleaning Montreal
-5. Cleaning service near Saint-Laurent
+1. Condo building cleaning Montreal
+2. Common area cleaning Montreal
+3. Entretien menager copropriete Montreal
+4. Nettoyage aires communes Montreal
+5. Condo janitorial service Saint-Laurent
 
 Important note:
 Local SEO should be honest. Do not stuff neighborhood names or publish fake location pages.
@@ -328,12 +335,14 @@ The following business inputs should be collected early because they affect both
 1. Official phone number and email address to publish.
 2. Exact service areas to mention.
 3. Final service list.
-4. Whether recurring cleaning, deep cleaning, and move-in/move-out cleaning are offered.
-5. Testimonials that can be published.
-6. Team or business photos, if available.
-7. Hours of operation or expected response time.
-8. Any trust credentials that are actually true and publishable.
-9. Preferred process for handling English vs French inquiries.
+4. Exact common-area tasks offered, such as lobbies, hallways, stairwells, elevators, bathrooms, garbage rooms, gyms, and pool-side areas.
+5. Cleaning frequencies offered, such as daily, weekly, or custom schedules.
+6. What is explicitly excluded, such as maintenance, repairs, or water treatment.
+7. Testimonials that can be published.
+8. Team or business photos, if available.
+9. Hours of operation or expected response time.
+10. Any trust credentials that are actually true and publishable.
+11. Preferred process for handling English vs French inquiries.
 
 ## Future Improvements
 
@@ -414,18 +423,10 @@ The exact structure may change slightly once the stack is initialized, but the p
 .
 |- README.md
 |- public/
-|  |- images/
 |  |- icons/
+|  |- images/
 |  `- og/
 |- src/
-|  |- app/
-|  |  |- [locale]/
-|  |  |  |- page.tsx
-|  |  |  |- services/page.tsx
-|  |  |  |- about/page.tsx
-|  |  |  `- contact/page.tsx
-|  |  |- sitemap.ts
-|  |  `- robots.ts
 |  |- components/
 |  |  |- forms/
 |  |  |- layout/
@@ -436,24 +437,35 @@ The exact structure may change slightly once the stack is initialized, but the p
 |  |  |  |- about.ts
 |  |  |  |- home.ts
 |  |  |  |- services.ts
-|  |  |  `- testimonials.ts
+|  |  |  `- site.ts
 |  |  `- fr/
 |  |     |- about.ts
 |  |     |- home.ts
 |  |     |- services.ts
-|  |     `- testimonials.ts
+|  |     `- site.ts
+|  |- layouts/
 |  |- lib/
-|  |  |- i18n/
-|  |  |- schema.ts
 |  |  |- seo.ts
 |  |  `- validation.ts
+|  |- pages/
+|  |  |- index.astro
+|  |  |- services.astro
+|  |  |- about.astro
+|  |  |- contact.astro
+|  |  `- fr/
+|  |     |- index.astro
+|  |     |- services.astro
+|  |     |- about.astro
+|  |     `- contact.astro
 |  |- styles/
-|  `- types/
+|  `- env.d.ts
 |- docs/
-|  |- content-plan.md
+|  |- business-website-plan.md
+|  |- competitor-notes.md
 |  `- launch-checklist.md
-|- .env.example
-`- package.json
+|- astro.config.mjs
+|- package.json
+`- tsconfig.json
 ```
 
 ## Development Principles
@@ -491,6 +503,6 @@ Version 1 is successful if it does the following reliably:
 
 1. Presents the business clearly in English and French.
 2. Explains services and service area without confusion.
-3. Gives visitors a simple way to request a quote.
-4. Builds enough trust for direct client inquiries.
+3. Gives condo syndicates, property managers, or building admins a simple way to request a quote.
+4. Builds enough trust for direct building-service inquiries.
 5. Can be updated later without rewriting the entire project.
