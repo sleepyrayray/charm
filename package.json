@@ -1,0 +1,36 @@
+{
+  "name": "charm",
+  "version": "1.0.0",
+  "description": "CHARM website for condo common-area cleaning in Saint-Laurent and nearby Montreal areas.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyrayray/charm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sleepyrayray/charm/issues"
+  },
+  "homepage": "https://github.com/sleepyrayray/charm#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.18.1",
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9"
+  }
+}

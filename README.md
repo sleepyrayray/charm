@@ -382,7 +382,7 @@ The project roadmap now lives in one place:
 
 ## Suggested Folder Structure
 
-The exact structure may change slightly once the stack is initialized, but the project should stay close to this shape:
+The base Astro project is now initialized. The structure below reflects the current foundation and the near-term content layout we are building toward:
 
 ```text
 .
@@ -397,16 +397,14 @@ The exact structure may change slightly once the stack is initialized, but the p
 |  |  |- layout/
 |  |  |- sections/
 |  |  `- ui/
-|  |- content/
+|  |- data/
 |  |  |- en/
 |  |  |  |- about.ts
 |  |  |  |- home.ts
 |  |  |  |- services.ts
+|  |  |  |- contact.ts
 |  |  |  `- site.ts
 |  |  `- fr/
-|  |     |- about.ts
-|  |     |- home.ts
-|  |     |- services.ts
 |  |     `- site.ts
 |  |- layouts/
 |  |- lib/
@@ -433,8 +431,12 @@ The exact structure may change slightly once the stack is initialized, but the p
 |  `- launch-checklist.md
 |- astro.config.mjs
 |- package.json
+|- package-lock.json
 `- tsconfig.json
 ```
+
+Current note:
+French page-specific content files will be added as the French copy is written. Right now the route structure exists, and shared French site copy lives in `src/data/fr/site.ts`.
 
 ## Development Principles
 
@@ -449,21 +451,65 @@ These principles should guide implementation decisions:
 
 ## Setup Instructions
 
-TODO:
+Requirements:
 
-1. Initialize the selected framework and package manager.
-2. Document local development commands.
-3. Document environment variables.
-4. Document content editing workflow.
+1. Node.js 20+ recommended
+2. npm 10+ recommended
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the local dev server:
+
+```bash
+npm run dev
+```
+
+Other useful commands:
+
+```bash
+npm run build
+npm run preview
+npm run check
+```
+
+Environment variables:
+
+1. None yet for the current scaffold
+2. A future form provider may require variables once the contact flow is connected
+
+Content editing workflow:
+
+1. Edit English site copy in `src/data/en/`
+2. Edit shared French site copy in `src/data/fr/`
+3. Update layouts and reusable UI in `src/components/` and `src/layouts/`
+4. Compose each page route in `src/pages/`
+5. Adjust the visual system in `src/styles/global.css`
 
 ## Deployment
 
-TODO:
+Current deployment direction:
 
-1. Document hosting provider and deployment flow.
-2. Document production environment variables.
-3. Document domain setup and DNS requirements.
-4. Document post-deployment checks for forms, SEO, and analytics.
+1. Static Astro deployment to `Vercel`, `Netlify`, or `Cloudflare Pages`
+2. Build command: `npm run build`
+3. Output directory: `dist`
+
+Still to confirm:
+
+1. Final hosting provider
+2. Production form delivery method
+3. Domain and DNS setup
+4. Analytics setup
+
+Post-deployment checks:
+
+1. Confirm both English and French routes load correctly
+2. Confirm all CTA buttons point to the intended contact path
+3. Confirm metadata, sitemap, and robots behavior
+4. Confirm the quote/contact flow works end to end once connected
 
 ## Definition Of A Successful V1 Launch
 

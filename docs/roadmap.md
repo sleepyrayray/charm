@@ -8,9 +8,9 @@ All planning docs can reference this file instead of maintaining separate roadma
 
 Current phase:
 
-1. planning
-2. structure confirmation
-3. pre-build documentation
+1. project scaffold complete
+2. content skeleton in progress
+3. first visual system in progress
 
 Already completed:
 
@@ -20,6 +20,13 @@ Already completed:
 4. working brief created
 5. site architecture drafted
 6. Astro chosen as the working framework direction
+7. Astro project initialized
+8. TypeScript and Tailwind CSS configured
+9. English-first route structure created
+10. French route structure created for future translation work
+11. base layouts, header, footer, and page shells created
+12. initial placeholder content added for Home, Services, About, and Contact
+13. build and Astro checks passing locally
 
 ## Phase 1 - Direction Lock
 
@@ -244,11 +251,11 @@ Done when:
 
 ## Current Priority Order
 
-1. confirm structure
-2. initialize Astro
-3. build the content skeleton
-4. design the first visual system
-5. build the core pages
+1. refine the content skeleton with real business details
+2. polish the first visual system
+3. connect the real quote/contact flow
+4. strengthen SEO and accessibility basics
+5. add fuller French page content
 
 ## Notes
 

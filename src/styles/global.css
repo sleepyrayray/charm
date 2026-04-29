@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fbf7ff;
+  --bg-strong: #f3ebff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --line: rgba(111, 76, 255, 0.14);
+  --ink: #1f1630;
+  --muted: #675d7b;
+  --primary: #7b5cff;
+  --primary-strong: #6444ef;
+  --primary-soft: #efe8ff;
+  --shadow: 0 18px 50px rgba(80, 48, 168, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(169, 140, 255, 0.22), transparent 34%),
+    radial-gradient(circle at top right, rgba(215, 193, 255, 0.3), transparent 24%),
+    linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  color: var(--ink);
+  font-family:
+    "Instrument Sans",
+    "Avenir Next",
+    "Segoe UI",
+    sans-serif;
+}
+
+::selection {
+  background: rgba(123, 92, 255, 0.18);
+}
+
+.shell {
+  @apply mx-auto max-w-6xl px-5 sm:px-6 lg:px-8;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.section-card {
+  @apply rounded-[2rem] p-6 sm:p-8;
+}
+
+.eyebrow {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium tracking-[0.18em] uppercase;
+  background: rgba(123, 92, 255, 0.1);
+  color: var(--primary-strong);
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight sm:text-4xl;
+}
+
+.section-copy {
+  @apply max-w-2xl text-sm leading-7 sm:text-base;
+  color: var(--muted);
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-200;
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--primary-strong);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-200;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.button-secondary:hover {
+  background: white;
+}
+
+.field {
+  @apply w-full rounded-2xl border px-4 py-3 text-sm outline-none transition;
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.field:focus {
+  border-color: rgba(123, 92, 255, 0.4);
+  box-shadow: 0 0 0 4px rgba(123, 92, 255, 0.1);
+}

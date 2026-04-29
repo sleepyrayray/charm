@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { servicesPage } from "../data/en/services";
+import { site } from "../data/en/site";
+---
+
+<MainLayout title="Services | CHARM" description={site.description}>
+  <section class="shell pt-10 sm:pt-14">
+    <div class="panel section-card">
+      <span class="eyebrow">{servicesPage.eyebrow}</span>
+      <h1 class="section-title mt-4">{servicesPage.title}</h1>
+      <p class="section-copy mt-4">{servicesPage.intro}</p>
+      <div class="mt-6">
+        <a class="button-primary" href="/contact">{site.quoteLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell mt-16">
+    <div class="grid gap-4 lg:grid-cols-2">
+      {servicesPage.categories.map((category) => (
+        <article class="panel section-card">
+          <h2 class="text-xl font-semibold text-[var(--ink)]">{category.title}</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+            {category.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="shell mt-16 grid gap-8 lg:grid-cols-3">
+    <div class="panel section-card">
+      <span class="eyebrow">Buildings</span>
+      <h2 class="mt-4 text-xl font-semibold text-[var(--ink)]">Who this service is built for</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+        {servicesPage.buildingTypes.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <div class="panel section-card">
+      <span class="eyebrow">Recurring Service</span>
+      <h2 class="mt-4 text-xl font-semibold text-[var(--ink)]">Schedule direction</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+        {servicesPage.frequencies.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <div class="panel section-card">
+      <span class="eyebrow">Not Included</span>
+      <h2 class="mt-4 text-xl font-semibold text-[var(--ink)]">Clear scope boundaries</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+        {servicesPage.notIncluded.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+</MainLayout>

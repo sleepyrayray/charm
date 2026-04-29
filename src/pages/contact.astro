@@ -1,0 +1,97 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { contactPage } from "../data/en/contact";
+import { site } from "../data/en/site";
+---
+
+<MainLayout title="Contact | CHARM" description={site.description}>
+  <section class="shell pt-10 sm:pt-14">
+    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <div class="panel section-card">
+        <span class="eyebrow">{contactPage.eyebrow}</span>
+        <h1 class="section-title mt-4">{contactPage.title}</h1>
+        <p class="section-copy mt-4">{contactPage.intro}</p>
+        <div class="mt-8 rounded-[1.6rem] border border-dashed border-[var(--line)] bg-white/70 p-5 text-sm leading-7 text-[var(--muted)]">
+          {contactPage.note}
+        </div>
+      </div>
+
+      <div class="panel section-card">
+        <form class="grid gap-4" aria-describedby="form-note">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Name</span>
+              <input class="field" type="text" name="name" placeholder="Your name" />
+            </label>
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Phone</span>
+              <input class="field" type="tel" name="phone" placeholder="Phone number" />
+            </label>
+          </div>
+
+          <label class="grid gap-2 text-sm font-medium">
+            <span>Email</span>
+            <input class="field" type="email" name="email" placeholder="Email address" />
+          </label>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Building or organization</span>
+              <input class="field" type="text" name="building" placeholder="Building or organization" />
+            </label>
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Property address or area</span>
+              <input class="field" type="text" name="area" placeholder="Saint-Laurent, Montreal, etc." />
+            </label>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Building type</span>
+              <input class="field" type="text" name="buildingType" placeholder="Condo building, multi-unit, etc." />
+            </label>
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Cleaning frequency needed</span>
+              <input class="field" type="text" name="frequency" placeholder="Daily, weekly, custom" />
+            </label>
+          </div>
+
+          <label class="grid gap-2 text-sm font-medium">
+            <span>Areas to clean</span>
+            <input class="field" type="text" name="areas" placeholder="Lobby, hallways, stairwells, gym, etc." />
+          </label>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Preferred language</span>
+              <select class="field" name="language">
+                <option>English</option>
+                <option>French</option>
+              </select>
+            </label>
+            <label class="grid gap-2 text-sm font-medium">
+              <span>Preferred contact method</span>
+              <select class="field" name="contactMethod">
+                <option>Email</option>
+                <option>Phone</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="grid gap-2 text-sm font-medium">
+            <span>Message</span>
+            <textarea class="field min-h-36" name="message" placeholder="Tell CHARM a little about the property and cleaning needs."></textarea>
+          </label>
+
+          <p id="form-note" class="text-sm leading-7 text-[var(--muted)]">
+            The visual structure is ready now. Form submission handling will be connected in the next implementation step.
+          </p>
+
+          <div class="pt-2">
+            <button class="button-primary opacity-70" type="button">Quote flow coming next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</MainLayout>
