@@ -24,9 +24,9 @@ The following assumptions are guiding the initial plan and should be confirmed b
 3. The main service area is Saint-Laurent, with additional nearby Montreal neighborhoods served when practical.
 4. The site will have full English and French content, written or reviewed manually rather than auto-translated at runtime.
 5. If the business does not have a public office, the site will emphasize service areas instead of publishing a full street address.
-6. Reviews/testimonials will be available to publish with client permission.
-7. Services are focused on recurring cleaning for condo buildings and shared spaces. Private home cleaning and building maintenance work are out of scope unless confirmed later.
-8. The public-facing brand can use `CHARM Service de Nettoyage`, while the footer and legal pages can use the full legal name `CHARM SERVICE DE NETTOYAGE s.e.n.c.`.
+6. Reviews/testimonials are not available yet and can be added later if they are collected with permission.
+7. Services are focused on recurring cleaning for condo buildings and shared spaces. Maintaining cleanliness in shared spaces is in scope, but repairs, technical maintenance, and non-cleaning building work are out of scope unless confirmed later.
+8. The public-facing brand should be `CHARM`, with `Service de Nettoyage` or `Cleaning Services` used as supporting subtext when needed. The footer and legal pages can use the full legal name `CHARM SERVICE DE NETTOYAGE s.e.n.c.`.
 
 ## Business Goals
 
@@ -236,16 +236,24 @@ Examples of claims to confirm before using:
 
 The visual style should be:
 
-1. Clean and calm rather than flashy.
-2. Bright and readable, with strong contrast.
-3. Friendly and local, not corporate.
-4. Built around clarity and trust, not decoration.
+1. Minimal, clean, and calm rather than flashy.
+2. Bright, readable, and slightly pastel in tone.
+3. Sleek and polished, with subtle soft-surface styling instead of heavy effects.
+4. Friendly and local, not corporate.
+5. Built around clarity and trust, not decoration.
+
+Current working color direction:
+
+1. Purple is the temporary main brand color.
+2. Pastel-like supporting tones are preferred over harsh or high-saturation accents.
+3. The final palette can evolve later once the logo and brand identity are confirmed.
 
 Preferred assets:
 
-1. Real photos of the team or real work when available.
-2. Real service-area references.
-3. Minimal icons used only when they improve scannability.
+1. No photos are required for the first design pass.
+2. Real photos of the team or real work can be added later when available.
+3. Real service-area references.
+4. Minimal icons used only when they improve scannability.
 
 ## Technical Goals
 
@@ -355,65 +363,22 @@ Possible post-launch improvements:
 5. Add a lightweight CMS or admin-friendly content workflow if updates become frequent.
 6. Add photo galleries or before/after case studies if strong assets become available.
 
-## Development Roadmap
+## Content Availability
 
-### Phase 1 - Discovery And Content Planning
+Current confirmed gaps:
 
-Deliverables:
+1. No logo yet
+2. No photos yet
+3. No reviews or testimonials yet
 
-1. Confirm service list, service area, and contact methods.
-2. Confirm brand presentation and legal footer details.
-3. Gather testimonials, photos, and trust claims that can be verified.
-4. Decide how French copy will be reviewed before launch.
+Build implication:
+The first version should rely on typography, spacing, color, structure, and clear service content rather than image-heavy sections.
 
-### Phase 2 - Site Architecture And Content Model
+## Roadmap
 
-Deliverables:
+The project roadmap now lives in one place:
 
-1. Finalize page structure and navigation.
-2. Define bilingual route structure.
-3. Define the shared content model for English and French pages.
-4. Define CTA placement and form fields.
-
-### Phase 3 - Design Foundation
-
-Deliverables:
-
-1. Create mobile-first layout system.
-2. Define typography, colors, spacing, and reusable sections.
-3. Build header, footer, language switcher, and CTA patterns.
-
-### Phase 4 - Core Page Build
-
-Deliverables:
-
-1. Home page
-2. Services page
-3. About page
-4. Contact page
-5. Testimonials section
-6. Bilingual versions of all above
-
-### Phase 5 - SEO, Accessibility, And Conversion Setup
-
-Deliverables:
-
-1. Metadata for all pages and both languages.
-2. Structured data setup.
-3. Sitemap and robots configuration.
-4. Accessibility pass on navigation, forms, and content hierarchy.
-5. Analytics and conversion tracking setup.
-
-### Phase 6 - QA And Launch
-
-Deliverables:
-
-1. Mobile and desktop QA.
-2. English and French content QA.
-3. Form submission testing.
-4. Performance review.
-5. Launch checklist completion.
-6. Production deployment.
+[roadmap.md](/Volumes/jon/Jon/business/cleaning/charm/docs/roadmap.md)
 
 ## Suggested Folder Structure
 
@@ -462,6 +427,9 @@ The exact structure may change slightly once the stack is initialized, but the p
 |- docs/
 |  |- business-website-plan.md
 |  |- competitor-notes.md
+|  |- roadmap.md
+|  |- site-architecture.md
+|  |- working-brief.md
 |  `- launch-checklist.md
 |- astro.config.mjs
 |- package.json

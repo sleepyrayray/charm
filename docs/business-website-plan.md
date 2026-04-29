@@ -89,22 +89,23 @@ Do not start with complex booking, online payments, accounts, or a full CMS unle
 
 Collect this information before or during the first build:
 
-1. Business name to display publicly
-2. Legal business name for footer if needed
-3. Phone number
-4. Email address
-5. Service areas
-6. Exact services offered
-7. Whether recurring daily, weekly, or custom schedules are offered
-8. Exact common-area services offered, such as lobbies, hallways, stairwells, elevators, bathrooms, garbage rooms, gyms, and pool-side areas
-9. Exact building types served
-10. What is not offered, such as maintenance work, repairs, or water treatment
-11. Hours of operation or expected response time
-12. Preferred contact method
-13. English/French communication details
-14. Photos of real work, supplies, team, or clean spaces
-15. Testimonials or reviews with permission
-16. Any true trust claims, such as years of experience, insurance, or specialties
+1. Public brand name: `CHARM`
+2. Supporting subtext: `Service de Nettoyage` / `Cleaning Services`
+3. Legal business name for footer if needed
+4. Phone number
+5. Email address
+6. Service areas
+7. Exact services offered
+8. Whether recurring daily, weekly, or custom schedules are offered
+9. Exact common-area services offered, such as lobbies, hallways, stairwells, elevators, bathrooms, garbage rooms, gyms, and pool-side areas
+10. Exact building types served
+11. What is not offered, such as repairs, technical maintenance, or water treatment
+12. Hours of operation or expected response time
+13. Preferred contact method
+14. English/French communication details
+15. Photos of real work, supplies, team, or clean spaces
+16. Testimonials or reviews with permission
+17. Any true trust claims, such as years of experience, insurance, or specialties
 
 Do not publish claims that are not confirmed.
 
@@ -180,6 +181,8 @@ The site should feel:
 4. Trustworthy
 5. Local
 6. Professional but not corporate
+7. Minimal and sleek
+8. Soft and pastel-leaning rather than loud
 
 Avoid:
 
@@ -189,7 +192,11 @@ Avoid:
 4. Complicated animations
 5. Pages that look nice but do not explain the service
 
-Good photos will matter a lot. Real photos are better than generic stock images if they are clear, well-lit, and professional enough.
+Current design note:
+
+1. Purple is the temporary main brand color.
+2. The design can stay image-light for now because there is no logo, no photos, and no reviews yet.
+3. The first visual system should rely on type, spacing, clean blocks, and a simple pastel-like palette.
 
 ## Technical Direction
 
@@ -213,6 +220,12 @@ Keep the first version practical:
 5. SEO metadata
 6. Simple content structure
 7. Easy future updates
+
+Content structure note:
+
+1. Site structure should be informed by local condo-cleaning competitor sites.
+2. We should follow familiar service-site content patterns when they help clarity.
+3. We should only include sections we can support with real content.
 
 Why this is a better fit than vanilla HTML/CSS/JS:
 
@@ -329,39 +342,11 @@ Create a simple spreadsheet with:
 10. Outcome
 11. Review requested
 
-## Immediate Action Plan
+## Roadmap Reference
 
-### Step 1 - Confirm Business Details
+The execution roadmap now lives in one place:
 
-Gather services, areas, contact info, language needs, photos, and trust claims.
-
-### Step 2 - Write Website Copy
-
-Draft English copy first. Then prepare French copy and have it reviewed.
-
-### Step 3 - Build Version 1
-
-Build the core pages, form, responsive layout, and language switcher.
-
-### Step 4 - Add Trust Signals
-
-Add reviews, real photos, service-area clarity, and honest business details.
-
-### Step 5 - Launch And Test
-
-Test on phone and desktop. Test the contact form. Check page speed, links, and language routing.
-
-### Step 6 - Set Up Google And Reviews
-
-Create or improve the Google Business Profile. Add services, service areas, photos, hours, and website link.
-
-### Step 7 - Turn It Into A Case Study
-
-Add the project to the portfolio with screenshots and a short explanation of goals, process, and outcomes.
-
-### Step 8 - Start Outreach
-
-Use the cleaning website and mockups to contact small businesses that need a better online presence.
+[roadmap.md](/Volumes/jon/Jon/business/cleaning/charm/docs/roadmap.md)
 
 ## Weekly Work Rhythm
 
