@@ -27,9 +27,9 @@ export const servicesPage = {
   ],
   frequencies: ["Daily", "Weekly", "Custom schedule"],
   notIncluded: [
-    "Repairs",
-    "Technical maintenance",
-    "Pool water maintenance",
-    "Unrelated building operations",
+    "Repairs or fixes",
+    "Technical building maintenance",
+    "Pool water testing or treatment",
+    "Other non-cleaning building operations",
   ],
 };

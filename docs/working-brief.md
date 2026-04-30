@@ -194,6 +194,7 @@ Likely core pages:
 2. Services
 3. About
 4. Contact
+5. Request a Quote
 
 Likely supporting sections:
 
@@ -201,10 +202,13 @@ Likely supporting sections:
 2. areas we clean
 3. who we work with
 4. why choose CHARM
-5. quote/contact CTA
+5. quote CTA
 
 Homepage content rule:
 The homepage should stay short and selective. Detailed process explanations, long FAQs, service checklists, testimonials, and trust credentials should move to supporting pages or wait until real content is available.
+
+Page-role rule:
+Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. FAQ lives at the bottom of the About page and should include the quote process.
 
 ## Working Content Notes
 
@@ -219,7 +223,7 @@ Content improvements to make next:
 1. Replace internal planning language with visitor-facing business copy.
 2. Make the hero headline more direct and service-specific.
 3. Reduce homepage sections so visitors are not overwhelmed.
-4. Keep FAQ content small or move it to Contact/Services until there are real customer questions.
+4. Keep FAQ content small at the bottom of About until there are real customer questions.
 5. Avoid unconfirmed claims such as insurance, eco-friendly products, years of experience, response time, or guarantees.
 
 ## Open Questions

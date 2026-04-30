@@ -10,7 +10,7 @@ import { site } from "../data/en/site";
       <h1 class="section-title">{servicesPage.title}</h1>
       <p class="section-copy mt-4">{servicesPage.intro}</p>
       <div class="mt-6">
-        <a class="button-primary" href="/contact">{site.quoteLabel}</a>
+        <a class="button-primary" href="/quote">{site.quoteLabel}</a>
       </div>
     </div>
   </section>
@@ -44,7 +44,7 @@ import { site } from "../data/en/site";
     </div>
 
     <div class="panel section-card">
-      <h2 class="text-xl font-semibold text-[var(--ink)]">Clear scope boundaries</h2>
+      <h2 class="text-xl font-semibold text-[var(--ink)]">Not included in this service</h2>
       <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
         {servicesPage.notIncluded.map((item) => <li>{item}</li>)}
       </ul>

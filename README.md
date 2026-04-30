@@ -20,7 +20,7 @@ This is not meant to be a flashy marketing site. It should feel clear, local, re
 The following assumptions are guiding the initial plan and should be confirmed before launch:
 
 1. Version 1 is a brochure-style lead generation website, not an online booking or payment system.
-2. Primary contact methods will be phone, email, and a quote/contact form.
+2. Primary contact methods will be phone, email, a general inquiry form, and a separate quote request form.
 3. The main service area is Saint-Laurent, with additional nearby Montreal neighborhoods served when practical.
 4. The site will have full English and French content, written or reviewed manually rather than auto-translated at runtime.
 5. If the business does not have a public office, the site will emphasize service areas instead of publishing a full street address.
@@ -83,7 +83,7 @@ To keep the first version focused, the following are out of scope unless the bus
 ### Home
 
 Purpose:
-Introduce the business, build trust quickly, explain the service area and cleaning focus, and push visitors toward a quote request or direct contact.
+Introduce the business, build trust quickly, explain the service area and cleaning focus, and push visitors toward the dedicated quote request flow.
 
 Must include:
 
@@ -118,19 +118,35 @@ Must include:
 3. Local service focus.
 4. Bilingual communication note.
 5. Honest trust signals only. Do not claim anything unverified.
+6. FAQ at the bottom of the page.
 
 ### Contact
 
 Purpose:
-Remove friction from lead generation and give visitors multiple ways to reach out.
+Give visitors a simple way to send a general inquiry or message that is not a full quote request.
 
 Must include:
 
-1. Quote/contact form.
-2. Phone and email.
-3. Preferred contact method options.
-4. Preferred language field.
-5. Service area summary.
+1. Basic inquiry form.
+2. Name, phone, email, and message fields.
+3. Button or link to the dedicated quote request page.
+4. Phone and email once confirmed.
+
+### Request A Quote
+
+Purpose:
+Collect the practical building details needed for a cleaning quote.
+
+Must include:
+
+1. Quote request form.
+2. Building or organisation details.
+3. Property address or area.
+4. Building type.
+5. Areas to clean.
+6. Cleaning frequency needed.
+7. Preferred language and contact method.
+8. Message field.
 
 ### Reviews / Testimonials Section
 
@@ -147,7 +163,7 @@ Recommended placement:
 
 1. Bilingual English/French support with a clear language switcher.
 2. Mobile-first responsive layout.
-3. Strong, repeated CTA for quote requests or direct contact.
+3. Strong, repeated CTA for quote requests plus a separate contact path for general inquiries.
 4. Testimonials or reviews as trust signals.
 5. Service-area messaging for Montreal and Saint-Laurent.
 6. SEO-ready page metadata and structured content.
@@ -156,9 +172,20 @@ Recommended placement:
 
 ## Lead Capture Requirements
 
-The site should make it easy for a serious visitor to contact the business without forcing a long process.
+The site should separate general inquiries from quote requests.
 
-Recommended form fields for V1:
+The Contact page should stay short and simple.
+
+Recommended contact fields for V1:
+
+1. Name
+2. Phone number
+3. Email
+4. Short message
+
+The Quote page should collect building-specific details.
+
+Recommended quote fields for V1:
 
 1. Name
 2. Phone number
@@ -403,6 +430,7 @@ The base Astro project is now initialized. The structure below reflects the curr
 |  |  |  |- home.ts
 |  |  |  |- services.ts
 |  |  |  |- contact.ts
+|  |  |  |- quote.ts
 |  |  |  `- site.ts
 |  |  `- fr/
 |  |     `- site.ts
@@ -415,11 +443,13 @@ The base Astro project is now initialized. The structure below reflects the curr
 |  |  |- services.astro
 |  |  |- about.astro
 |  |  |- contact.astro
+|  |  |- quote.astro
 |  |  `- fr/
 |  |     |- index.astro
 |  |     |- services.astro
 |  |     |- about.astro
-|  |     `- contact.astro
+|  |     |- contact.astro
+|  |     `- quote.astro
 |  |- styles/
 |  `- env.d.ts
 |- docs/
@@ -507,9 +537,9 @@ Still to confirm:
 Post-deployment checks:
 
 1. Confirm both English and French routes load correctly
-2. Confirm all CTA buttons point to the intended contact path
+2. Confirm all CTA buttons point to the intended quote or contact path
 3. Confirm metadata, sitemap, and robots behavior
-4. Confirm the quote/contact flow works end to end once connected
+4. Confirm the quote and contact flows work end to end once connected
 
 ## Definition Of A Successful V1 Launch
 

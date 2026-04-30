@@ -26,7 +26,9 @@ Already completed:
 10. French route structure created for future translation work
 11. base layouts, header, footer, and page shells created
 12. initial placeholder content added for Home, Services, About, and Contact
-13. build and Astro checks passing locally
+13. dedicated Quote route created separately from Contact
+14. FAQ moved to the About page
+15. build and Astro checks passing locally
 
 ## Phase 1 - Direction Lock
 
@@ -40,7 +42,8 @@ Tasks:
 3. Confirm the page list for V1
 4. Confirm brand usage for `CHARM`
 5. Confirm what contact details can be public
-6. Confirm whether FAQ stays on the homepage, the contact page, or both
+6. Confirm that FAQ belongs at the bottom of the About page
+7. Confirm that Contact and Request a Quote are separate flows
 
 Done when:
 
@@ -80,8 +83,9 @@ Tasks:
 2. Add services page placeholder content
 3. Add about page placeholder content
 4. Add contact page placeholder content
-5. Add temporary FAQ content
-6. Keep all copy free of unconfirmed claims
+5. Add quote page placeholder content
+6. Add temporary FAQ content to About
+7. Keep all copy free of unconfirmed claims
 
 Done when:
 
@@ -120,10 +124,11 @@ Tasks:
 2. Build the services page
 3. Build the about page
 4. Build the contact page
-5. Build the navbar
-6. Build the footer
-7. Build the FAQ block if included
-8. Build the quote CTA blocks
+5. Build the quote request page
+6. Build the navbar
+7. Build the footer
+8. Build the FAQ block on About
+9. Build the quote CTA blocks
 
 Done when:
 
@@ -138,16 +143,18 @@ Make lead capture practical and easy.
 
 Tasks:
 
-1. Build the quote/contact form UI
-2. Add validation
-3. Choose the form delivery method
-4. Add contact details once confirmed
-5. Add confirmation/success state
+1. Build the general contact inquiry form UI
+2. Build the detailed quote request form UI
+3. Add validation
+4. Choose the form delivery method
+5. Add contact details once confirmed
+6. Add confirmation/success states
 
 Done when:
 
-1. a visitor can submit a quote request
-2. the form is clear and easy to complete
+1. a visitor can submit a general inquiry
+2. a visitor can submit a quote request
+3. both forms are clear and easy to complete
 
 ## Phase 7 - SEO And Accessibility
 
@@ -253,7 +260,7 @@ Done when:
 
 1. refine the content skeleton with real business details
 2. polish the first visual system
-3. connect the real quote/contact flow
+3. connect the real quote and contact flows
 4. strengthen SEO and accessibility basics
 5. add fuller French page content
 

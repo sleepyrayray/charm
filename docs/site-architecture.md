@@ -165,13 +165,13 @@ Content:
 
 1. short CTA headline
 2. 1-sentence reminder of service fit
-3. quote/contact button
+3. quote request button
 
-## Optional Homepage Sections
+## Supporting Content Moved Off The Homepage
 
-These sections are useful, but should only appear if the page still feels simple.
+These sections are useful, but should not return to the homepage for now.
 
-### Optional: How It Works
+### How It Works
 
 Goal:
 Make the quote/request flow feel easy.
@@ -184,10 +184,9 @@ Simple 3-step flow:
 
 Layout note:
 
-1. Horizontal on desktop
-2. Stacked on mobile
+This idea should appear inside the About-page FAQ as a practical answer about the quote process.
 
-### Optional: Practical Info / FAQ
+### Practical Info / FAQ
 
 Goal:
 Answer early objections without making the site feel crowded.
@@ -201,7 +200,7 @@ Suggested questions:
 5. Can we contact you in English or French?
 
 Note:
-This should be a small block only. If the homepage feels crowded, move FAQ content to the Services or Contact page.
+This should not return to the homepage for now. FAQ content belongs at the bottom of the About page.
 
 ## Homepage Wireframe Summary
 
@@ -213,13 +212,6 @@ Who We Help
 Why CHARM
 Final CTA
 Footer
-```
-
-Optional additions:
-
-```text
-How It Works
-Practical FAQ
 ```
 
 ## Services Page Wireframe
@@ -326,18 +318,51 @@ Make CHARM feel real, local, and dependable.
 1. English available
 2. French version available
 
+#### FAQ
+
+Place FAQ at the bottom of the About page.
+
+Suggested questions:
+
+1. What kinds of spaces does CHARM clean?
+2. Do you offer recurring cleaning?
+3. How does the quote process work?
+4. Do you handle repairs or technical maintenance?
+5. Can we contact CHARM in English or French?
+
 ## Contact Page Wireframe
 
 Goal:
-Make it easy to request a quote with minimal friction.
+Make it easy to send a general inquiry without forcing visitors through the full quote request flow.
 
 ### Recommended Structure
 
 1. Contact hero
-2. Quote form
-3. Direct contact block
-4. Service area note
-5. FAQ or quick clarifications
+2. Simple inquiry form
+3. Quote request CTA
+4. Direct contact block once public details are confirmed
+
+### Recommended Form Fields
+
+1. Name
+2. Phone
+3. Email
+4. Message
+
+### Quote CTA
+
+The Contact page should include a clear button to `Request a Quote`.
+
+## Request A Quote Page Wireframe
+
+Goal:
+Collect the practical building details needed for a cleaning quote.
+
+### Recommended Structure
+
+1. Quote hero
+2. Detailed quote request form
+3. Submission note or next-step expectation
 
 ### Recommended Form Fields
 
@@ -389,8 +414,8 @@ Possible later additions:
 2. French route structure
 3. Mobile-first responsive design
 4. Sticky navbar
-5. Quote/contact CTA on key pages
-6. Structured contact form
+5. Quote CTA on key pages
+6. Separate contact inquiry and quote request forms
 7. Clean footer
 8. Local SEO basics
 9. Fast static pages

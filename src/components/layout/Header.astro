@@ -10,6 +10,7 @@ interface Props {
 const { locale = "en", currentPath } = Astro.props;
 const site = locale === "fr" ? frSite : enSite;
 const navigation = locale === "fr" ? frNavigation : enNavigation;
+const quoteHref = locale === "fr" ? "/fr/quote" : "/quote";
 
 const switchHref = locale === "fr"
   ? currentPath.replace(/^\/fr/, "") || "/"
@@ -44,13 +45,13 @@ const switchHref = locale === "fr"
       </nav>
 
       <div class="hidden items-center gap-3 md:flex">
-        <a href={locale === "fr" ? "/fr/contact" : "/contact"} class="button-primary">{site.quoteLabel}</a>
+        <a href={quoteHref} class="button-primary">{site.quoteLabel}</a>
         <a href={switchHref} class="rounded-lg border border-[var(--line)] px-3 py-2 text-xs font-semibold text-[var(--muted)]">{site.languageLabel}</a>
       </div>
 
       <div class="flex items-center gap-2 md:hidden">
         <a href={switchHref} class="rounded-lg border border-[var(--line)] px-3 py-2 text-xs font-semibold text-[var(--muted)]">{site.languageLabel}</a>
-        <a href={locale === "fr" ? "/fr/contact" : "/contact"} class="button-primary px-4">{site.quoteLabel}</a>
+        <a href={quoteHref} class="button-primary px-4">{site.quoteLabel}</a>
       </div>
     </div>
 

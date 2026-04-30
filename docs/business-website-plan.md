@@ -57,7 +57,7 @@ The full system should include:
 2. Google Business Profile
 3. Review collection process
 4. Work-quality photos of common areas when available
-5. Clear quote/contact form
+5. Clear quote request form and separate contact inquiry form
 6. Simple social media presence
 7. Outreach to potential clients
 8. Follow-up process for inquiries
@@ -73,12 +73,13 @@ Recommended pages:
 1. Home
 2. Services
 3. About
-4. Contact / Request a Quote
+4. Contact
+5. Request a Quote
 
 Optional later pages:
 
 1. Reviews
-2. FAQ
+2. Dedicated FAQ page if the About-page FAQ becomes too long
 3. Service-area pages
 4. Scope or checklist page
 5. Blog or cleaning tips
@@ -122,9 +123,8 @@ Suggested sections:
 3. Short service overview
 4. Why choose this business
 5. Service area note
-6. Testimonials or review prompt
-7. Simple process: contact, quote, recurring cleaning
-8. Final call to action
+6. Testimonials or review prompt once real trust details are available
+7. Final call to action
 
 ### Services Page
 
@@ -134,7 +134,7 @@ Suggested sections:
 
 1. Lobby and hallway cleaning
 2. Stairwell and elevator cleaning
-3. Bathroom and garbage area cleaning
+3. Shared washroom and garbage area cleaning
 4. Gym, pool-side, and recreational-area cleaning
 5. Recurring schedules
 6. What is commonly included
@@ -152,10 +152,24 @@ Suggested sections:
 3. Areas served
 4. English/French support
 5. Honest note about how the team works
+6. FAQ at the bottom, including the quote process
 
 ### Contact Page
 
-Purpose: Make it easy to ask for a quote.
+Purpose: Make it easy to send a general inquiry.
+
+Recommended form fields:
+
+1. Name
+2. Phone
+3. Email
+4. Message
+
+Also include a clear button to request a quote.
+
+### Request A Quote Page
+
+Purpose: Collect the building details needed for pricing and follow-up.
 
 Recommended form fields:
 
@@ -163,7 +177,7 @@ Recommended form fields:
 2. Phone
 3. Email
 4. Building or organisation name
-5. Neighborhood or city
+5. Neighbourhood or city
 6. Building type
 7. Areas to clean
 8. Cleaning frequency needed
@@ -285,7 +299,7 @@ Starter package:
 
 1. One-page or small multi-page website
 2. Mobile-friendly design
-3. Contact or quote form
+3. Contact and quote forms
 4. Basic SEO setup
 5. Google Business Profile cleanup checklist
 6. Review link setup
