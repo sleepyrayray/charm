@@ -65,6 +65,12 @@ Mobile menu items:
 
 The homepage should be short, clear, and conversion-focused.
 
+Current direction:
+Keep the homepage minimal. It should introduce the service, show the fit, build basic trust, and point to the quote path without overwhelming visitors.
+
+Presentation rule:
+Avoid decorative pill labels above homepage sections. Service items and audience items can use static grid cards, but they should read as informational blocks rather than clickable controls.
+
 ### Section 1: Hero
 
 Goal:
@@ -89,8 +95,9 @@ Suggested message direction:
 Layout note:
 
 1. Left-aligned copy
-2. Right-side visual card or soft abstract panel
+2. Optional compact service panel if it adds clarity
 3. No photo required
+4. Keep the hero direct and calm
 
 ### Section 2: What We Clean
 
@@ -105,33 +112,35 @@ Suggested cards:
 1. Lobbies
 2. Hallways
 3. Stairwells
-4. Shared bathrooms
-5. Garbage areas
-6. Gyms
-7. Recreational areas
-8. Pool-side common areas
+4. Shared washrooms
+5. Garbage and recycling areas
+6. Gyms and recreation areas
 
 Layout note:
 
-1. Clean icon or simple label
+1. Use a simple grid of static information cards
 2. Keep the copy very short
+3. Avoid hover states that make the cards feel clickable
 
-### Section 3: Who We Work With
+### Section 3: Who We Help
 
 Goal:
 Make the target audience obvious.
 
 Suggested content:
 
-1. Condo boards
-2. Condo syndicates
-3. Property managers
-4. Building administrators
+1. Condo boards and syndicates
+2. Property managers
+3. Building administrators
 
 Why this matters:
 
 1. It immediately tells the right people the site is for them
 2. It helps filter out the wrong type of lead
+3. It can be combined with the quote path to keep the homepage shorter
+
+Layout note:
+Use static grid cards that include a short description for each audience.
 
 ### Section 4: Why CHARM
 
@@ -140,15 +149,29 @@ Replace missing reviews/photos with operational trust.
 
 Suggested content blocks:
 
-1. recurring service focus
-2. clear communication
-3. shared-space cleaning specialization
-4. dependable local service
+1. focused on shared spaces
+2. recurring cleanliness upkeep
+3. simple communication
 
 Important note:
 Because there are no reviews yet, this section should carry more trust weight in V1.
 
-### Section 5: How It Works
+### Section 5: Final CTA
+
+Goal:
+Catch visitors who are ready to act without adding another dense section.
+
+Content:
+
+1. short CTA headline
+2. 1-sentence reminder of service fit
+3. quote/contact button
+
+## Optional Homepage Sections
+
+These sections are useful, but should only appear if the page still feels simple.
+
+### Optional: How It Works
 
 Goal:
 Make the quote/request flow feel easy.
@@ -164,7 +187,7 @@ Layout note:
 1. Horizontal on desktop
 2. Stacked on mobile
 
-### Section 6: Practical Info / FAQ
+### Optional: Practical Info / FAQ
 
 Goal:
 Answer early objections without making the site feel crowded.
@@ -178,18 +201,7 @@ Suggested questions:
 5. Can we contact you in English or French?
 
 Note:
-This can be a small FAQ block, not a full page at launch.
-
-### Section 7: Final CTA
-
-Goal:
-Catch visitors who scroll to the end and are ready to act.
-
-Content:
-
-1. short CTA headline
-2. 1-sentence reminder of service fit
-3. quote/contact button
+This should be a small block only. If the homepage feels crowded, move FAQ content to the Services or Contact page.
 
 ## Homepage Wireframe Summary
 
@@ -197,12 +209,17 @@ Content:
 Navbar
 Hero
 What We Clean
-Who We Work With
+Who We Help
 Why CHARM
-How It Works
-Practical FAQ
 Final CTA
 Footer
+```
+
+Optional additions:
+
+```text
+How It Works
+Practical FAQ
 ```
 
 ## Services Page Wireframe
@@ -233,7 +250,7 @@ Group services into simple categories:
 
 1. entrance and lobby areas
 2. hallways and stairwells
-3. shared bathrooms
+3. shared washrooms
 4. garbage and recycling spaces
 5. gyms and recreational spaces
 6. pool-side common areas
@@ -327,7 +344,7 @@ Make it easy to request a quote with minimal friction.
 1. Name
 2. Phone
 3. Email
-4. Building or organization name
+4. Building or organisation name
 5. Property address or area
 6. Building type
 7. Areas to clean
@@ -420,7 +437,7 @@ How to combine the two inspiration references:
 
 ### For CHARM
 
-1. soft purple highlights
+1. soft teal highlights
 2. minimal surface design
 3. short page sections
 4. practical content order

@@ -16,10 +16,10 @@ const summary = locale === "fr"
 
 <footer class="mt-20 pb-10">
   <div class="shell">
-    <div class="panel rounded-[2rem] px-6 py-8 sm:px-8">
+    <div class="panel rounded-lg px-6 py-8 sm:px-8">
       <div class="grid gap-8 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <div class="text-sm font-semibold tracking-[0.2em] text-[var(--primary-strong)]">{site.brand}</div>
+          <div class="text-sm font-semibold text-[var(--primary-strong)]">{site.brand}</div>
           <div class="mt-1 text-sm text-[var(--muted)]">{site.subtext}</div>
           <p class="mt-4 max-w-xl text-sm leading-7 text-[var(--muted)]">{summary}</p>
         </div>
@@ -28,7 +28,7 @@ const summary = locale === "fr"
           {navigation.map((item) => (
             <a href={item.href}>{item.label}</a>
           ))}
-          <div class="pt-3 text-xs uppercase tracking-[0.16em] text-[var(--primary-strong)]">
+          <div class="pt-3 text-xs uppercase text-[var(--primary-strong)]">
             CHARM SERVICE DE NETTOYAGE s.e.n.c.
           </div>
         </div>

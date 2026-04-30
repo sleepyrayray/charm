@@ -1,70 +1,67 @@
 export const home = {
-  eyebrow: "Condo common-area cleaning",
-  title: "Recurring cleaning for the shared spaces people notice every day.",
+  title: "Common-area cleaning for condo buildings.",
   intro:
-    "CHARM helps condo buildings stay clean, presentable, and easy to manage with recurring cleaning for common areas in Saint-Laurent and nearby Montreal areas.",
+    "CHARM helps condo buildings in Saint-Laurent and nearby Montreal keep shared spaces clean, presentable, and easy to manage.",
+  heroNotes: [
+    "Recurring cleaning",
+    "Shared spaces only",
+    "Simple quote requests",
+  ],
   serviceAreas: [
-    "Lobbies",
-    "Hallways",
-    "Stairwells",
-    "Shared bathrooms",
-    "Garbage areas",
-    "Gyms",
-    "Recreational areas",
-    "Pool-side common areas",
+    {
+      title: "Lobbies",
+      description: "Entrances and waiting areas that shape the first impression of the building.",
+    },
+    {
+      title: "Hallways",
+      description: "Shared corridors that residents and visitors use throughout the day.",
+    },
+    {
+      title: "Stairwells",
+      description: "Exit stairs and stair areas that need steady upkeep.",
+    },
+    {
+      title: "Shared washrooms",
+      description: "Common washrooms connected to lobbies, gyms, pools, or recreation areas.",
+    },
+    {
+      title: "Garbage and recycling areas",
+      description: "Waste rooms and shared disposal spaces that need regular attention.",
+    },
+    {
+      title: "Gyms and recreation areas",
+      description: "Shared amenities where clean surfaces help the space feel cared for.",
+    },
   ],
   audiences: [
-    "Condo boards",
-    "Condo syndicates",
-    "Property managers",
-    "Building administrators",
+    {
+      title: "Condo boards and syndicates",
+      description: "For decision-makers managing cleanliness across shared building areas.",
+    },
+    {
+      title: "Property managers",
+      description: "For managers co-ordinating vendors and day-to-day building needs.",
+    },
+    {
+      title: "Building administrators",
+      description: "For administrators who need simple communication and practical follow-up.",
+    },
   ],
   reasons: [
     {
-      title: "Built for recurring service",
-      body: "The site is positioned around scheduled upkeep for shared spaces, not one-off residential cleaning.",
+      title: "Focused on shared spaces",
+      body: "Service is centered on condo common areas, not private home cleaning or in-unit cleaning.",
     },
     {
-      title: "Clear communication",
-      body: "The core message stays simple: what CHARM cleans, who CHARM works with, and how to request a quote.",
+      title: "Recurring cleanliness upkeep",
+      body: "The goal is to keep everyday areas clean and presentable through regular service.",
     },
     {
-      title: "Focused scope",
-      body: "Common-area cleaning stays front and center, while repairs and technical maintenance stay clearly out of scope.",
-    },
-    {
-      title: "Local and dependable",
-      body: "The tone is meant to feel direct, professional, and easy to trust without pretending to be a giant company.",
+      title: "Simple communication",
+      body: "Tell us about the building, the spaces involved, and the cleaning frequency you have in mind.",
     },
   ],
-  process: [
-    "Tell us about your building",
-    "Get a quote or follow-up",
-    "Set up recurring cleaning",
-  ],
-  faq: [
-    {
-      question: "What kinds of spaces do you clean?",
-      answer:
-        "CHARM is focused on shared condo-building spaces such as lobbies, hallways, stairs, bathrooms, garbage areas, gyms, and recreational common areas.",
-    },
-    {
-      question: "Do you offer recurring cleaning?",
-      answer:
-        "Yes. The current direction for the business is recurring cleanliness upkeep for condo common areas.",
-    },
-    {
-      question: "Do you handle repairs or technical maintenance?",
-      answer:
-        "No. CHARM is positioned around cleaning and maintaining cleanliness, not repairs, technical maintenance, or pool water work.",
-    },
-    {
-      question: "Can we contact you in English or French?",
-      answer:
-        "English is the default site language, and the structure is prepared so French content can be added cleanly.",
-    },
-  ],
-  finalCtaTitle: "Need a cleaner, simpler common-area cleaning setup?",
+  finalCtaTitle: "Ready to talk about your building?",
   finalCtaBody:
-    "Use the contact page to start a quote request and tell CHARM a little about your building.",
+    "Send a few details about the shared spaces you need cleaned, and CHARM can follow up with the next step.",
 };

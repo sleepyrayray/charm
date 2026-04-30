@@ -18,7 +18,7 @@ Typical service scope in this category:
 2. Hallways
 3. Stairwells
 4. Elevators
-5. Shared bathrooms
+5. Shared washrooms
 6. Garbage and recycling rooms
 7. Gyms
 8. Pool-side or recreational common areas

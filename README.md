@@ -50,7 +50,7 @@ Visitors should be able to answer the following questions within a few seconds:
 
 Primary audience:
 
-1. Condo syndicates and condo boards in Saint-Laurent and nearby Montreal areas.
+1. Condo boards and syndicates in Saint-Laurent and nearby Montreal areas.
 2. Property managers and building administrators who need recurring cleaning for shared spaces.
 3. Owners or managers of multi-unit residential buildings who want reliable upkeep of common areas.
 
@@ -163,7 +163,7 @@ Recommended form fields for V1:
 1. Name
 2. Phone number
 3. Email
-4. Building or organization name
+4. Building or organisation name
 5. Property address or area
 6. Building type
 7. Areas to clean
@@ -244,7 +244,7 @@ The visual style should be:
 
 Current working color direction:
 
-1. Purple is the temporary main brand color.
+1. Teal is the temporary main brand color.
 2. Pastel-like supporting tones are preferred over harsh or high-saturation accents.
 3. The final palette can evolve later once the logo and brand identity are confirmed.
 
@@ -343,7 +343,7 @@ The following business inputs should be collected early because they affect both
 1. Official phone number and email address to publish.
 2. Exact service areas to mention.
 3. Final service list.
-4. Exact common-area tasks offered, such as lobbies, hallways, stairwells, elevators, bathrooms, garbage rooms, gyms, and pool-side areas.
+4. Exact common-area tasks offered, such as lobbies, hallways, stairwells, elevators, washrooms, garbage rooms, gyms, and pool-side areas.
 5. Cleaning frequencies offered, such as daily, weekly, or custom schedules.
 6. What is explicitly excluded, such as maintenance, repairs, or water treatment.
 7. Testimonials that can be published.

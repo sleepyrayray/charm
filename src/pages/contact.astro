@@ -8,10 +8,9 @@ import { site } from "../data/en/site";
   <section class="shell pt-10 sm:pt-14">
     <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
       <div class="panel section-card">
-        <span class="eyebrow">{contactPage.eyebrow}</span>
-        <h1 class="section-title mt-4">{contactPage.title}</h1>
+        <h1 class="section-title">{contactPage.title}</h1>
         <p class="section-copy mt-4">{contactPage.intro}</p>
-        <div class="mt-8 rounded-[1.6rem] border border-dashed border-[var(--line)] bg-white/70 p-5 text-sm leading-7 text-[var(--muted)]">
+        <div class="mt-8 rounded-lg border border-dashed border-[var(--line)] bg-white/70 p-5 text-sm leading-7 text-[var(--muted)]">
           {contactPage.note}
         </div>
       </div>
@@ -36,8 +35,8 @@ import { site } from "../data/en/site";
 
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="grid gap-2 text-sm font-medium">
-              <span>Building or organization</span>
-              <input class="field" type="text" name="building" placeholder="Building or organization" />
+              <span>Building or organisation</span>
+              <input class="field" type="text" name="building" placeholder="Building or organisation" />
             </label>
             <label class="grid gap-2 text-sm font-medium">
               <span>Property address or area</span>

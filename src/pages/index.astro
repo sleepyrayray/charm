@@ -5,80 +5,76 @@ import { site } from "../data/en/site";
 ---
 
 <MainLayout title="CHARM | Cleaning Services" description={site.description}>
-  <section class="shell pt-10 sm:pt-14">
-    <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-      <div class="space-y-6">
-        <span class="eyebrow">{home.eyebrow}</span>
-        <h1 class="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">{home.title}</h1>
+  <section class="shell pt-12 sm:pt-16">
+    <div class="grid gap-10 lg:min-h-[560px] lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div class="max-w-3xl space-y-6">
+        <h1 class="text-4xl font-semibold sm:text-5xl lg:text-6xl">{home.title}</h1>
         <p class="section-copy">{home.intro}</p>
         <div class="flex flex-wrap gap-3">
           <a class="button-primary" href="/contact">{site.quoteLabel}</a>
           <a class="button-secondary" href="/services">View Services</a>
         </div>
-        <p class="text-sm text-[var(--muted)]">Serving {site.area}</p>
       </div>
 
-      <div class="panel section-card">
-        <div class="text-sm font-medium text-[var(--primary-strong)]">What CHARM is built for</div>
-        <ul class="mt-5 space-y-4 text-sm text-[var(--muted)]">
-          <li>Recurring cleaning for condo common areas</li>
-          <li>Shared spaces that need to stay clean and presentable</li>
-          <li>Simple quote requests for property managers and building teams</li>
+      <div class="hero-panel">
+        <div>
+          <h2 class="text-xl font-semibold text-[var(--ink)]">Built for condo common areas</h2>
+          <p class="mt-3 text-sm leading-7 text-[var(--muted)]">
+            Recurring cleaning for the shared spaces residents and managers see every day.
+          </p>
+        </div>
+        <ul class="detail-list mt-6">
+          {home.heroNotes.map((note) => (
+            <li>{note}</li>
+          ))}
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="shell mt-16">
-    <div class="panel section-card">
-      <div class="space-y-3">
-        <span class="eyebrow">What We Clean</span>
-        <h2 class="section-title">Shared spaces, kept simple.</h2>
-      </div>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+  <section class="section-band mt-6">
+    <div class="shell">
+      <h2 class="section-title">Shared spaces, kept presentable.</h2>
+      <p class="section-copy mt-4">
+        The everyday areas that need steady care, from entrances to shared amenities.
+      </p>
+
+      <div class="info-grid mt-8">
         {home.serviceAreas.map((area) => (
-          <div class="rounded-[1.6rem] border border-[var(--line)] bg-white/80 p-5 text-sm font-medium text-[var(--ink)]">
-            {area}
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="shell mt-16 grid gap-8 lg:grid-cols-2">
-    <div class="panel section-card">
-      <span class="eyebrow">Who We Work With</span>
-      <h2 class="section-title mt-4">Built for condo decision-makers.</h2>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2">
-        {home.audiences.map((audience) => (
-          <div class="rounded-[1.6rem] border border-[var(--line)] bg-white/80 p-5 text-sm font-medium text-[var(--ink)]">
-            {audience}
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div class="panel section-card">
-      <span class="eyebrow">How It Works</span>
-      <h2 class="section-title mt-4">A short, direct quote path.</h2>
-      <div class="mt-8 grid gap-4">
-        {home.process.map((step, index) => (
-          <div class="rounded-[1.6rem] border border-[var(--line)] bg-white/80 p-5">
-            <div class="text-xs uppercase tracking-[0.16em] text-[var(--primary-strong)]">Step {index + 1}</div>
-            <div class="mt-2 text-sm font-medium text-[var(--ink)]">{step}</div>
-          </div>
+          <article class="info-card">
+            <h3>{area.title}</h3>
+            <p>{area.description}</p>
+          </article>
         ))}
       </div>
     </div>
   </section>
 
   <section class="shell mt-16">
-    <div class="panel section-card">
-      <span class="eyebrow">Why CHARM</span>
-      <h2 class="section-title mt-4">Trust built through clarity, not filler.</h2>
-      <div class="mt-8 grid gap-4 lg:grid-cols-2">
+    <h2 class="section-title">For the people responsible for the building.</h2>
+    <p class="section-copy mt-4">
+      CHARM is meant for condo decision-makers who want common areas to stay clean, presentable, and cared for.
+    </p>
+
+    <div class="info-grid mt-8">
+      {home.audiences.map((audience) => (
+        <article class="info-card">
+          <h3>{audience.title}</h3>
+          <p>{audience.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-band mt-16">
+    <div class="shell">
+      <div class="max-w-2xl">
+        <h2 class="section-title">Why choose CHARM?</h2>
+      </div>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
         {home.reasons.map((reason) => (
-          <article class="rounded-[1.6rem] border border-[var(--line)] bg-white/80 p-5">
+          <article class="quiet-card">
             <h3 class="text-lg font-semibold text-[var(--ink)]">{reason.title}</h3>
             <p class="mt-3 text-sm leading-7 text-[var(--muted)]">{reason.body}</p>
           </article>
@@ -87,26 +83,10 @@ import { site } from "../data/en/site";
     </div>
   </section>
 
-  <section class="shell mt-16">
-    <div class="panel section-card">
-      <span class="eyebrow">Practical FAQ</span>
-      <h2 class="section-title mt-4">Quick answers before you reach out.</h2>
-      <div class="mt-8 grid gap-4">
-        {home.faq.map((item) => (
-          <article class="rounded-[1.6rem] border border-[var(--line)] bg-white/80 p-5">
-            <h3 class="text-base font-semibold text-[var(--ink)]">{item.question}</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--muted)]">{item.answer}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <section class="shell mt-16 pb-10">
-    <div class="panel section-card flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+    <div class="cta-strip">
       <div>
-        <span class="eyebrow">Request a Quote</span>
-        <h2 class="section-title mt-4">{home.finalCtaTitle}</h2>
+        <h2 class="section-title">{home.finalCtaTitle}</h2>
         <p class="section-copy mt-3">{home.finalCtaBody}</p>
       </div>
       <a class="button-primary" href="/contact">{site.quoteLabel}</a>

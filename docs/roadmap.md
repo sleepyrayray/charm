@@ -95,7 +95,7 @@ Build the first visual system for CHARM.
 
 Tasks:
 
-1. Set the temporary pastel-purple palette
+1. Set the temporary pastel-teal palette
 2. Define typography scale
 3. Define spacing system
 4. Create button styles

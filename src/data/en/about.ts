@@ -1,5 +1,4 @@
 export const aboutPage = {
-  eyebrow: "About CHARM",
   title: "A straightforward local service for shared building spaces.",
   intro:
     "CHARM is being positioned as a focused condo-building cleaning service for Saint-Laurent and nearby Montreal areas, with an emphasis on clarity, dependable service, and recurring upkeep.",

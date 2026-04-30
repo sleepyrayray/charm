@@ -97,7 +97,7 @@ Collect this information before or during the first build:
 6. Service areas
 7. Exact services offered
 8. Whether recurring daily, weekly, or custom schedules are offered
-9. Exact common-area services offered, such as lobbies, hallways, stairwells, elevators, bathrooms, garbage rooms, gyms, and pool-side areas
+9. Exact common-area services offered, such as lobbies, hallways, stairwells, elevators, washrooms, garbage rooms, gyms, and pool-side areas
 10. Exact building types served
 11. What is not offered, such as repairs, technical maintenance, or water treatment
 12. Hours of operation or expected response time
@@ -162,7 +162,7 @@ Recommended form fields:
 1. Name
 2. Phone
 3. Email
-4. Building or organization name
+4. Building or organisation name
 5. Neighborhood or city
 6. Building type
 7. Areas to clean
@@ -194,7 +194,7 @@ Avoid:
 
 Current design note:
 
-1. Purple is the temporary main brand color.
+1. Teal is the temporary main brand color.
 2. The design can stay image-light for now because there is no logo, no photos, and no reviews yet.
 3. The first visual system should rely on type, spacing, clean blocks, and a simple pastel-like palette.
 
@@ -332,7 +332,7 @@ Create a simple spreadsheet with:
 
 1. Name
 2. Contact info
-3. Building or organization
+3. Building or organisation
 4. Area
 5. Date contacted
 6. Service needed

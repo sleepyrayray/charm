@@ -7,34 +7,33 @@ import { site } from "../data/en/site";
 <MainLayout title="About | CHARM" description={site.description}>
   <section class="shell pt-10 sm:pt-14">
     <div class="panel section-card">
-      <span class="eyebrow">{aboutPage.eyebrow}</span>
-      <h1 class="section-title mt-4">{aboutPage.title}</h1>
+      <h1 class="section-title">{aboutPage.title}</h1>
       <p class="section-copy mt-4">{aboutPage.intro}</p>
     </div>
   </section>
 
   <section class="shell mt-16 grid gap-8 lg:grid-cols-3">
     <article class="panel section-card">
-      <span class="eyebrow">Business Focus</span>
+      <h2 class="text-xl font-semibold text-[var(--ink)]">Business focus</h2>
       <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
         {aboutPage.focus.map((item) => <li>{item}</li>)}
       </ul>
     </article>
 
     <article class="panel section-card">
-      <span class="eyebrow">Values</span>
+      <h2 class="text-xl font-semibold text-[var(--ink)]">Values</h2>
       <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
         {aboutPage.values.map((item) => <li>{item}</li>)}
       </ul>
     </article>
 
     <article class="panel section-card">
-      <span class="eyebrow">Coverage</span>
+      <h2 class="text-xl font-semibold text-[var(--ink)]">Coverage</h2>
       <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
         {aboutPage.area.map((item) => <li>{item}</li>)}
       </ul>
       <div class="mt-6 border-t border-[var(--line)] pt-6">
-        <div class="text-xs uppercase tracking-[0.16em] text-[var(--primary-strong)]">Language support</div>
+        <h3 class="text-base font-semibold text-[var(--ink)]">Language support</h3>
         <ul class="mt-3 space-y-3 text-sm leading-7 text-[var(--muted)]">
           {aboutPage.language.map((item) => <li>{item}</li>)}
         </ul>

@@ -31,10 +31,9 @@ The business focuses on condo-building and shared-space cleaning in Saint-Lauren
 
 Core audience:
 
-1. Condo boards
-2. Condo syndicates
-3. Property managers
-4. Building administrators
+1. Condo boards and syndicates
+2. Property managers
+3. Building administrators
 
 ## Service Scope
 
@@ -43,7 +42,7 @@ Core audience:
 1. Lobbies
 2. Hallways
 3. Exit stairs and stairwells
-4. Shared toilets and bathrooms
+4. Shared washrooms
 5. Garbage and recycling areas
 6. Pool-side areas
 7. Recreational areas
@@ -77,8 +76,8 @@ The site should feel:
 
 ### Current Color Direction
 
-1. Purple is the temporary main brand color.
-2. Supporting colors should stay soft and pastel-leaning.
+1. Teal is the temporary main brand color.
+2. Supporting colors should stay soft, bright, and pastel-leaning.
 3. Final colors can evolve after the logo/brand identity is defined.
 
 ### Visual Notes
@@ -87,6 +86,10 @@ The site should feel:
 2. Avoid intimidating, content-heavy walls of text.
 3. Use subtle polished styling instead of loud effects.
 4. A soft glassy treatment can still be used lightly if it stays readable and clean.
+5. Prioritize breathing room, short copy, and obvious actions over adding every possible section.
+6. Avoid small decorative pill labels above content sections.
+7. Use static grid cards for service items and audience items when it improves scanability.
+8. Keep those item cards clearly informational, with no hover treatment that makes them feel clickable.
 
 ## Inspiration References
 
@@ -141,19 +144,18 @@ Likely homepage flow:
 
 1. clear hero with service area and CTA
 2. quick overview of what CHARM cleans
-3. who CHARM works with
+3. compact note on who CHARM helps
 4. why choose CHARM
-5. simple quote/request process
-6. FAQ or practical info
-7. final contact CTA
+5. final contact CTA
 
 Likely design translation:
 
-1. soft pastel purple accents
+1. soft pastel teal accents
 2. lots of whitespace
 3. clean cards or blocks
 4. minimal but polished surfaces
 5. easy-to-scan sections without huge text walls
+6. no section should feel like a wall of information
 
 ## Current Content Availability
 
@@ -201,6 +203,9 @@ Likely supporting sections:
 4. why choose CHARM
 5. quote/contact CTA
 
+Homepage content rule:
+The homepage should stay short and selective. Detailed process explanations, long FAQs, service checklists, testimonials, and trust credentials should move to supporting pages or wait until real content is available.
+
 ## Working Content Notes
 
 Safe early messaging:
@@ -208,6 +213,14 @@ Safe early messaging:
 1. CHARM provides recurring cleaning for condo common areas in Saint-Laurent and nearby Montreal areas.
 2. The business helps keep shared spaces clean, presentable, and well maintained from a cleanliness standpoint.
 3. The focus is on clear communication, dependable service, and straightforward quote requests.
+
+Content improvements to make next:
+
+1. Replace internal planning language with visitor-facing business copy.
+2. Make the hero headline more direct and service-specific.
+3. Reduce homepage sections so visitors are not overwhelmed.
+4. Keep FAQ content small or move it to Contact/Services until there are real customer questions.
+5. Avoid unconfirmed claims such as insurance, eco-friendly products, years of experience, response time, or guarantees.
 
 ## Open Questions
 
@@ -233,4 +246,11 @@ Safe early messaging:
 1. Set `CHARM` as the public-facing brand.
 2. Set `Service de Nettoyage` / `Cleaning Services` as supporting subtext.
 3. Confirmed recurring cleanliness maintenance is in scope, but repairs and technical maintenance are not.
-4. Set the temporary design direction to minimal, pastel-like, and purple-led.
+4. Initially set the temporary design direction to minimal, pastel-like, and purple-led before the later teal direction.
+
+### 2026-04-29
+
+1. Switched the temporary main color direction from purple to teal.
+2. Tightened the homepage direction toward fewer sections and less on-screen information.
+3. Confirmed simplicity and minimalism should guide the homepage polish pass.
+4. Removed decorative section labels and switched service/audience lists to static grid cards.

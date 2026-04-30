@@ -1,5 +1,4 @@
 export const servicesPage = {
-  eyebrow: "Services",
   title: "Shared-space cleaning built around condo properties.",
   intro:
     "The first version of the site stays focused on the spaces that matter most in condo buildings and other shared residential properties.",
@@ -14,7 +13,7 @@ export const servicesPage = {
     },
     {
       title: "Shared support spaces",
-      items: ["Shared bathrooms", "Garbage areas", "Recycling areas"],
+      items: ["Shared washrooms", "Garbage areas", "Recycling areas"],
     },
     {
       title: "Amenity areas",
