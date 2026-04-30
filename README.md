@@ -523,16 +523,18 @@ Content editing workflow:
 
 Current deployment direction:
 
-1. Static Astro deployment to `Vercel`, `Netlify`, or `Cloudflare Pages`
+1. Static Astro deployment to GitHub Pages
 2. Build command: `npm run build`
 3. Output directory: `dist`
+4. Deployment workflow: `.github/workflows/deploy.yml`
+5. GitHub Pages URL: `https://sleepyrayray.github.io/charm/`
+6. Astro base path: `/charm`
 
 Still to confirm:
 
-1. Final hosting provider
-2. Production form delivery method
-3. Domain and DNS setup
-4. Analytics setup
+1. Production form delivery method
+2. Domain and DNS setup if a custom business domain is added later
+3. Analytics setup
 
 Post-deployment checks:
 

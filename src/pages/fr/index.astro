@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import { pathWithBase } from "../../lib/paths";
 ---
 
 <MainLayout
@@ -15,7 +16,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
         puisse etre ajoutee proprement ensuite.
       </p>
       <div class="mt-6">
-        <a class="button-primary" href="/">Retour en anglais</a>
+        <a class="button-primary" href={pathWithBase("/")}>Retour en anglais</a>
       </div>
     </div>
   </section>

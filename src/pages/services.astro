@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { servicesPage } from "../data/en/services";
 import { site } from "../data/en/site";
+import { pathWithBase } from "../lib/paths";
 ---
 
 <MainLayout title="Services | CHARM" description={site.description}>
@@ -10,7 +11,7 @@ import { site } from "../data/en/site";
       <h1 class="section-title">{servicesPage.title}</h1>
       <p class="section-copy mt-4">{servicesPage.intro}</p>
       <div class="mt-6">
-        <a class="button-primary" href="/quote">{site.quoteLabel}</a>
+        <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
       </div>
     </div>
   </section>

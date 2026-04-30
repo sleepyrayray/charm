@@ -1,6 +1,7 @@
 ---
 import { navigation as enNavigation, site as enSite } from "../../data/en/site";
 import { navigation as frNavigation, site as frSite } from "../../data/fr/site";
+import { pathWithBase } from "../../lib/paths";
 
 interface Props {
   locale?: "en" | "fr";
@@ -26,7 +27,7 @@ const summary = locale === "fr"
 
         <div class="grid gap-2 text-sm text-[var(--muted)]">
           {navigation.map((item) => (
-            <a href={item.href}>{item.label}</a>
+            <a href={pathWithBase(item.href)}>{item.label}</a>
           ))}
           <div class="pt-3 text-xs uppercase text-[var(--primary-strong)]">
             CHARM SERVICE DE NETTOYAGE s.e.n.c.

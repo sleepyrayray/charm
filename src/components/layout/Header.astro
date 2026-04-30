@@ -1,6 +1,7 @@
 ---
 import { navigation as enNavigation, site as enSite } from "../../data/en/site";
 import { navigation as frNavigation, site as frSite } from "../../data/fr/site";
+import { pathWithBase, pathWithoutBase } from "../../lib/paths";
 
 interface Props {
   locale?: "en" | "fr";
@@ -10,28 +11,29 @@ interface Props {
 const { locale = "en", currentPath } = Astro.props;
 const site = locale === "fr" ? frSite : enSite;
 const navigation = locale === "fr" ? frNavigation : enNavigation;
-const quoteHref = locale === "fr" ? "/fr/quote" : "/quote";
+const routePath = pathWithoutBase(currentPath);
+const quoteHref = pathWithBase(locale === "fr" ? "/fr/quote" : "/quote");
 
 const switchHref = locale === "fr"
-  ? currentPath.replace(/^\/fr/, "") || "/"
-  : `/fr${currentPath === "/" ? "" : currentPath}`;
+  ? pathWithBase(routePath.replace(/^\/fr/, "") || "/")
+  : pathWithBase(`/fr${routePath === "/" ? "" : routePath}`);
 ---
 
 <header class="sticky top-0 z-40 px-3 py-3 sm:px-4">
   <div class="shell">
     <div class="panel flex items-center justify-between rounded-lg px-4 py-3 sm:px-6">
-      <a href={locale === "fr" ? "/fr" : "/"} class="min-w-0">
+      <a href={pathWithBase(locale === "fr" ? "/fr" : "/")} class="min-w-0">
         <div class="text-sm font-semibold text-[var(--primary-strong)]">{site.brand}</div>
         <div class="truncate text-xs text-[var(--muted)]">{site.subtext}</div>
       </a>
 
       <nav class="hidden items-center gap-2 md:flex">
         {navigation.map((item) => {
-          const active = currentPath === item.href;
+          const active = routePath === item.href;
 
           return (
             <a
-              href={item.href}
+              href={pathWithBase(item.href)}
               aria-current={active ? "page" : undefined}
               class:list={[
                 "rounded-lg px-4 py-2 text-sm font-medium transition",
@@ -57,11 +59,11 @@ const switchHref = locale === "fr"
 
     <nav class="mt-3 flex flex-wrap gap-2 md:hidden">
       {navigation.map((item) => {
-        const active = currentPath === item.href;
+        const active = routePath === item.href;
 
         return (
           <a
-            href={item.href}
+            href={pathWithBase(item.href)}
             aria-current={active ? "page" : undefined}
             class:list={[
               "rounded-lg px-4 py-2 text-sm font-medium transition",

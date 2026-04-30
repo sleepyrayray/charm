@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/sleepyrayray/charm/issues"
   },
-  "homepage": "https://github.com/sleepyrayray/charm#readme",
+  "homepage": "https://sleepyrayray.github.io/charm/",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.18.1",
