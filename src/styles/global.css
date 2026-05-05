@@ -13,6 +13,7 @@
   --primary-soft: #e2f5f1;
   --accent-soft: #fff2df;
   --shadow: 0 18px 44px rgba(20, 101, 91, 0.1);
+  --footer-reveal-height: 23rem;
 }
 
 html {
@@ -21,6 +22,8 @@ html {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     linear-gradient(135deg, rgba(226, 245, 241, 0.78), transparent 34%),
     linear-gradient(225deg, rgba(255, 242, 223, 0.72), transparent 28%),
@@ -31,6 +34,17 @@ body {
     "Avenir Next",
     "Segoe UI",
     sans-serif;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(135deg, rgba(226, 245, 241, 0.78), transparent 34%),
+    linear-gradient(225deg, rgba(255, 242, 223, 0.72), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  box-shadow: 0 26px 60px rgba(8, 111, 103, 0.1);
 }
 
 ::selection {
@@ -46,6 +60,51 @@ body {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
+}
+
+.site-header-panel,
+.site-footer-panel {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.site-header-panel {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-footer-panel {
+  border-top: 1px solid var(--line);
+}
+
+.site-footer {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.site-footer-panel {
+  min-height: var(--footer-reveal-height);
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 30%),
+    linear-gradient(135deg, var(--primary-strong), var(--primary));
+  color: white;
+}
+
+.footer-reveal-space {
+  height: var(--footer-reveal-height);
+  flex: 0 0 var(--footer-reveal-height);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --footer-reveal-height: 15rem;
+  }
 }
 
 .section-card {

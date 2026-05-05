@@ -258,3 +258,10 @@ Content improvements to make next:
 2. Tightened the homepage direction toward fewer sections and less on-screen information.
 3. Confirmed simplicity and minimalism should guide the homepage polish pass.
 4. Removed decorative section labels and switched service/audience lists to static grid cards.
+
+### 2026-05-05
+
+1. Changed the header from a floating rounded panel to a full-width top bar.
+2. Changed the footer into a teal full-width reveal panel fixed behind the page content.
+3. Added more bottom spacing before the footer reveal on core pages.
+4. Added an all-caps creator credit linking to Ray Hernaez's portfolio.

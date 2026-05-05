@@ -388,7 +388,15 @@ Show when available:
 
 ## Footer Plan
 
-The footer should stay simple and useful.
+The footer should stay simple and useful while adding a polished finish to the page.
+
+Current behavior:
+
+1. Full-width teal footer panel
+2. Fixed behind the page content
+3. Revealed as the main page scrolls upward near the bottom
+4. White or soft-white text for contrast
+5. Footer navigation links should be text-only click targets, not button-like blocks
 
 ### Footer Content
 
@@ -399,6 +407,7 @@ The footer should stay simple and useful.
 5. contact link
 6. language switch
 7. legal business name if needed
+8. all-caps creator credit with `RAY HERNAEZ` linked to the portfolio site
 
 Possible later additions:
 
