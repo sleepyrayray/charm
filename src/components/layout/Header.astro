@@ -13,6 +13,10 @@ const site = locale === "fr" ? frSite : enSite;
 const navigation = locale === "fr" ? frNavigation : enNavigation;
 const routePath = pathWithoutBase(currentPath);
 const quoteHref = pathWithBase(locale === "fr" ? "/fr/quote" : "/quote");
+const homeHref = pathWithBase(locale === "fr" ? "/fr" : "/");
+const primaryLogo = pathWithBase("/brand/charm-logo-primary.png");
+const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
+const brandLabel = `${site.brand} ${site.subtext}`;
 
 const switchHref = locale === "fr"
   ? pathWithBase(routePath.replace(/^\/fr/, "") || "/")
@@ -23,9 +27,10 @@ const switchHref = locale === "fr"
   <div class="site-header-panel">
     <div class="shell">
       <div class="flex items-center justify-between py-3">
-        <a href={pathWithBase(locale === "fr" ? "/fr" : "/")} class="min-w-0">
-          <div class="text-sm font-semibold text-[var(--primary-strong)]">{site.brand}</div>
-          <div class="truncate text-xs text-[var(--muted)]">{site.subtext}</div>
+        <a href={homeHref} class="brand-link" aria-label={brandLabel}>
+          <img class="brand-logo brand-logo-primary" src={primaryLogo} alt="" width="188" height="61" decoding="async" />
+          <img class="brand-logo-icon" src={iconLogo} alt="" width="48" height="48" decoding="async" />
+          <span class="sr-only">{brandLabel}</span>
         </a>
 
         <nav class="hidden items-center gap-2 md:flex">

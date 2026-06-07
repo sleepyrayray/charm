@@ -399,10 +399,9 @@ The footer should stay simple and useful while adding a polished finish to the p
 Current behavior:
 
 1. Full-width Charm Turquoise footer panel
-2. Fixed behind the page content
-3. Revealed as the main page scrolls upward near the bottom
-4. White or soft-white text for contrast
-5. Footer navigation links should be text-only click targets, not button-like blocks
+2. Normal document-flow footer that appears after the page content
+3. White or soft-white text for contrast
+4. Footer navigation links should be text-only click targets, not button-like blocks
 
 ### Footer Content
 
@@ -490,8 +489,6 @@ How to combine the official brand system with the earlier inspiration references
 
 Before coding:
 
-1. Use Montserrat as the V1 website font.
-2. Confirm whether the desktop header should use the full primary logo or a compact logo treatment.
-3. Confirm whether the icon logo should become the favicon.
-4. Confirm what direct contact details can be shown publicly.
-5. Keep FAQ at the bottom of the About page unless the content grows enough to need a dedicated FAQ page.
+1. Confirm whether the desktop header should use the full primary logo or a compact logo treatment.
+2. Confirm what direct contact details can be shown publicly.
+3. Keep FAQ at the bottom of the About page unless the content grows enough to need a dedicated FAQ page.

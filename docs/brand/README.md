@@ -11,6 +11,7 @@ Committed project assets:
 1. `docs/brand/CharmServicedeNettoyage-BrandDesign.pdf`
 2. `public/brand/charm-logo-primary.png`
 3. `public/brand/charm-logo-icon.png`
+4. `src/assets/fonts/montserrat/`
 
 Local-only font assets:
 
@@ -115,6 +116,7 @@ V1 website font direction:
 1. Use Montserrat for body copy, headings, navigation, buttons, and form UI.
 2. Use medium and bold weights for hierarchy instead of adding extra typefaces.
 3. Keep the CSS font stack ready to swap if Gotham web usage is licensed later.
+4. Self-host Montserrat through `@font-face` in `src/styles/global.css`.
 
 Typography rules:
 
@@ -212,9 +214,9 @@ Recommended order before touching code:
 
 Recommended implementation order:
 
-1. Add brand tokens for colour, typography, shadows, borders, and surfaces.
-2. Add Montserrat and logo usage.
-3. Refresh header and footer.
-4. Refresh homepage visual system.
+1. Add brand tokens for colour, typography, shadows, borders, and surfaces. Done.
+2. Add Montserrat and favicon/icon usage. Done.
+3. Refresh header and footer. Done.
+4. Refresh homepage visual system. Done.
 5. Refresh Services, About, Contact, and Quote pages.
 6. Run mobile, accessibility, and contrast checks.

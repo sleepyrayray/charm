@@ -33,6 +33,11 @@ Already completed:
 17. official primary logo and icon logo saved
 18. Gotham font files copied locally and kept out of Git until webfont licensing is confirmed
 19. Montserrat chosen as the safe V1 website font
+20. Montserrat copied into `src/assets` and self-hosted through `@font-face`
+21. official colour tokens added to the global stylesheet
+22. icon logo wired as the favicon and theme colour set to Charm Turquoise
+23. header and footer refreshed with the official logo assets
+24. homepage visual system refreshed around the official logo, palette, and restrained sparkle accents
 
 ## Phase 1 - Direction Lock
 
@@ -267,7 +272,7 @@ Done when:
 ## Current Priority Order
 
 1. refine the content skeleton with real business details
-2. redesign the visual system around the official brand assets
+2. align Services, About, Contact, and Quote with the official brand system
 3. connect the real quote and contact flows
 4. strengthen SEO and accessibility basics
 5. add fuller French page content

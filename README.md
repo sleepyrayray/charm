@@ -441,6 +441,9 @@ The base Astro project is now initialized. The structure below reflects the curr
 |  |  |  `- site.ts
 |  |  `- fr/
 |  |     `- site.ts
+|  |- assets/
+|  |  `- fonts/
+|  |     `- montserrat/
 |  |- layouts/
 |  |- lib/
 |  |  |- seo.ts
@@ -480,6 +483,9 @@ French page-specific content files will be added as the French copy is written. 
 
 Brand note:
 Gotham font files are copied locally in `private/fonts/gotham/`, but `private/` is ignored by Git. Do not commit or deploy those font files until website embedding rights are confirmed.
+
+Font note:
+Montserrat is self-hosted from `src/assets/fonts/montserrat/` for the V1 website typography.
 
 ## Development Principles
 

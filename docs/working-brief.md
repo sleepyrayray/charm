@@ -293,3 +293,8 @@ Content improvements to make next:
 4. Copied Gotham font files locally in `private/fonts/gotham/` and kept them ignored by Git until webfont licensing is confirmed.
 5. Updated the design direction to use Charm Turquoise `#007887`, Aqua Mist `#78E5DE`, Teal Foam `#38A8AB`, and Cloud White `#F0FFFF`.
 6. Chose Montserrat as the V1 website font while Gotham licensing remains separate.
+7. Copied Montserrat into `src/assets` and wired it through `@font-face`.
+8. Added official brand colour tokens and favicon metadata to the site foundation.
+9. Replaced text-only header and footer branding with the official logo assets.
+10. Changed the footer back to a normal scroll footer instead of a fixed reveal footer.
+11. Refreshed the homepage visual system with the official logo, palette, soft aqua surfaces, and restrained sparkle accents.
