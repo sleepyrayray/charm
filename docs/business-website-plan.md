@@ -196,7 +196,7 @@ The site should feel:
 5. Local
 6. Professional but not corporate
 7. Minimal and sleek
-8. Soft and pastel-leaning rather than loud
+8. Fresh and turquoise-led rather than loud
 
 Avoid:
 
@@ -206,11 +206,14 @@ Avoid:
 4. Complicated animations
 5. Pages that look nice but do not explain the service
 
-Current design note:
+Official brand note:
 
-1. Teal is the temporary main brand color.
-2. The design can stay image-light for now because there is no logo, no photos, and no reviews yet.
-3. The first visual system should rely on type, spacing, clean blocks, and a simple pastel-like palette.
+1. The official CHARM logo and brand deck are now available.
+2. Charm Turquoise `#007887` is the primary colour.
+3. Aqua Mist `#78E5DE`, Teal Foam `#38A8AB`, and Cloud White `#F0FFFF` are the supporting colours.
+4. Gotham is the official brand typeface, but Montserrat is the selected V1 website font.
+5. The site can stay image-light for now because there are still no real photos or reviews yet.
+6. The next visual system should rely on the official logo, Montserrat typography, spacing, clean blocks, and restrained brand accents.
 
 ## Technical Direction
 

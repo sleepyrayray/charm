@@ -10,7 +10,7 @@ Current phase:
 
 1. project scaffold complete
 2. content skeleton in progress
-3. first visual system in progress
+3. official brand refresh planning in progress
 
 Already completed:
 
@@ -29,6 +29,10 @@ Already completed:
 13. dedicated Quote route created separately from Contact
 14. FAQ moved to the About page
 15. build and Astro checks passing locally
+16. official CHARM brand deck received and saved
+17. official primary logo and icon logo saved
+18. Gotham font files copied locally and kept out of Git until webfont licensing is confirmed
+19. Montserrat chosen as the safe V1 website font
 
 ## Phase 1 - Direction Lock
 
@@ -95,23 +99,27 @@ Done when:
 ## Phase 4 - Design System
 
 Goal:
-Build the first visual system for CHARM.
+Replace the temporary visual system with the official CHARM brand direction.
 
 Tasks:
 
-1. Set the temporary pastel-teal palette
-2. Define typography scale
-3. Define spacing system
-4. Create button styles
-5. Create card and section styles
-6. Add soft glass treatment only where helpful
-7. Make sure the interface stays minimal and readable
+1. Replace the temporary teal direction with the official palette
+2. Use Charm Turquoise `#007887` as the main brand colour
+3. Add Aqua Mist, Teal Foam, and Cloud White as supporting tokens
+4. Use Montserrat as the V1 website font
+5. Define the final typography stack and scale
+6. Define spacing, surface, border, and shadow styles
+7. Create button styles using the official palette
+8. Create card and section styles that feel clean, fresh, and minimal
+9. Add soft glass or shine treatment only where helpful
+10. Make sure the interface stays readable and accessible
 
 Done when:
 
 1. the visual language feels consistent
 2. key UI patterns are reusable
-3. the site works well without a logo or photos
+3. the official logo, palette, and Montserrat typography are integrated cleanly
+4. the site works well without photos or reviews
 
 ## Phase 5 - Core Page Build
 
@@ -205,10 +213,10 @@ Tasks:
 1. Add final contact details
 2. Add final service area list
 3. Add final service checklist
-4. Add logo if available
-5. Add photos if available
-6. Add reviews if available
-7. Add any confirmed trust claims
+4. Add photos if available
+5. Add reviews if available
+6. Add any confirmed trust claims
+7. Add final French copy once reviewed
 
 Done when:
 
@@ -259,7 +267,7 @@ Done when:
 ## Current Priority Order
 
 1. refine the content skeleton with real business details
-2. polish the first visual system
+2. redesign the visual system around the official brand assets
 3. connect the real quote and contact flows
 4. strengthen SEO and accessibility basics
 5. add fuller French page content

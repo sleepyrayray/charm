@@ -63,22 +63,36 @@ If "maintenance" means maintaining cleanliness through recurring cleaning, that 
 
 ## Current Design Direction
 
+The official brand system is now available. Use the dedicated brand guide as the source of truth:
+
+[Brand Direction](/Volumes/jon/Jon/business/cleaning/charm/docs/brand/README.md)
+
 The site should feel:
 
-1. minimal
-2. clean
-3. simple
-4. sleek
-5. bright
-6. pastel-like
-7. professional
-8. easy to navigate
+1. clean
+2. simple
+3. sleek
+4. bright
+5. fresh
+6. friendly
+7. trustworthy
+8. professional
+9. easy to navigate
 
-### Current Color Direction
+### Official Color Direction
 
-1. Teal is the temporary main brand color.
-2. Supporting colors should stay soft, bright, and pastel-leaning.
-3. Final colors can evolve after the logo/brand identity is defined.
+1. Charm Turquoise `#007887` is the primary brand color.
+2. Aqua Mist `#78E5DE` should be used for soft highlights.
+3. Teal Foam `#38A8AB` should support borders, secondary accents, and section rhythm.
+4. Cloud White `#F0FFFF` should support light page backgrounds and calm surfaces.
+5. Most page areas should still be white or near-white so the site stays minimal and readable.
+
+### Typography Direction
+
+1. Gotham is the official brand typeface from the design deck.
+2. Gotham files are copied locally in `private/fonts/gotham/`, but that folder is ignored by Git.
+3. Do not commit or deploy Gotham font files until web embedding rights are confirmed.
+4. Use Montserrat for the V1 website because it is safe, free, web-friendly, and close to Gotham's clean geometric feel.
 
 ### Visual Notes
 
@@ -90,6 +104,8 @@ The site should feel:
 6. Avoid small decorative pill labels above content sections.
 7. Use static grid cards for service items and audience items when it improves scanability.
 8. Keep those item cards clearly informational, with no hover treatment that makes them feel clickable.
+9. Use the official logo and star/sparkle motif sparingly so it feels branded, not busy.
+10. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
 
 ## Inspiration References
 
@@ -150,7 +166,7 @@ Likely homepage flow:
 
 Likely design translation:
 
-1. soft pastel teal accents
+1. official Charm Turquoise with soft aqua and cloud-white support
 2. lots of whitespace
 3. clean cards or blocks
 4. minimal but polished surfaces
@@ -165,19 +181,21 @@ Likely design translation:
 2. General service category
 3. General target audience
 4. General design preference
+5. Official logo files
+6. Official brand deck
+7. Local Gotham font files for reference
 
 ### Missing
 
-1. Logo
-2. Final brand system
-3. Photos
-4. Reviews or testimonials
-5. Exact contact details for public use
-6. Final service-area list
-7. Final service checklist
+1. Photos
+2. Reviews or testimonials
+3. Exact contact details for public use
+4. Final service-area list
+5. Final service checklist
+6. Confirmation that Gotham can be used as a deployed webfont if the site ever switches away from Montserrat
 
 Build note:
-The first version should not depend on photos, reviews, or a finished logo.
+The next version can use the official logo and colour palette, but should not depend on photos, reviews, or unconfirmed trust claims.
 
 ## Site Structure Guidance
 
@@ -236,7 +254,8 @@ Content improvements to make next:
 6. Whether the business is insured
 7. Whether there are any trust claims that can be published
 8. Final French wording for brand subtext
-9. Final logo direction
+9. Whether Gotham webfont use is licensed for the live website if the site ever switches away from Montserrat
+10. Whether brand mockup images from the deck are inspiration only or can be used publicly
 
 ## Decision Log
 
@@ -265,3 +284,12 @@ Content improvements to make next:
 2. Changed the footer into a teal full-width reveal panel fixed behind the page content.
 3. Added more bottom spacing before the footer reveal on core pages.
 4. Added an all-caps creator credit linking to Ray Hernaez's portfolio.
+
+### 2026-06-06
+
+1. Received the official CHARM brand deck and logo files.
+2. Saved the brand deck in `docs/brand/`.
+3. Saved the primary logo and icon logo in `public/brand/`.
+4. Copied Gotham font files locally in `private/fonts/gotham/` and kept them ignored by Git until webfont licensing is confirmed.
+5. Updated the design direction to use Charm Turquoise `#007887`, Aqua Mist `#78E5DE`, Teal Foam `#38A8AB`, and Cloud White `#F0FFFF`.
+6. Chose Montserrat as the V1 website font while Gotham licensing remains separate.

@@ -264,23 +264,27 @@ Examples of claims to confirm before using:
 The visual style should be:
 
 1. Minimal, clean, and calm rather than flashy.
-2. Bright, readable, and slightly pastel in tone.
-3. Sleek and polished, with subtle soft-surface styling instead of heavy effects.
+2. Bright, readable, and fresh, with white and soft aqua surfaces.
+3. Sleek and polished, with subtle shine or glass only where it improves the experience.
 4. Friendly and local, not corporate.
-5. Built around clarity and trust, not decoration.
+5. Built around clarity, trust, and the official CHARM brand system, not decoration.
 
-Current working color direction:
+Official brand direction:
 
-1. Teal is the temporary main brand color.
-2. Pastel-like supporting tones are preferred over harsh or high-saturation accents.
-3. The final palette can evolve later once the logo and brand identity are confirmed.
+1. Primary colour: Charm Turquoise `#007887`.
+2. Supporting colours: Aqua Mist `#78E5DE`, Teal Foam `#38A8AB`, and Cloud White `#F0FFFF`.
+3. The official logo should replace text-only brand placeholders once the redesign starts.
+4. The logo star can inspire small sparkle or shine details, but the site should stay restrained.
+5. Typography should use Montserrat for V1 as a safe web-friendly Gotham alternative.
 
 Preferred assets:
 
-1. No photos are required for the first design pass.
-2. Real photos of the team or real work can be added later when available.
-3. Real service-area references.
-4. Minimal icons used only when they improve scannability.
+1. Official primary logo and icon files are available in `public/brand/`.
+2. The official brand deck is available in `docs/brand/`.
+3. No photos are required for the first design pass.
+4. Real photos of the team or real work can be added later when available.
+5. Real service-area references should be added once confirmed.
+6. Minimal icons used only when they improve scannability.
 
 ## Technical Goals
 
@@ -394,12 +398,12 @@ Possible post-launch improvements:
 
 Current confirmed gaps:
 
-1. No logo yet
-2. No photos yet
-3. No reviews or testimonials yet
+1. No photos yet
+2. No reviews or testimonials yet
+3. Gotham webfont usage can be revisited later if a valid web license is confirmed
 
 Build implication:
-The first version should rely on typography, spacing, color, structure, and clear service content rather than image-heavy sections.
+The next visual pass can use the official logo, palette, and Montserrat, but should still rely on typography, spacing, color, structure, and clear service content rather than image-heavy sections.
 
 ## Roadmap
 
@@ -415,6 +419,9 @@ The base Astro project is now initialized. The structure below reflects the curr
 .
 |- README.md
 |- public/
+|  |- brand/
+|  |  |- charm-logo-primary.png
+|  |  `- charm-logo-icon.png
 |  |- icons/
 |  |- images/
 |  `- og/
@@ -453,6 +460,9 @@ The base Astro project is now initialized. The structure below reflects the curr
 |  |- styles/
 |  `- env.d.ts
 |- docs/
+|  |- brand/
+|  |  |- README.md
+|  |  `- CharmServicedeNettoyage-BrandDesign.pdf
 |  |- business-website-plan.md
 |  |- competitor-notes.md
 |  |- roadmap.md
@@ -467,6 +477,9 @@ The base Astro project is now initialized. The structure below reflects the curr
 
 Current note:
 French page-specific content files will be added as the French copy is written. Right now the route structure exists, and shared French site copy lives in `src/data/fr/site.ts`.
+
+Brand note:
+Gotham font files are copied locally in `private/fonts/gotham/`, but `private/` is ignored by Git. Do not commit or deploy those font files until website embedding rights are confirmed.
 
 ## Development Principles
 

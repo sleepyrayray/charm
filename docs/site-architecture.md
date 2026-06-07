@@ -4,6 +4,10 @@ This document defines the current website structure before development starts.
 
 It is a planning doc, not a final design spec.
 
+Brand source of truth:
+
+[Brand Direction](/Volumes/jon/Jon/business/cleaning/charm/docs/brand/README.md)
+
 ## Purpose
 
 The website should feel:
@@ -12,7 +16,7 @@ The website should feel:
 2. minimal
 3. easy to scan
 4. professional
-5. soft and polished
+5. fresh and polished
 
 The structure should feel familiar to property managers and condo decision-makers, while staying shorter and simpler than most competitor sites.
 
@@ -22,8 +26,8 @@ The structure should feel familiar to property managers and condo decision-maker
 
 Left:
 
-1. `CHARM`
-2. small subtext: `Service de Nettoyage` or `Cleaning Services`
+1. primary CHARM logo
+2. accessible text label for `CHARM`
 
 Center or right:
 
@@ -41,8 +45,8 @@ Far right:
 
 Top row:
 
-1. `CHARM`
-2. small subtext under or beside brand if space allows
+1. CHARM logo or compact icon logo
+2. accessible text label for `CHARM`
 3. hamburger menu
 
 Mobile menu items:
@@ -57,9 +61,10 @@ Mobile menu items:
 ### Navbar Behavior
 
 1. Sticky on scroll
-2. Soft glass or translucent surface is acceptable here
+2. Soft glass or translucent surface is acceptable here if contrast stays strong
 3. Keep it compact
 4. The quote CTA should stay easy to find at all times
+5. Use Charm Turquoise `#007887` or a high-contrast neutral treatment for the CTA
 
 ## Homepage Wireframe
 
@@ -78,8 +83,8 @@ Explain who CHARM is, what CHARM does, where CHARM works, and what action to tak
 
 Content:
 
-1. Brand: `CHARM`
-2. Subtext: `Cleaning Services` / `Service de Nettoyage`
+1. Official CHARM logo
+2. Real text brand and service messaging for SEO
 3. Headline
 4. Short supporting paragraph
 5. Primary CTA: `Request a Quote`
@@ -95,9 +100,10 @@ Suggested message direction:
 Layout note:
 
 1. Left-aligned copy
-2. Optional compact service panel if it adds clarity
+2. Optional compact brand/service panel if it adds clarity
 3. No photo required
 4. Keep the hero direct and calm
+5. Use the logo star/sparkle motif sparingly as an accent, not as a repeated decoration
 
 ### Section 2: What We Clean
 
@@ -392,7 +398,7 @@ The footer should stay simple and useful while adding a polished finish to the p
 
 Current behavior:
 
-1. Full-width teal footer panel
+1. Full-width Charm Turquoise footer panel
 2. Fixed behind the page content
 3. Revealed as the main page scrolls upward near the bottom
 4. White or soft-white text for contrast
@@ -400,8 +406,8 @@ Current behavior:
 
 ### Footer Content
 
-1. `CHARM`
-2. supporting subtext
+1. official CHARM logo or icon
+2. supporting subtext where readable
 3. short one-line service summary
 4. navigation links
 5. contact link
@@ -454,12 +460,12 @@ Possible later additions:
 
 ## Design Translation Notes
 
-How to combine the two inspiration references:
+How to combine the official brand system with the earlier inspiration references:
 
 ### From Therese
 
-1. soft pastel atmosphere
-2. airy spacing
+1. airy spacing
+2. soft visual rhythm
 3. clean visual calm
 
 ### From Capital One
@@ -471,17 +477,21 @@ How to combine the two inspiration references:
 
 ### For CHARM
 
-1. soft teal highlights
-2. minimal surface design
-3. short page sections
-4. practical content order
-5. polished without looking corporate or intimidating
+1. Charm Turquoise `#007887` as the confident primary colour
+2. Aqua Mist and Cloud White for bright, fresh sections
+3. Teal Foam for secondary accents and borders
+4. minimal surface design with subtle shine only where useful
+5. short page sections and practical content order
+6. official logo usage instead of text-only placeholders
+7. polished without looking corporate or intimidating
+8. no heavy stock-photo dependency
 
 ## Recommended Next Step
 
 Before coding:
 
-1. confirm this site map
-2. confirm the homepage section order
-3. confirm whether FAQ should live on the homepage or contact page only
-4. confirm what direct contact details can be shown publicly
+1. Use Montserrat as the V1 website font.
+2. Confirm whether the desktop header should use the full primary logo or a compact logo treatment.
+3. Confirm whether the icon logo should become the favicon.
+4. Confirm what direct contact details can be shown publicly.
+5. Keep FAQ at the bottom of the About page unless the content grows enough to need a dedicated FAQ page.
