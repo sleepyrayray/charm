@@ -1,104 +1,112 @@
 ---
+import QuoteRequestForm from "../components/forms/QuoteRequestForm.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import { aboutPage } from "../data/en/about";
 import { home } from "../data/en/home";
 import { site } from "../data/en/site";
 import { pathWithBase } from "../lib/paths";
 
-const primaryLogo = pathWithBase("/brand/charm-logo-primary.png");
 const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
 ---
 
 <MainLayout title="CHARM | Cleaning Services" description={site.description}>
-  <section class="home-hero shell pt-12 sm:pt-16">
-    <div class="grid gap-10 lg:min-h-[560px] lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div class="home-hero-copy max-w-3xl space-y-6">
-        <h1 class="home-hero-title text-4xl font-semibold sm:text-5xl lg:text-6xl">{home.title}</h1>
-        <p class="section-copy">{home.intro}</p>
-        <div class="flex flex-wrap gap-3">
+  <section class="home-hero">
+    <div class="home-hero-overlay">
+      <div class="home-hero-copy shell">
+        <h1 class="home-hero-title">{home.title}</h1>
+        <p class="home-hero-text">{home.intro}</p>
+        <div class="home-hero-actions">
           <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
-          <a class="button-secondary" href={pathWithBase("/services")}>View Services</a>
         </div>
-      </div>
-
-      <div class="hero-panel hero-brand-panel">
-        <div class="hero-logo-card" aria-hidden="true">
-          <img src={primaryLogo} alt="" width="230" height="75" loading="eager" decoding="async" />
-        </div>
-        <img class="hero-spark-mark" src={iconLogo} alt="" width="96" height="96" loading="eager" decoding="async" />
-
-        <div>
-          <h2 class="text-xl font-semibold text-[var(--ink)]">Built for condo common areas</h2>
-          <p class="mt-3 text-sm leading-7 text-[var(--muted)]">
-            Recurring cleaning for the shared spaces residents and managers see every day.
-          </p>
-        </div>
-        <ul class="detail-list mt-6">
-          {home.heroNotes.map((note) => (
-            <li>{note}</li>
-          ))}
-        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section-band home-band mt-6">
+  <section class="home-section home-specialties">
     <div class="shell">
-      <h2 class="section-title">Shared spaces, kept presentable.</h2>
-      <p class="section-copy mt-4">
-        The everyday areas that need steady care, from entrances to shared amenities.
-      </p>
+      <div class="home-card-grid home-card-grid-3">
+        {home.specialties.map((specialty) => (
+          <article class="home-solid-card">
+            <h3>{specialty.title}</h3>
+            <p>{specialty.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <div class="info-grid mt-8">
+  <section class="home-section">
+    <div class="shell">
+      <div class="home-section-heading home-section-heading-center">
+        <h2>Services offered</h2>
+      </div>
+
+      <ul class="home-check-list">
         {home.serviceAreas.map((area) => (
-          <article class="info-card home-info-card">
-            <h3>{area.title}</h3>
-            <p>{area.description}</p>
-          </article>
+          <li>{area.title}</li>
         ))}
+      </ul>
+
+      <div class="home-section-link home-section-link-center">
+        <a class="button-secondary" href={pathWithBase("/services")}>See service details</a>
       </div>
     </div>
   </section>
 
-  <section class="shell mt-16">
-    <h2 class="section-title">For the people responsible for the building.</h2>
-    <p class="section-copy mt-4">
-      CHARM is meant for condo decision-makers who want common areas to stay clean, presentable, and cared for.
-    </p>
-
-    <div class="info-grid mt-8">
-      {home.audiences.map((audience) => (
-        <article class="info-card home-info-card">
-          <h3>{audience.title}</h3>
-          <p>{audience.description}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="section-band home-band mt-16">
+  <section class="home-section home-work-section">
     <div class="shell">
-      <div class="max-w-2xl">
-        <h2 class="section-title">Why choose CHARM?</h2>
+      <div class="home-section-heading home-section-heading-center">
+        <h2>Our work</h2>
       </div>
 
-      <div class="mt-8 grid gap-4 lg:grid-cols-3">
-        {home.reasons.map((reason) => (
-          <article class="quiet-card home-reason-card">
-            <h3 class="text-lg font-semibold text-[var(--ink)]">{reason.title}</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--muted)]">{reason.body}</p>
+      <div class="home-work-grid">
+        {home.workPlaceholders.map((item) => (
+          <article class="home-photo-placeholder">
+            <img src={iconLogo} alt="" width="54" height="54" loading="lazy" decoding="async" />
+            <div>
+              <p class="home-placeholder-kicker">Image placeholder</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
           </article>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="shell mt-16 pb-20 sm:pb-24">
-    <div class="cta-strip home-cta">
-      <div>
-        <h2 class="section-title">{home.finalCtaTitle}</h2>
-        <p class="section-copy mt-3">{home.finalCtaBody}</p>
+  <section class="home-quote-band">
+    <div class="shell">
+      <div class="home-quote-panel">
+        <div>
+          <h2>Get an estimate</h2>
+          <p>Send the building details, shared spaces, and cleaning frequency you have in mind.</p>
+        </div>
+        <QuoteRequestForm
+          noteId="home-quote-form-note"
+          note="This homepage quote form will be connected once form delivery is set up."
+        />
       </div>
-      <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
+    </div>
+  </section>
+
+  <section class="home-section pb-20 sm:pb-24">
+    <div class="shell">
+      <div class="home-section-heading home-section-heading-center">
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="home-faq-list">
+        {aboutPage.faq.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="home-section-link home-section-link-center">
+        <a class="button-secondary" href={pathWithBase("/about")}>Read more about CHARM</a>
+      </div>
     </div>
   </section>
 </MainLayout>

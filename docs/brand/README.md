@@ -158,7 +158,7 @@ Borrow:
 4. services-offered section
 5. cleaned-work/photo section
 6. quote section near the bottom
-7. common questions near the end
+7. collapsed FAQ/common-questions rhythm near the bottom
 
 Do not include in V1:
 
@@ -194,7 +194,7 @@ Do not include in V1:
 
 1. Use the brand story from the deck only where it matches confirmed business facts.
 2. Keep the tone human and local.
-3. Put FAQ at the bottom as currently planned.
+3. Keep FAQ available on About; it may also appear on the homepage while the FAQ set is small.
 
 ### Contact And Quote
 

@@ -27,7 +27,7 @@ Already completed:
 11. base layouts, header, footer, and page shells created
 12. initial placeholder content added for Home, Services, About, and Contact
 13. dedicated Quote route created separately from Contact
-14. FAQ moved to the About page
+14. FAQ added to the About page
 15. build and Astro checks passing locally
 16. official CHARM brand deck received and saved
 17. official primary logo and icon logo saved
@@ -41,6 +41,8 @@ Already completed:
 25. Services page refreshed with the official brand system and clearer condo common-area service scope
 26. Davis Janitorial selected as a structure reference for the next homepage redesign
 27. client login excluded from V1 unless the business adopts a real portal later
+28. homepage Davis-inspired redesign started with solid sections and cleaned-area placeholders
+29. homepage structure adjusted to use a centered image-style hero, three-column checklist services, embedded quote form, FAQ accordion, and dark footer with the alt logo
 
 ## Phase 1 - Direction Lock
 
@@ -54,7 +56,7 @@ Tasks:
 3. Confirm the page list for V1
 4. Confirm brand usage for `CHARM`
 5. Confirm what contact details can be public
-6. Confirm that FAQ belongs at the bottom of the About page
+6. Confirm that FAQ can appear on the homepage and at the bottom of the About page while the content set is small
 7. Confirm that Contact and Request a Quote are separate flows
 8. Confirm the Davis-inspired homepage structure for CHARM
 9. Confirm that image placeholders are acceptable until real cleaned-area photos are added
@@ -148,7 +150,7 @@ Tasks:
 5. Build the quote request page
 6. Build the navbar
 7. Build the footer
-8. Build the FAQ block on About
+8. Build FAQ blocks for the homepage and About
 9. Build the quote CTA blocks
 10. Add placeholder spaces for cleaned-area photos
 
@@ -281,13 +283,12 @@ Done when:
 
 ## Current Priority Order
 
-1. redesign the homepage around the Davis-inspired structure using CHARM branding
-2. remove the glassy-effect styling from active page sections
-3. add placeholder image areas for future cleaned-space photos
-4. align About, Contact, and Quote with the new structure
-5. connect the real quote and contact flows
-6. strengthen SEO and accessibility basics
-7. add fuller French page content
+1. review the Davis-inspired homepage layout with real screenshots
+2. align Services, About, Contact, and Quote with the new structure
+3. replace cleaned-area placeholders with real photos when available
+4. connect the real quote and contact flows
+5. strengthen SEO and accessibility basics
+6. add fuller French page content
 
 ## Notes
 

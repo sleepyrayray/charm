@@ -11,7 +11,7 @@ const { locale = "en" } = Astro.props;
 const site = locale === "fr" ? frSite : enSite;
 const navigation = locale === "fr" ? frNavigation : enNavigation;
 const homeHref = pathWithBase(locale === "fr" ? "/fr" : "/");
-const primaryLogo = pathWithBase("/brand/charm-logo-primary.png");
+const primaryLogo = pathWithBase("/brand/charm-logo-primary-alt.png");
 const brandLabel = `${site.brand} ${site.subtext}`;
 const summary = locale === "fr"
   ? "Entretien menager des aires communes pour immeubles en copropriete."

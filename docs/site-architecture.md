@@ -113,7 +113,7 @@ Current direction:
 Use a Davis-inspired service-business structure while keeping CHARM's own brand, shorter copy, and condo common-area focus.
 
 Presentation rule:
-Avoid decorative pill labels above homepage sections. Service items and audience items can use static grid cards, but they should read as informational blocks rather than clickable controls.
+Avoid decorative pill labels above homepage sections. Cards should be used for clear category blocks only; simple lists should stay visually simple unless they need stronger separation.
 
 Visual rule:
 Remove the glassy-effect direction. Use solid white, Cloud White, and soft aqua sections with clean borders, simple cards, and image placeholders.
@@ -125,14 +125,13 @@ Explain who CHARM is, what CHARM does, where CHARM works, and what action to tak
 
 Content:
 
-1. Official CHARM logo
-2. Real text brand and service messaging for SEO
-3. Headline
-4. Short supporting paragraph
-5. Primary CTA: `Request a Quote`
-6. Secondary CTA: `View Services` or `Ask a Question`
-7. Optional phone/email line once public contact details are confirmed
-8. Large image placeholder for a cleaned condo common area until real photos are ready
+1. Real text brand and service messaging for SEO
+2. Headline
+3. Short supporting paragraph
+4. Primary CTA: `Request a Quote`
+5. Secondary CTA: keep out of the hero for now so the first action stays focused on quote requests.
+6. Optional phone/email line once public contact details are confirmed
+7. Full-width image-style background placeholder until real photos are ready
 
 Suggested message direction:
 
@@ -142,9 +141,9 @@ Suggested message direction:
 
 Layout note:
 
-1. Left-aligned copy
-2. Right-side or full-width image area inspired by a service-business hero
-3. Use a branded placeholder if no photo exists yet
+1. Center the main hero copy over the image-style background.
+2. Keep the image area full-width like a service-business landing page.
+3. Use a branded dark teal placeholder if no photo exists yet.
 4. Keep the hero direct and calm
 5. Use the logo star/sparkle motif sparingly as an accent, not as a repeated decoration
 
@@ -160,7 +159,7 @@ Suggested cards:
 3. Clear communication
 
 Layout note:
-This section replaces generic "why us" claims with practical specialties that are already true.
+This section replaces generic "why us" claims with practical specialties that are already true. Use three cards with no heading for now so the section feels light after the hero.
 
 ### Section 3: Services Offered
 
@@ -168,9 +167,9 @@ Goal:
 Let visitors confirm the service fit quickly.
 
 Format:
-Grid of simple cards
+Centered heading and checklist
 
-Suggested cards:
+Suggested checklist items:
 
 1. Lobbies
 2. Hallways
@@ -181,9 +180,10 @@ Suggested cards:
 
 Layout note:
 
-1. Use a simple grid of static information cards
-2. Keep the copy very short
-3. Avoid hover states that make the cards feel clickable
+1. Use checklist rows instead of service cards.
+2. Keep labels short and remove extra descriptions from this section.
+3. Use three columns and two rows on desktop when the six service items are shown.
+4. Keep the `See service details` button centered under the checklist.
 
 ### Section 4: Our Work / Cleaned Areas
 
@@ -206,36 +206,25 @@ Placeholder rules:
 2. Clearly treat them as layout placeholders during development.
 3. Do not imply before/after proof until real photos are available.
 4. Add meaningful alt text once real images are used.
+5. Center the section heading and remove the extra paragraph under it.
 
-### Section 5: Who We Help
-
-Goal:
-Make the target audience obvious.
-
-Suggested content blocks:
-
-1. condo boards and syndicates
-2. property managers
-3. building administrators
-
-Layout note:
-This section can be compact or merged with Specialties if the homepage feels too long.
-
-### Section 6: Quote CTA
+### Section 5: Quote Request Form
 
 Goal:
-Catch visitors who are ready to act without adding another dense section.
+Let visitors send building details directly from the homepage.
 
 Content:
 
-1. short CTA headline
-2. 1-sentence reminder of service fit
-3. quote request button
+1. `Get an estimate` heading
+2. short reminder of the details needed
+3. embedded quote request form
+4. clear note until form delivery is connected
+5. centered form action button
 
-### Section 7: Common Questions Preview
+### Section 6: FAQ
 
 Goal:
-Borrow the Davis-style end-of-page FAQ rhythm without making the homepage feel heavy.
+Borrow the Davis-style end-of-page FAQ rhythm while answering practical questions.
 
 Suggested questions:
 
@@ -244,7 +233,7 @@ Suggested questions:
 3. How do quote requests work?
 
 Layout note:
-Keep the full FAQ at the bottom of the About page. The homepage can show a short preview only.
+Show the full current FAQ on the homepage and keep it mirrored on the About page for now. Use a collapsed accordion, keep the question list narrower than the main content width, and center the `Read more about CHARM` link below it.
 
 ## Supporting Content Moved Off The Homepage
 
@@ -279,7 +268,7 @@ Suggested questions:
 5. Can we contact you in English or French?
 
 Note:
-The full FAQ belongs at the bottom of the About page. A compact homepage FAQ preview is acceptable in the Davis-inspired structure.
+The full FAQ can appear on the homepage and About page while the content set is still small.
 
 ## Homepage Wireframe Summary
 
@@ -289,9 +278,8 @@ Hero
 Specialties
 Services Offered
 Our Work / Image Placeholders
-Who We Help
-Quote CTA
-Common Questions Preview
+Quote Request Form
+FAQ
 Footer
 ```
 
@@ -477,6 +465,7 @@ Current behavior:
 2. Normal document-flow footer that appears after the page content
 3. White or soft-white text for contrast
 4. Footer navigation links should be text-only click targets, not button-like blocks
+5. Use `charm-logo-primary-alt.png` on the dark footer background
 
 ### Footer Content
 

@@ -191,10 +191,9 @@ Likely homepage flow:
 3. specialties
 4. services offered
 5. our work / cleaned-area image placeholders
-6. who CHARM helps
-7. quote request section
-8. common questions preview
-9. footer
+6. embedded quote request form
+7. FAQ accordion
+8. footer
 
 Likely design translation:
 
@@ -253,15 +252,14 @@ Likely supporting sections:
 2. areas we clean
 3. specialties
 4. work/photo placeholders
-5. who we work with
-6. quote CTA
-7. common questions preview
+5. embedded quote request form
+6. FAQ accordion
 
 Homepage content rule:
-The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Detailed process explanations, long FAQs, service checklists, testimonials, and trust credentials should move to supporting pages or wait until real content is available.
+The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Keep the hero focused on one quote CTA, use a simple three-column checklist for services on desktop, show the quote request form directly, and keep the FAQ collapsed as an accordion so visitors are not overwhelmed.
 
 Page-role rule:
-Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. The full FAQ lives at the bottom of the About page and should include the quote process. A short homepage FAQ preview is acceptable.
+Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
 
 Feature rule:
 Do not add client login, online accounts, or a customer portal in V1.
@@ -279,7 +277,7 @@ Content improvements to make next:
 1. Replace internal planning language with visitor-facing business copy.
 2. Make the hero headline more direct and service-specific.
 3. Reduce homepage sections so visitors are not overwhelmed.
-4. Keep FAQ content small at the bottom of About until there are real customer questions.
+4. Keep FAQ content small until there are real customer questions.
 5. Avoid unconfirmed claims such as insurance, eco-friendly products, years of experience, response time, or guarantees.
 
 ## Open Questions
@@ -345,3 +343,5 @@ Content improvements to make next:
 2. Confirmed client login is not needed for V1.
 3. Confirmed cleaned-area image placeholders should be added until real photos are shared.
 4. Removed the glassy-effect direction from the active design plan.
+5. Started the homepage redesign with a Davis-inspired flow, solid sections, direct transparent-logo usage, and cleaned-area placeholders.
+6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, embedded quote form, full FAQ, and dark teal footer using the light logo alternative.

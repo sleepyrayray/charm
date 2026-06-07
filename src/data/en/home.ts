@@ -2,10 +2,19 @@ export const home = {
   title: "Common-area cleaning for condo buildings.",
   intro:
     "CHARM helps condo buildings in Saint-Laurent and nearby Montreal keep shared spaces clean, presentable, and easy to manage.",
-  heroNotes: [
-    "Recurring cleaning",
-    "Shared spaces only",
-    "Simple quote requests",
+  specialties: [
+    {
+      title: "Condo common areas",
+      description: "Focused on the spaces residents, visitors, and managers use every day.",
+    },
+    {
+      title: "Recurring upkeep",
+      description: "Built for regular cleaning schedules instead of one-off residential jobs.",
+    },
+    {
+      title: "Clear scope",
+      description: "Cleaning and cleanliness upkeep only, with no repairs or technical maintenance.",
+    },
   ],
   serviceAreas: [
     {
@@ -33,35 +42,22 @@ export const home = {
       description: "Shared amenities where clean surfaces help the space feel cared for.",
     },
   ],
-  audiences: [
+  workPlaceholders: [
     {
-      title: "Condo boards and syndicates",
-      description: "For decision-makers managing cleanliness across shared building areas.",
+      title: "Lobby areas",
+      description: "Photo placeholder for a cleaned entrance or lobby.",
     },
     {
-      title: "Property managers",
-      description: "For managers co-ordinating vendors and day-to-day building needs.",
+      title: "Hallways",
+      description: "Photo placeholder for shared corridors and walking paths.",
     },
     {
-      title: "Building administrators",
-      description: "For administrators who need simple communication and practical follow-up.",
-    },
-  ],
-  reasons: [
-    {
-      title: "Focused on shared spaces",
-      body: "Service is centered on condo common areas, not private home cleaning or in-unit cleaning.",
+      title: "Shared washrooms",
+      description: "Photo placeholder for common washrooms or support areas.",
     },
     {
-      title: "Recurring cleanliness upkeep",
-      body: "The goal is to keep everyday areas clean and presentable through regular service.",
-    },
-    {
-      title: "Simple communication",
-      body: "Tell us about the building, the spaces involved, and the cleaning frequency you have in mind.",
+      title: "Amenity spaces",
+      description: "Photo placeholder for gyms, recreation rooms, or pool-side common areas.",
     },
   ],
-  finalCtaTitle: "Ready to talk about your building?",
-  finalCtaBody:
-    "Send a few details about the shared spaces you need cleaned, and CHARM can follow up with the next step.",
 };
