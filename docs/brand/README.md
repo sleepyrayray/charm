@@ -40,6 +40,7 @@ The brand should not feel:
 4. cluttered
 5. luxury for the sake of luxury
 6. dependent on stock photos
+7. glassy or glossy as the main visual style
 
 ## Logo Usage
 
@@ -128,17 +129,43 @@ Typography rules:
 
 ## Visual System Direction
 
-The redesign should move away from the temporary pastel startup look and toward the official brand system:
+The redesign should move away from the temporary pastel/glassy startup look and toward a cleaner service-business structure inspired by Davis Janitorial, while keeping the official CHARM brand system:
 
 1. crisp white and Cloud White page surfaces
 2. deeper Charm Turquoise for strong brand moments
 3. soft Aqua Mist and Teal Foam accents
 4. rounded but cleaner containers
-5. subtle shine or glass only in select places
-6. light water/foam-inspired gradients when helpful
-7. small sparkle details inspired by the logo star
+5. solid sections and cards instead of glassy effects
+6. light water/foam-inspired colour blocks only when helpful
+7. small sparkle details inspired by the logo star, used sparingly
+8. placeholder image areas for future cleaned-space photos
 
 The site should stay simple. Do not add many decorative elements just because the brand has a sparkle motif.
+
+## Structural Reference
+
+Current structure inspiration:
+
+[Davis Janitorial](https://davisjanitorial.com/)
+
+Use this as a layout and content-flow reference only. Do not copy Davis Janitorial's brand, wording, colours, images, reviews, or customer-portal features.
+
+Borrow:
+
+1. service-business homepage rhythm
+2. strong quote CTA
+3. specialties section
+4. services-offered section
+5. cleaned-work/photo section
+6. quote section near the bottom
+7. common questions near the end
+
+Do not include in V1:
+
+1. client login
+2. customer portal
+3. online account features
+4. unsupported trust claims
 
 ## Page-Level Design Notes
 
@@ -151,10 +178,11 @@ The site should stay simple. Do not add many decorative elements just because th
 
 ### Homepage
 
-1. Keep the current short homepage flow.
+1. Shift to a Davis-inspired service-site flow.
 2. Use the logo and official palette to create a stronger first impression.
-3. Replace generic decorative shapes with subtle brand-inspired shine, water, or sparkle accents.
+3. Add placeholder image spaces for cleaned areas until real photos are ready.
 4. Keep content selective so the page does not feel intimidating.
+5. Avoid glassy-effect cards and translucent panels.
 
 ### Services
 
@@ -211,6 +239,7 @@ Recommended order before touching code:
 2. Decide whether the desktop header should show the full primary logo or a compact logo treatment.
 3. Confirm whether the icon should be used as the favicon.
 4. Confirm whether brand mockup photos are inspiration only or can be used publicly.
+5. Confirm which cleaned-area photos can be added when the user shares them.
 
 Recommended implementation order:
 
@@ -218,5 +247,8 @@ Recommended implementation order:
 2. Add Montserrat and favicon/icon usage. Done.
 3. Refresh header and footer. Done.
 4. Refresh homepage visual system. Done.
-5. Refresh Services, About, Contact, and Quote pages.
-6. Run mobile, accessibility, and contrast checks.
+5. Refresh Services page. Done.
+6. Pivot homepage to Davis-inspired structure with CHARM branding and image placeholders.
+7. Remove glassy-effect styling from the active design system.
+8. Refresh About, Contact, and Quote pages.
+9. Run mobile, accessibility, and contrast checks.

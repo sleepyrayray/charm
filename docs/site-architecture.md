@@ -13,12 +13,50 @@ Brand source of truth:
 The website should feel:
 
 1. clean
-2. minimal
+2. structured
 3. easy to scan
 4. professional
 5. fresh and polished
+6. practical
 
 The structure should feel familiar to property managers and condo decision-makers, while staying shorter and simpler than most competitor sites.
+
+## Current Design Reference Shift
+
+The current structural reference is:
+
+[Davis Janitorial](https://davisjanitorial.com/)
+
+This is a structure reference only. The CHARM site should not copy Davis Janitorial's wording, branding, colours, imagery, or business claims.
+
+What to borrow:
+
+1. service-business homepage rhythm
+2. clear top navigation with a strong quote CTA
+3. hero section that explains the service quickly
+4. short specialties section
+5. practical services-offered section
+6. work/photo section showing cleaned spaces
+7. strong quote request section near the bottom
+8. common questions near the end of the page
+9. simple footer with direct navigation and contact paths
+
+What not to borrow for V1:
+
+1. client login
+2. external customer portal
+3. online account features
+4. claims, reviews, or trust badges that are not confirmed
+5. residential-cleaning positioning
+6. image-heavy layouts that require final photos before the page works
+
+CHARM translation:
+
+1. Use the official CHARM logo and teal/turquoise palette.
+2. Keep the business focus on condo-building common-area cleaning.
+3. Use placeholder image spaces until real cleaned-area photos are added.
+4. Use solid, clean sections instead of glassy surfaces.
+5. Keep the site calm and readable, not overly glossy.
 
 ## Core Navigation
 
@@ -61,20 +99,24 @@ Mobile menu items:
 ### Navbar Behavior
 
 1. Sticky on scroll
-2. Soft glass or translucent surface is acceptable here if contrast stays strong
+2. Use a solid or near-solid white surface for clarity
 3. Keep it compact
 4. The quote CTA should stay easy to find at all times
 5. Use Charm Turquoise `#007887` or a high-contrast neutral treatment for the CTA
+6. Do not add a client login link unless the business later adopts a real client portal
 
 ## Homepage Wireframe
 
-The homepage should be short, clear, and conversion-focused.
+The homepage should be clear, structured, and conversion-focused.
 
 Current direction:
-Keep the homepage minimal. It should introduce the service, show the fit, build basic trust, and point to the quote path without overwhelming visitors.
+Use a Davis-inspired service-business structure while keeping CHARM's own brand, shorter copy, and condo common-area focus.
 
 Presentation rule:
 Avoid decorative pill labels above homepage sections. Service items and audience items can use static grid cards, but they should read as informational blocks rather than clickable controls.
+
+Visual rule:
+Remove the glassy-effect direction. Use solid white, Cloud White, and soft aqua sections with clean borders, simple cards, and image placeholders.
 
 ### Section 1: Hero
 
@@ -88,8 +130,9 @@ Content:
 3. Headline
 4. Short supporting paragraph
 5. Primary CTA: `Request a Quote`
-6. Secondary CTA: `View Services`
-7. Short service-area note
+6. Secondary CTA: `View Services` or `Ask a Question`
+7. Optional phone/email line once public contact details are confirmed
+8. Large image placeholder for a cleaned condo common area until real photos are ready
 
 Suggested message direction:
 
@@ -100,12 +143,26 @@ Suggested message direction:
 Layout note:
 
 1. Left-aligned copy
-2. Optional compact brand/service panel if it adds clarity
-3. No photo required
+2. Right-side or full-width image area inspired by a service-business hero
+3. Use a branded placeholder if no photo exists yet
 4. Keep the hero direct and calm
 5. Use the logo star/sparkle motif sparingly as an accent, not as a repeated decoration
 
-### Section 2: What We Clean
+### Section 2: Specialties
+
+Goal:
+Show the business focus in a compact, confidence-building way.
+
+Suggested cards:
+
+1. Condo common areas
+2. Recurring cleaning
+3. Clear communication
+
+Layout note:
+This section replaces generic "why us" claims with practical specialties that are already true.
+
+### Section 3: Services Offered
 
 Goal:
 Let visitors confirm the service fit quickly.
@@ -128,41 +185,43 @@ Layout note:
 2. Keep the copy very short
 3. Avoid hover states that make the cards feel clickable
 
-### Section 3: Who We Help
+### Section 4: Our Work / Cleaned Areas
+
+Goal:
+Prepare for real cleaned-area photos without depending on them yet.
+
+Format:
+Image placeholder grid
+
+Suggested content:
+
+1. Lobby placeholder
+2. Hallway placeholder
+3. Shared washroom placeholder
+4. Amenity area placeholder
+
+Placeholder rules:
+
+1. Use neutral blocks, subtle icons, or soft branded gradients until real photos arrive.
+2. Clearly treat them as layout placeholders during development.
+3. Do not imply before/after proof until real photos are available.
+4. Add meaningful alt text once real images are used.
+
+### Section 5: Who We Help
 
 Goal:
 Make the target audience obvious.
 
-Suggested content:
-
-1. Condo boards and syndicates
-2. Property managers
-3. Building administrators
-
-Why this matters:
-
-1. It immediately tells the right people the site is for them
-2. It helps filter out the wrong type of lead
-3. It can be combined with the quote path to keep the homepage shorter
-
-Layout note:
-Use static grid cards that include a short description for each audience.
-
-### Section 4: Why CHARM
-
-Goal:
-Replace missing reviews/photos with operational trust.
-
 Suggested content blocks:
 
-1. focused on shared spaces
-2. recurring cleanliness upkeep
-3. simple communication
+1. condo boards and syndicates
+2. property managers
+3. building administrators
 
-Important note:
-Because there are no reviews yet, this section should carry more trust weight in V1.
+Layout note:
+This section can be compact or merged with Specialties if the homepage feels too long.
 
-### Section 5: Final CTA
+### Section 6: Quote CTA
 
 Goal:
 Catch visitors who are ready to act without adding another dense section.
@@ -172,6 +231,20 @@ Content:
 1. short CTA headline
 2. 1-sentence reminder of service fit
 3. quote request button
+
+### Section 7: Common Questions Preview
+
+Goal:
+Borrow the Davis-style end-of-page FAQ rhythm without making the homepage feel heavy.
+
+Suggested questions:
+
+1. What spaces does CHARM clean?
+2. Do you offer recurring cleaning?
+3. How do quote requests work?
+
+Layout note:
+Keep the full FAQ at the bottom of the About page. The homepage can show a short preview only.
 
 ## Supporting Content Moved Off The Homepage
 
@@ -206,17 +279,19 @@ Suggested questions:
 5. Can we contact you in English or French?
 
 Note:
-This should not return to the homepage for now. FAQ content belongs at the bottom of the About page.
+The full FAQ belongs at the bottom of the About page. A compact homepage FAQ preview is acceptable in the Davis-inspired structure.
 
 ## Homepage Wireframe Summary
 
 ```text
 Navbar
 Hero
-What We Clean
+Specialties
+Services Offered
+Our Work / Image Placeholders
 Who We Help
-Why CHARM
-Final CTA
+Quote CTA
+Common Questions Preview
 Footer
 ```
 
@@ -438,8 +513,8 @@ Possible later additions:
 
 1. FAQ accordion
 2. subtle scroll reveal animation
-3. soft glass effect on navbar or CTA cards
-4. basic icon system
+3. basic icon system
+4. image placeholder system for future cleaned-area photos
 
 ## Features To Avoid In V1
 
@@ -448,6 +523,8 @@ Possible later additions:
 3. complicated search tools
 4. fake review sliders with placeholder content
 5. image-heavy hero layouts that depend on missing assets
+6. client login or customer portal links
+7. glassy-effect UI as a primary design style
 
 ## Copy Rules For The Whole Site
 
@@ -459,36 +536,34 @@ Possible later additions:
 
 ## Design Translation Notes
 
-How to combine the official brand system with the earlier inspiration references:
+How to combine the official brand system with the Davis-inspired structure:
 
-### From Therese
+### From Davis Janitorial
 
-1. airy spacing
-2. soft visual rhythm
-3. clean visual calm
-
-### From Capital One
-
-1. strong hierarchy
-2. obvious actions
-3. modular section flow
-4. helpful support content near the end
+1. practical service-business homepage sequence
+2. quote-first conversion flow
+3. clear service category rhythm
+4. cleaned-work photo section
+5. FAQ/support content near the end
+6. simple footer and repeated contact paths
 
 ### For CHARM
 
 1. Charm Turquoise `#007887` as the confident primary colour
 2. Aqua Mist and Cloud White for bright, fresh sections
 3. Teal Foam for secondary accents and borders
-4. minimal surface design with subtle shine only where useful
+4. solid, clean surfaces instead of glassy effects
 5. short page sections and practical content order
 6. official logo usage instead of text-only placeholders
 7. polished without looking corporate or intimidating
-8. no heavy stock-photo dependency
+8. image placeholders until real cleaned-area photos are ready
 
 ## Recommended Next Step
 
 Before coding:
 
-1. Confirm whether the desktop header should use the full primary logo or a compact logo treatment.
-2. Confirm what direct contact details can be shown publicly.
-3. Keep FAQ at the bottom of the About page unless the content grows enough to need a dedicated FAQ page.
+1. Redesign the homepage around the Davis-inspired section sequence.
+2. Replace glassy surfaces with solid clean cards and soft brand sections.
+3. Add placeholder spaces for cleaned-area photos.
+4. Keep client login out of V1.
+5. Confirm what direct contact details can be shown publicly.

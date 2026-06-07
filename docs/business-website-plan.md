@@ -195,7 +195,7 @@ The site should feel:
 4. Trustworthy
 5. Local
 6. Professional but not corporate
-7. Minimal and sleek
+7. Structured and easy to scan
 8. Fresh and turquoise-led rather than loud
 
 Avoid:
@@ -205,6 +205,8 @@ Avoid:
 3. Empty marketing claims
 4. Complicated animations
 5. Pages that look nice but do not explain the service
+6. Glassy-effect styling as the main visual direction
+7. Client login or customer portal features before there is a real portal
 
 Official brand note:
 
@@ -212,8 +214,9 @@ Official brand note:
 2. Charm Turquoise `#007887` is the primary colour.
 3. Aqua Mist `#78E5DE`, Teal Foam `#38A8AB`, and Cloud White `#F0FFFF` are the supporting colours.
 4. Gotham is the official brand typeface, but Montserrat is the selected V1 website font.
-5. The site can stay image-light for now because there are still no real photos or reviews yet.
-6. The next visual system should rely on the official logo, Montserrat typography, spacing, clean blocks, and restrained brand accents.
+5. The next design should use Davis Janitorial as a structure reference, not as a brand or copy reference.
+6. The site should include placeholder spaces for cleaned-area photos until real images are selected.
+7. The next visual system should rely on the official logo, Montserrat typography, spacing, clean blocks, and restrained brand accents.
 
 ## Technical Direction
 

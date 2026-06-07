@@ -71,7 +71,7 @@ The site should feel:
 
 1. clean
 2. simple
-3. sleek
+3. structured
 4. bright
 5. fresh
 6. friendly
@@ -99,13 +99,15 @@ The site should feel:
 1. Keep the layout neat and uncluttered.
 2. Avoid intimidating, content-heavy walls of text.
 3. Use subtle polished styling instead of loud effects.
-4. A soft glassy treatment can still be used lightly if it stays readable and clean.
-5. Prioritize breathing room, short copy, and obvious actions over adding every possible section.
-6. Avoid small decorative pill labels above content sections.
-7. Use static grid cards for service items and audience items when it improves scanability.
-8. Keep those item cards clearly informational, with no hover treatment that makes them feel clickable.
-9. Use the official logo and star/sparkle motif sparingly so it feels branded, not busy.
-10. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
+4. Remove the glassy-effect direction from the active design system.
+5. Use solid white, Cloud White, and soft aqua sections with clean borders.
+6. Prioritize breathing room, short copy, and obvious actions over adding every possible section.
+7. Avoid small decorative pill labels above content sections.
+8. Use static grid cards for service items and audience items when it improves scanability.
+9. Keep those item cards clearly informational, with no hover treatment that makes them feel clickable.
+10. Use the official logo and star/sparkle motif sparingly so it feels branded, not busy.
+11. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
+12. Add placeholder spaces for cleaned-area photos until real images are selected.
 
 ## Inspiration References
 
@@ -149,29 +151,60 @@ What not to copy directly:
 2. Enterprise-scale density
 3. Large marketplace-style navigation
 
+### Davis Janitorial
+
+Reference:
+<https://davisjanitorial.com/>
+
+What to borrow:
+
+1. Practical service-business homepage structure
+2. Clear quote-first CTA rhythm
+3. Short specialties section
+4. Services-offered section
+5. Work/photo section
+6. Estimate or quote section near the bottom
+7. Common questions near the end
+8. Simple footer navigation and contact paths
+
+What not to copy directly:
+
+1. Their branding, colours, copy, or imagery
+2. Residential-cleaning positioning
+3. Client login or customer portal features
+4. Unsupported claims, reviews, badges, or proof points
+5. Any Jobber-specific flow unless CHARM later chooses that tool
+
 ## Structure Direction From Inspiration
 
 The current design/structure mix should aim for:
 
-1. Therese for visual softness and clean presentation
-2. Capital One for hierarchy, flow, and content organization
+1. Davis Janitorial for the service-business homepage structure
+2. CHARM's official brand system for the visual identity
+3. Capital One only as a secondary reference for hierarchy and clear action paths
+4. Therese only as a secondary reference for softness and breathing room
 
 Likely homepage flow:
 
-1. clear hero with service area and CTA
-2. quick overview of what CHARM cleans
-3. compact note on who CHARM helps
-4. why choose CHARM
-5. final contact CTA
+1. header with logo, nav, language switch, and quote CTA
+2. hero with service message, CTA, and a cleaned-area image placeholder
+3. specialties
+4. services offered
+5. our work / cleaned-area image placeholders
+6. who CHARM helps
+7. quote request section
+8. common questions preview
+9. footer
 
 Likely design translation:
 
 1. official Charm Turquoise with soft aqua and cloud-white support
 2. lots of whitespace
-3. clean cards or blocks
-4. minimal but polished surfaces
+3. clean solid cards or blocks
+4. no glassy-effect containers
 5. easy-to-scan sections without huge text walls
 6. no section should feel like a wall of information
+7. image placeholders that can be replaced later without changing the whole layout
 
 ## Current Content Availability
 
@@ -187,7 +220,7 @@ Likely design translation:
 
 ### Missing
 
-1. Photos
+1. Final selected photos
 2. Reviews or testimonials
 3. Exact contact details for public use
 4. Final service-area list
@@ -195,7 +228,7 @@ Likely design translation:
 6. Confirmation that Gotham can be used as a deployed webfont if the site ever switches away from Montserrat
 
 Build note:
-The next version can use the official logo and colour palette, but should not depend on photos, reviews, or unconfirmed trust claims.
+The next version can use the official logo and colour palette, plus placeholder image spaces. It should not depend on final photos, reviews, or unconfirmed trust claims.
 
 ## Site Structure Guidance
 
@@ -218,15 +251,20 @@ Likely supporting sections:
 
 1. service overview
 2. areas we clean
-3. who we work with
-4. why choose CHARM
-5. quote CTA
+3. specialties
+4. work/photo placeholders
+5. who we work with
+6. quote CTA
+7. common questions preview
 
 Homepage content rule:
-The homepage should stay short and selective. Detailed process explanations, long FAQs, service checklists, testimonials, and trust credentials should move to supporting pages or wait until real content is available.
+The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Detailed process explanations, long FAQs, service checklists, testimonials, and trust credentials should move to supporting pages or wait until real content is available.
 
 Page-role rule:
-Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. FAQ lives at the bottom of the About page and should include the quote process.
+Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. The full FAQ lives at the bottom of the About page and should include the quote process. A short homepage FAQ preview is acceptable.
+
+Feature rule:
+Do not add client login, online accounts, or a customer portal in V1.
 
 ## Working Content Notes
 
@@ -256,6 +294,7 @@ Content improvements to make next:
 8. Final French wording for brand subtext
 9. Whether Gotham webfont use is licensed for the live website if the site ever switches away from Montserrat
 10. Whether brand mockup images from the deck are inspiration only or can be used publicly
+11. Which cleaned-area photos should replace the homepage placeholders
 
 ## Decision Log
 
@@ -298,3 +337,11 @@ Content improvements to make next:
 9. Replaced text-only header and footer branding with the official logo assets.
 10. Changed the footer back to a normal scroll footer instead of a fixed reveal footer.
 11. Refreshed the homepage visual system with the official logo, palette, soft aqua surfaces, and restrained sparkle accents.
+12. Refreshed the Services page with clearer condo common-area cleaning scope, short item descriptions, and the official brand visual system.
+
+### 2026-06-07
+
+1. Pivoted the next design direction toward Davis Janitorial's service-business structure while keeping CHARM's own branding.
+2. Confirmed client login is not needed for V1.
+3. Confirmed cleaned-area image placeholders should be added until real photos are shared.
+4. Removed the glassy-effect direction from the active design plan.

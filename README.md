@@ -263,11 +263,17 @@ Examples of claims to confirm before using:
 
 The visual style should be:
 
-1. Minimal, clean, and calm rather than flashy.
+1. Clean, structured, and practical rather than flashy.
 2. Bright, readable, and fresh, with white and soft aqua surfaces.
-3. Sleek and polished, with subtle shine or glass only where it improves the experience.
+3. Solid and polished, without glassy-effect containers.
 4. Friendly and local, not corporate.
 5. Built around clarity, trust, and the official CHARM brand system, not decoration.
+
+Current structure reference:
+
+1. The next design direction uses [Davis Janitorial](https://davisjanitorial.com/) as a service-business structure reference.
+2. CHARM should borrow the homepage rhythm, quote CTA placement, services-offered flow, work/photo section, and FAQ/support rhythm.
+3. CHARM should not copy Davis Janitorial's branding, wording, imagery, residential positioning, client login, or customer portal features.
 
 Official brand direction:
 
@@ -281,8 +287,8 @@ Preferred assets:
 
 1. Official primary logo and icon files are available in `public/brand/`.
 2. The official brand deck is available in `docs/brand/`.
-3. No photos are required for the first design pass.
-4. Real photos of the team or real work can be added later when available.
+3. Placeholder spaces should be used for cleaned-area photos until real images are selected.
+4. Real photos of cleaned common areas, team, or work can be added later when available.
 5. Real service-area references should be added once confirmed.
 6. Minimal icons used only when they improve scannability.
 
@@ -398,12 +404,12 @@ Possible post-launch improvements:
 
 Current confirmed gaps:
 
-1. No photos yet
+1. Final selected photos are not available yet
 2. No reviews or testimonials yet
 3. Gotham webfont usage can be revisited later if a valid web license is confirmed
 
 Build implication:
-The next visual pass can use the official logo, palette, and Montserrat, but should still rely on typography, spacing, color, structure, and clear service content rather than image-heavy sections.
+The next visual pass can use the official logo, palette, Montserrat, and cleaned-area image placeholders. It should still work without final photos, reviews, or unconfirmed trust claims.
 
 ## Roadmap
 

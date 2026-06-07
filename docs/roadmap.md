@@ -10,7 +10,7 @@ Current phase:
 
 1. project scaffold complete
 2. content skeleton in progress
-3. official brand refresh planning in progress
+3. Davis-inspired design pivot in progress
 
 Already completed:
 
@@ -38,6 +38,9 @@ Already completed:
 22. icon logo wired as the favicon and theme colour set to Charm Turquoise
 23. header and footer refreshed with the official logo assets
 24. homepage visual system refreshed around the official logo, palette, and restrained sparkle accents
+25. Services page refreshed with the official brand system and clearer condo common-area service scope
+26. Davis Janitorial selected as a structure reference for the next homepage redesign
+27. client login excluded from V1 unless the business adopts a real portal later
 
 ## Phase 1 - Direction Lock
 
@@ -53,6 +56,9 @@ Tasks:
 5. Confirm what contact details can be public
 6. Confirm that FAQ belongs at the bottom of the About page
 7. Confirm that Contact and Request a Quote are separate flows
+8. Confirm the Davis-inspired homepage structure for CHARM
+9. Confirm that image placeholders are acceptable until real cleaned-area photos are added
+10. Confirm that client login is out of scope for V1
 
 Done when:
 
@@ -116,8 +122,9 @@ Tasks:
 6. Define spacing, surface, border, and shadow styles
 7. Create button styles using the official palette
 8. Create card and section styles that feel clean, fresh, and minimal
-9. Add soft glass or shine treatment only where helpful
-10. Make sure the interface stays readable and accessible
+9. Remove glassy-effect styling from the active design direction
+10. Create solid section blocks and image placeholders for future cleaned-area photos
+11. Make sure the interface stays readable and accessible
 
 Done when:
 
@@ -125,6 +132,7 @@ Done when:
 2. key UI patterns are reusable
 3. the official logo, palette, and Montserrat typography are integrated cleanly
 4. the site works well without photos or reviews
+5. image placeholders can be swapped for real photos later
 
 ## Phase 5 - Core Page Build
 
@@ -133,8 +141,8 @@ Build the main site pages from the approved wireframes.
 
 Tasks:
 
-1. Build the homepage
-2. Build the services page
+1. Rebuild the homepage around the Davis-inspired structure
+2. Keep the services page focused on condo common-area cleaning
 3. Build the about page
 4. Build the contact page
 5. Build the quote request page
@@ -142,6 +150,7 @@ Tasks:
 7. Build the footer
 8. Build the FAQ block on About
 9. Build the quote CTA blocks
+10. Add placeholder spaces for cleaned-area photos
 
 Done when:
 
@@ -222,6 +231,7 @@ Tasks:
 5. Add reviews if available
 6. Add any confirmed trust claims
 7. Add final French copy once reviewed
+8. Replace cleaned-area placeholders with real photos once selected
 
 Done when:
 
@@ -271,11 +281,13 @@ Done when:
 
 ## Current Priority Order
 
-1. refine the content skeleton with real business details
-2. align Services, About, Contact, and Quote with the official brand system
-3. connect the real quote and contact flows
-4. strengthen SEO and accessibility basics
-5. add fuller French page content
+1. redesign the homepage around the Davis-inspired structure using CHARM branding
+2. remove the glassy-effect styling from active page sections
+3. add placeholder image areas for future cleaned-space photos
+4. align About, Contact, and Quote with the new structure
+5. connect the real quote and contact flows
+6. strengthen SEO and accessibility basics
+7. add fuller French page content
 
 ## Notes
 
