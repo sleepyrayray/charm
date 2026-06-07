@@ -247,8 +247,9 @@ Recommended implementation order:
 2. Add Montserrat and favicon/icon usage. Done.
 3. Refresh header and footer. Done.
 4. Refresh homepage visual system. Done.
-5. Refresh Services page. Done.
-6. Pivot homepage to Davis-inspired structure with CHARM branding and image placeholders.
-7. Remove glassy-effect styling from the active design system.
-8. Refresh About, Contact, and Quote pages.
-9. Run mobile, accessibility, and contrast checks.
+5. Refresh Services page with the official brand system. Done.
+6. Pivot homepage to Davis-inspired structure with CHARM branding and image placeholders. Done.
+7. Remove glassy-effect styling from the active design system. Done.
+8. Align Services page with the Davis-inspired structure. Done.
+9. Refresh About, Contact, and Quote pages. Done.
+10. Run mobile, accessibility, and contrast checks.

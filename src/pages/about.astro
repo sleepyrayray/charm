@@ -2,54 +2,90 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { aboutPage } from "../data/en/about";
 import { site } from "../data/en/site";
+import { pathWithBase } from "../lib/paths";
 ---
 
 <MainLayout title="About | CHARM" description={site.description}>
-  <section class="shell pt-10 sm:pt-14">
-    <div class="panel section-card">
-      <h1 class="section-title">{aboutPage.title}</h1>
-      <p class="section-copy mt-4">{aboutPage.intro}</p>
+  <section class="page-hero">
+    <div class="page-hero-overlay">
+      <div class="page-hero-copy shell">
+        <h1>{aboutPage.title}</h1>
+        <p>{aboutPage.intro}</p>
+        <div class="page-hero-actions">
+          <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
+          <a class="button-secondary" href={pathWithBase("/contact")}>Contact CHARM</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="shell mt-16 grid gap-8 lg:grid-cols-3">
-    <article class="panel section-card">
-      <h2 class="text-xl font-semibold text-[var(--ink)]">Business focus</h2>
-      <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
-        {aboutPage.focus.map((item) => <li>{item}</li>)}
-      </ul>
-    </article>
-
-    <article class="panel section-card">
-      <h2 class="text-xl font-semibold text-[var(--ink)]">Values</h2>
-      <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
-        {aboutPage.values.map((item) => <li>{item}</li>)}
-      </ul>
-    </article>
-
-    <article class="panel section-card">
-      <h2 class="text-xl font-semibold text-[var(--ink)]">Coverage</h2>
-      <ul class="mt-5 space-y-3 text-sm leading-7 text-[var(--muted)]">
-        {aboutPage.area.map((item) => <li>{item}</li>)}
-      </ul>
-      <div class="mt-6 border-t border-[var(--line)] pt-6">
-        <h3 class="text-base font-semibold text-[var(--ink)]">Language support</h3>
-        <ul class="mt-3 space-y-3 text-sm leading-7 text-[var(--muted)]">
-          {aboutPage.language.map((item) => <li>{item}</li>)}
-        </ul>
+  <section class="page-section about-intro-section">
+    <div class="shell">
+      <div class="about-summary-card">
+        <p>{aboutPage.summary}</p>
       </div>
-    </article>
+    </div>
   </section>
 
-  <section class="shell mt-16 pb-20 sm:pb-24">
-    <div class="panel section-card">
-      <h2 class="section-title">Frequently asked questions</h2>
-      <div class="mt-8 grid gap-4">
-        {aboutPage.faq.map((item) => (
-          <article class="quiet-card">
-            <h3 class="text-base font-semibold text-[var(--ink)]">{item.question}</h3>
-            <p class="mt-3 text-sm leading-7 text-[var(--muted)]">{item.answer}</p>
+  <section class="page-section">
+    <div class="shell">
+      <div class="about-card-grid">
+        <article class="about-info-card">
+          <h2>Business focus</h2>
+          <ul class="page-check-list">
+            {aboutPage.focus.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+
+        <article class="about-info-card">
+          <h2>Values</h2>
+          <ul class="page-check-list">
+            {aboutPage.values.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+
+        <article class="about-info-card">
+          <h2>Coverage and language</h2>
+          <ul class="page-check-list">
+            {aboutPage.area.map((item) => <li>{item}</li>)}
+            {aboutPage.language.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section about-process-section">
+    <div class="shell">
+      <div class="page-section-heading page-section-heading-center">
+        <h2>How it works</h2>
+        <p>A simple path for understanding the building, the shared spaces, and the next step.</p>
+      </div>
+
+      <div class="about-process-grid">
+        {aboutPage.process.map((item, index) => (
+          <article class="about-process-card">
+            <span>{index + 1}</span>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section page-final-section">
+    <div class="shell">
+      <div class="page-section-heading page-section-heading-center">
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="page-faq-list">
+        {aboutPage.faq.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
         ))}
       </div>
     </div>

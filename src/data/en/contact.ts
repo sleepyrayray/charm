@@ -4,4 +4,9 @@ export const contactPage = {
     "Use this page for general questions, basic inquiries, or messages that are not ready for a full quote request.",
   note:
     "Need pricing for a building? Use the quote request page so CHARM can collect the right property details.",
+  contactFit: [
+    "general questions",
+    "basic follow-up messages",
+    "questions before requesting a quote",
+  ],
 };

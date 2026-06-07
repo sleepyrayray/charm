@@ -1,11 +1,20 @@
 export const servicesPage = {
-  title: "Common-area cleaning for condo buildings.",
+  title: "Cleaning services for condo common areas.",
   intro:
-    "CHARM focuses on recurring cleaning for shared spaces in condo buildings, multi-unit properties, and similar residential buildings around Saint-Laurent and nearby Montreal.",
-  heroNotes: [
-    "Condo common areas",
-    "Recurring schedules",
-    "Clear cleaning scope",
+    "CHARM helps condo buildings and similar shared residential properties keep everyday common spaces clean, presentable, and easier to manage.",
+  highlights: [
+    {
+      title: "Shared spaces",
+      description: "Focused on common areas residents, visitors, and managers use every day.",
+    },
+    {
+      title: "Recurring upkeep",
+      description: "Built for regular cleaning schedules, not private in-unit cleaning.",
+    },
+    {
+      title: "Clear limits",
+      description: "Cleaning and cleanliness upkeep only, with no repairs or technical maintenance.",
+    },
   ],
   categories: [
     {
@@ -81,6 +90,8 @@ export const servicesPage = {
       ],
     },
   ],
+  servicesIntro:
+    "The service is built around visible, shared spaces that shape the everyday experience of a building.",
   buildingTypes: [
     {
       title: "Condo buildings",
@@ -95,6 +106,8 @@ export const servicesPage = {
       description: "Other buildings can be reviewed when the cleaning scope matches CHARM's focus.",
     },
   ],
+  planningIntro:
+    "Every building is different. These details help shape a practical cleaning plan before a quote is prepared.",
   frequencies: [
     {
       title: "Daily",
@@ -109,6 +122,8 @@ export const servicesPage = {
       description: "For buildings that need a schedule based on specific spaces and priorities.",
     },
   ],
+  notIncludedIntro:
+    "To keep expectations clear, these items are not part of CHARM's cleaning service.",
   notIncluded: [
     {
       title: "Repairs or fixes",

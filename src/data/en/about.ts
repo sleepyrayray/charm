@@ -1,7 +1,9 @@
 export const aboutPage = {
   title: "A straightforward local service for shared building spaces.",
   intro:
-    "CHARM is being positioned as a focused condo-building cleaning service for Saint-Laurent and nearby Montreal areas, with an emphasis on clarity, dependable service, and recurring upkeep.",
+    "CHARM provides focused condo-building cleaning for Saint-Laurent and nearby Montreal areas, with an emphasis on clarity, dependable service, and recurring upkeep.",
+  summary:
+    "CHARM is made for condo boards, property managers, and people responsible for keeping shared residential spaces clean and presentable.",
   focus: [
     "Condo-building common-area cleaning",
     "Recurring cleanliness upkeep",
@@ -10,6 +12,20 @@ export const aboutPage = {
   values: ["Reliable", "Respectful", "Clear", "Consistent"],
   area: ["Saint-Laurent", "Nearby Montreal areas"],
   language: ["English-first experience", "French route structure prepared"],
+  process: [
+    {
+      title: "Share the building details",
+      description: "Send the type of building, shared spaces, and cleaning frequency you have in mind.",
+    },
+    {
+      title: "Confirm the cleaning scope",
+      description: "CHARM can review what areas are included and what is outside the cleaning service.",
+    },
+    {
+      title: "Plan the next step",
+      description: "The goal is a simple follow-up path before any recurring cleaning plan is confirmed.",
+    },
+  ],
   faq: [
     {
       question: "What kinds of spaces does CHARM clean?",
@@ -19,7 +35,7 @@ export const aboutPage = {
     {
       question: "Do you offer recurring cleaning?",
       answer:
-        "Yes. The site is being built around recurring cleanliness upkeep for shared building spaces, with the exact schedule confirmed during the quote process.",
+        "Yes. CHARM focuses on recurring cleanliness upkeep for shared building spaces, with the exact schedule confirmed during the quote process.",
     },
     {
       question: "How does the quote process work?",
@@ -34,7 +50,7 @@ export const aboutPage = {
     {
       question: "Can we contact CHARM in English or French?",
       answer:
-        "The site is English-first for now, with French routes prepared so bilingual content can be added cleanly as the project grows.",
+        "The website is English-first for now, with French support planned so bilingual communication can be added cleanly as the project grows.",
     },
   ],
 };

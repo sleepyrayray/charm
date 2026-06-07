@@ -8,113 +8,122 @@ const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
 ---
 
 <MainLayout title="Services | CHARM" description="Common-area cleaning services for condo buildings in Saint-Laurent and nearby Montreal.">
-  <section class="services-hero shell pt-10 sm:pt-14">
-    <div class="panel section-card services-hero-panel">
-      <div class="max-w-2xl">
-        <h1 class="section-title">{servicesPage.title}</h1>
-        <p class="section-copy mt-4">{servicesPage.intro}</p>
-        <div class="mt-7 flex flex-wrap gap-3">
+  <section class="services-hero">
+    <div class="services-hero-overlay">
+      <div class="services-hero-copy shell">
+        <img src={iconLogo} alt="" width="70" height="70" loading="eager" decoding="async" />
+        <h1>{servicesPage.title}</h1>
+        <p>{servicesPage.intro}</p>
+        <div class="services-hero-actions">
           <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
           <a class="button-secondary" href={pathWithBase("/contact")}>Ask a Question</a>
         </div>
       </div>
-
-      <aside class="services-hero-note" aria-label="Service summary">
-        <img src={iconLogo} alt="" width="72" height="72" loading="eager" decoding="async" />
-        <h2>Focused on shared building spaces.</h2>
-        <ul>
-          {servicesPage.heroNotes.map((note) => <li>{note}</li>)}
-        </ul>
-      </aside>
     </div>
   </section>
 
-  <section class="shell mt-16">
-    <div class="max-w-2xl">
-      <h2 class="section-title">Common areas CHARM cleans</h2>
-      <p class="section-copy mt-4">
-        The service is built around visible, shared spaces that affect the everyday experience of residents, visitors, and building managers.
-      </p>
-    </div>
-
-    <div class="services-category-stack mt-8">
-      {servicesPage.categories.map((category) => (
-        <article class="panel section-card services-category-card">
-          <div>
-            <h3>{category.title}</h3>
-            <p>{category.summary}</p>
-          </div>
-
-          <ul class="services-item-grid">
-            {category.items.map((item) => (
-              <li>
-                <span>{item.title}</span>
-                <small>{item.description}</small>
-              </li>
-            ))}
-          </ul>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="shell mt-16">
-    <div class="services-plan-grid">
-      <article class="panel section-card services-plan-card">
-        <h2>Buildings we work with</h2>
-        <div class="services-line-list mt-6">
-          {servicesPage.buildingTypes.map((item) => (
-            <div class="services-line-item">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </article>
-
-      <article class="panel section-card services-plan-card">
-        <h2>Recurring service options</h2>
-        <div class="services-line-list mt-6">
-          {servicesPage.frequencies.map((item) => (
-            <div class="services-line-item">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="shell mt-16">
-    <div class="panel section-card services-scope-card">
-      <div>
-        <h2 class="section-title">What CHARM does not do</h2>
-        <p class="section-copy mt-4">
-          To keep the service clear, CHARM stays focused on cleaning and cleanliness upkeep. These items are outside the current scope.
-        </p>
-      </div>
-
-      <ul class="services-item-grid services-not-included-grid">
-        {servicesPage.notIncluded.map((item) => (
-          <li>
-            <span>{item.title}</span>
-            <small>{item.description}</small>
-          </li>
+  <section class="services-section services-highlights-section">
+    <div class="shell">
+      <div class="services-highlight-grid">
+        {servicesPage.highlights.map((item) => (
+          <article class="services-highlight-card">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </article>
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 
-  <section class="shell mt-16 pb-20 sm:pb-24">
-    <div class="cta-strip home-cta">
-      <div>
-        <h2 class="section-title">Need cleaning for a condo building?</h2>
-        <p class="section-copy mt-3">
-          Send the building type, shared spaces, and cleaning frequency you have in mind. CHARM can follow up with the next step.
-        </p>
+  <section class="services-section">
+    <div class="shell">
+      <div class="services-section-heading">
+        <h2>Common areas CHARM cleans</h2>
+        <p>{servicesPage.servicesIntro}</p>
       </div>
-      <div class="shrink-0">
+
+      <div class="services-category-grid">
+        {servicesPage.categories.map((category) => (
+          <article class="services-category-card">
+            <div>
+              <h3>{category.title}</h3>
+              <p>{category.summary}</p>
+            </div>
+
+            <ul class="services-clean-list">
+              {category.items.map((item) => (
+                <li>
+                  <span>{item.title}</span>
+                  <small>{item.description}</small>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section services-planning-section">
+    <div class="shell">
+      <div class="services-section-heading services-section-heading-center">
+        <h2>Service planning</h2>
+        <p>{servicesPage.planningIntro}</p>
+      </div>
+
+      <div class="services-plan-grid">
+        <article class="services-plan-card">
+          <h3>Buildings we work with</h3>
+          <div class="services-line-list">
+            {servicesPage.buildingTypes.map((item) => (
+              <div class="services-line-item">
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <article class="services-plan-card">
+          <h3>Recurring service options</h3>
+          <div class="services-line-list">
+            {servicesPage.frequencies.map((item) => (
+              <div class="services-line-item">
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="shell">
+      <div class="services-scope-card">
+        <div>
+          <h2>Outside CHARM's cleaning scope</h2>
+          <p>{servicesPage.notIncludedIntro}</p>
+        </div>
+
+        <ul class="services-scope-list">
+          {servicesPage.notIncluded.map((item) => (
+            <li>
+              <span>{item.title}</span>
+              <small>{item.description}</small>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section services-final-section">
+    <div class="shell">
+      <div class="services-final-cta">
+        <h2>Need cleaning for a condo building?</h2>
+        <p>Send the building type, shared spaces, and cleaning frequency you have in mind. CHARM can follow up with the next step.</p>
         <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
       </div>
     </div>

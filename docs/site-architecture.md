@@ -290,11 +290,11 @@ Give a fuller breakdown of what CHARM actually cleans.
 
 ### Recommended Structure
 
-1. Intro hero
-2. Common areas we clean
-3. Building types we work with
-4. Recurring cleaning options
-5. What is not included
+1. Full-width intro hero
+2. Three service-fit highlights
+3. Common areas we clean
+4. Service planning
+5. Outside cleaning scope
 6. Quote CTA
 
 ### Suggested Page Sections
@@ -303,7 +303,20 @@ Give a fuller breakdown of what CHARM actually cleans.
 
 1. clear page title
 2. short summary paragraph
-3. CTA button
+3. primary quote CTA
+4. secondary question/contact CTA
+
+Layout note:
+Use the same full-width teal hero direction as the homepage, but keep the page shorter and more practical.
+
+#### Service-Fit Highlights
+
+1. shared spaces
+2. recurring upkeep
+3. clear limits
+
+Layout note:
+Use compact cards directly below the hero so visitors understand fit before reading the longer service breakdown.
 
 #### Common Areas We Clean
 
@@ -316,27 +329,30 @@ Group services into simple categories:
 5. gyms and recreational spaces
 6. pool-side common areas
 
-#### Buildings We Work With
+Layout note:
+Use category cards with simple checklist-style rows inside. Avoid making every item look like a separate clickable card.
+
+#### Service Planning
 
 1. condo buildings
 2. multi-unit residential buildings
 3. other shared residential properties if applicable
-
-#### Recurring Service
-
-1. daily
-2. weekly
-3. custom frequency
+4. daily recurring service
+5. weekly recurring service
+6. custom frequency
 
 Note:
 Only keep options that are truly offered.
 
-#### Not Included
+#### Outside Cleaning Scope
 
 1. repairs
 2. technical maintenance
 3. pool water maintenance
 4. unrelated building operations
+
+Layout note:
+Use clear wording that explains limits without sounding negative or defensive.
 
 #### CTA
 
@@ -350,12 +366,12 @@ Make CHARM feel real, local, and dependable.
 
 ### Recommended Structure
 
-1. Intro / who CHARM is
-2. Business focus
-3. Values
-4. Areas served
-5. Language support
-6. CTA
+1. Full-width intro hero
+2. Short summary card
+3. Business focus, values, coverage, and language cards
+4. How it works
+5. FAQ accordion
+6. CTA links where helpful
 
 ### Suggested Content
 
@@ -399,6 +415,9 @@ Suggested questions:
 4. Do you handle repairs or technical maintenance?
 5. Can we contact CHARM in English or French?
 
+Layout note:
+Use the same collapsed accordion pattern as the homepage so the page stays calm and easy to scan.
+
 ## Contact Page Wireframe
 
 Goal:
@@ -406,10 +425,11 @@ Make it easy to send a general inquiry without forcing visitors through the full
 
 ### Recommended Structure
 
-1. Contact hero
-2. Simple inquiry form
-3. Quote request CTA
-4. Direct contact block once public details are confirmed
+1. Full-width contact hero
+2. General inquiry explainer card
+3. Simple inquiry form
+4. Quote request CTA
+5. Direct contact block once public details are confirmed
 
 ### Recommended Form Fields
 
@@ -422,6 +442,9 @@ Make it easy to send a general inquiry without forcing visitors through the full
 
 The Contact page should include a clear button to `Request a Quote`.
 
+Layout note:
+Contact and Quote should look related, but Contact must stay clearly positioned as a general inquiry page.
+
 ## Request A Quote Page Wireframe
 
 Goal:
@@ -429,9 +452,10 @@ Collect the practical building details needed for a cleaning quote.
 
 ### Recommended Structure
 
-1. Quote hero
-2. Detailed quote request form
-3. Submission note or next-step expectation
+1. Full-width quote hero
+2. Quote request explainer card
+3. Detailed quote request form
+4. Submission note or next-step expectation
 
 ### Recommended Form Fields
 
@@ -446,6 +470,9 @@ Collect the practical building details needed for a cleaning quote.
 9. Preferred language
 10. Preferred contact method
 11. Message
+
+Layout note:
+Quote should collect building-specific details and should not feel like the same form as Contact.
 
 ### Direct Contact Block
 

@@ -43,6 +43,8 @@ Already completed:
 27. client login excluded from V1 unless the business adopts a real portal later
 28. homepage Davis-inspired redesign started with solid sections and cleaned-area placeholders
 29. homepage structure adjusted to use a centered image-style hero, three-column checklist services, embedded quote form, FAQ accordion, and dark footer with the alt logo
+30. Services page aligned with the Davis-inspired structure using a full-width hero, service highlights, category checklists, planning cards, and clearer scope limits
+31. About, Contact, and Quote pages aligned with the new page system, including About FAQ accordion and separate inquiry/quote flows
 
 ## Phase 1 - Direction Lock
 
@@ -170,7 +172,7 @@ Tasks:
 1. Build the general contact inquiry form UI
 2. Build the detailed quote request form UI
 3. Add validation
-4. Choose the form delivery method
+4. Choose the form delivery method after the receiving inbox, required fields, confirmation message, and spam approach are confirmed
 5. Add contact details once confirmed
 6. Add confirmation/success states
 
@@ -283,12 +285,11 @@ Done when:
 
 ## Current Priority Order
 
-1. review the Davis-inspired homepage layout with real screenshots
-2. align Services, About, Contact, and Quote with the new structure
-3. replace cleaned-area placeholders with real photos when available
-4. connect the real quote and contact flows
-5. strengthen SEO and accessibility basics
-6. add fuller French page content
+1. review the refreshed Services, About, Contact, and Quote pages with real screenshots
+2. replace cleaned-area placeholders with real photos when available
+3. connect the real quote and contact flows
+4. strengthen SEO and accessibility basics
+5. add fuller French page content
 
 ## Notes
 

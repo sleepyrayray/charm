@@ -293,6 +293,8 @@ Content improvements to make next:
 9. Whether Gotham webfont use is licensed for the live website if the site ever switches away from Montserrat
 10. Whether brand mockup images from the deck are inspiration only or can be used publicly
 11. Which cleaned-area photos should replace the homepage placeholders
+12. Which email inbox should receive Contact and Quote submissions
+13. Which form delivery method should be used for the static GitHub Pages site
 
 ## Decision Log
 
@@ -345,3 +347,5 @@ Content improvements to make next:
 4. Removed the glassy-effect direction from the active design plan.
 5. Started the homepage redesign with a Davis-inspired flow, solid sections, direct transparent-logo usage, and cleaned-area placeholders.
 6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, embedded quote form, full FAQ, and dark teal footer using the light logo alternative.
+7. Aligned the Services page with the new structure using a full-width hero, compact service highlights, category checklists, planning cards, and clearer outside-scope wording.
+8. Aligned About, Contact, and Quote with the same page system, including the About FAQ accordion and clearer separation between general inquiries and quote requests.
