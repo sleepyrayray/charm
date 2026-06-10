@@ -287,8 +287,8 @@ Preferred assets:
 
 1. Official primary logo and icon files are available in `public/brand/`.
 2. The official brand deck is available in `docs/brand/`.
-3. Placeholder spaces should be used for cleaned-area photos until real images are selected.
-4. Real photos of cleaned common areas, team, or work can be added later when available.
+3. Selected homepage cleaned-area photos are available in `public/images/` and `public/images/work/`.
+4. Additional real photos of cleaned common areas, team, or work can be added later when available.
 5. Real service-area references should be added once confirmed.
 6. Minimal icons used only when they improve scannability.
 
@@ -404,12 +404,12 @@ Possible post-launch improvements:
 
 Current confirmed gaps:
 
-1. Final selected photos are not available yet
-2. No reviews or testimonials yet
+1. No reviews or testimonials yet
+2. Final public contact details are still not confirmed
 3. Gotham webfont usage can be revisited later if a valid web license is confirmed
 
 Build implication:
-The next visual pass can use the official logo, palette, Montserrat, and cleaned-area image placeholders. It should still work without final photos, reviews, or unconfirmed trust claims.
+The homepage now uses selected cleaned-area photos for the hero, specialties section, and work gallery. The site should still avoid unconfirmed reviews, trust claims, and final contact details until those are provided.
 
 ## Roadmap
 

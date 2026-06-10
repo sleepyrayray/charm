@@ -32,5 +32,37 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
       <slot />
     </main>
     <Footer locale={locale} />
+    <script>
+      const protectedImageSelector = "img, .home-hero";
+
+      document.querySelectorAll("img").forEach((image) => {
+        image.setAttribute("draggable", "false");
+      });
+
+      const isProtectedImageTarget = (target: EventTarget | null) =>
+        target instanceof Element && target.closest(protectedImageSelector) !== null;
+
+      document.addEventListener("contextmenu", (event) => {
+        if (isProtectedImageTarget(event.target)) {
+          event.preventDefault();
+        }
+      });
+
+      document.addEventListener("dragstart", (event) => {
+        if (isProtectedImageTarget(event.target)) {
+          event.preventDefault();
+        }
+      });
+
+      document.addEventListener("copy", (event) => {
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed || selection.rangeCount === 0) return;
+
+        const copiedFragment = selection.getRangeAt(0).cloneContents();
+        if (copiedFragment.querySelector("img")) {
+          event.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>

@@ -6,11 +6,12 @@ import { home } from "../data/en/home";
 import { site } from "../data/en/site";
 import { pathWithBase } from "../lib/paths";
 
-const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
+const heroImage = pathWithBase("/images/common-area-hero.jpeg");
+const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
 ---
 
 <MainLayout title="CHARM | Cleaning Services" description={site.description}>
-  <section class="home-hero">
+  <section class="home-hero" style={`--home-hero-image: url("${heroImage}")`}>
     <div class="home-hero-overlay">
       <div class="home-hero-copy shell">
         <h1 class="home-hero-title">{home.title}</h1>
@@ -24,18 +25,24 @@ const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
 
   <section class="home-section home-specialties">
     <div class="shell">
-      <div class="home-card-grid home-card-grid-3">
-        {home.specialties.map((specialty) => (
-          <article class="home-solid-card">
-            <h3>{specialty.title}</h3>
-            <p>{specialty.description}</p>
-          </article>
-        ))}
+      <div class="home-specialties-layout">
+        <figure class="home-specialties-image">
+          <img src={specialtiesImage} alt="Clean shared condo common area" width="1536" height="2048" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="home-specialties-list">
+          {home.specialties.map((specialty) => (
+            <article class="home-specialty-item">
+              <h3>{specialty.title}</h3>
+              <p>{specialty.description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="home-section">
+  <section class="home-section home-services-offered">
     <div class="shell">
       <div class="home-section-heading home-section-heading-center">
         <h2>Services offered</h2>
@@ -59,20 +66,51 @@ const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
         <h2>Our work</h2>
       </div>
 
-      <div class="home-work-grid">
-        {home.workPlaceholders.map((item) => (
-          <article class="home-photo-placeholder">
-            <img src={iconLogo} alt="" width="54" height="54" loading="lazy" decoding="async" />
-            <div>
-              <p class="home-placeholder-kicker">Image placeholder</p>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          </article>
+      <div class="home-work-gallery" data-work-gallery>
+        {home.workGallery.map((item, index) => (
+          <button
+            class="home-work-photo"
+            type="button"
+            data-gallery-trigger
+            data-gallery-index={index}
+            data-gallery-src={pathWithBase(item.src)}
+            data-gallery-title={item.title}
+            data-gallery-alt={item.alt}
+            aria-label={`View ${item.title}`}
+          >
+            <img src={pathWithBase(item.src)} alt={item.alt} width="1536" height="2048" loading="lazy" decoding="async" />
+            <span>{item.title}</span>
+          </button>
         ))}
       </div>
     </div>
   </section>
+
+  <div class="work-lightbox" data-gallery-lightbox hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Work photo gallery">
+    <button class="work-lightbox-nav work-lightbox-prev" type="button" data-gallery-prev aria-label="Previous photo">‹</button>
+    <figure class="work-lightbox-figure">
+      <div class="work-lightbox-topbar">
+        <p class="work-lightbox-count" data-gallery-count></p>
+        <button class="work-lightbox-close" type="button" data-gallery-close aria-label="Close gallery">×</button>
+      </div>
+      <img data-gallery-image src="" alt="" />
+      <figcaption data-gallery-caption></figcaption>
+    </figure>
+    <div class="work-lightbox-thumbnails" aria-label="Choose a work photo">
+      {home.workGallery.map((item, index) => (
+        <button
+          class="work-lightbox-thumbnail"
+          type="button"
+          data-gallery-thumbnail
+          data-gallery-index={index}
+          aria-label={`Show ${item.title}`}
+        >
+          <img src={pathWithBase(item.src)} alt="" width="1536" height="2048" loading="lazy" decoding="async" />
+        </button>
+      ))}
+    </div>
+    <button class="work-lightbox-nav work-lightbox-next" type="button" data-gallery-next aria-label="Next photo">›</button>
+  </div>
 
   <section class="home-quote-band">
     <div class="shell">
@@ -110,3 +148,98 @@ const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
     </div>
   </section>
 </MainLayout>
+
+<script>
+  const triggers = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-gallery-trigger]"));
+  const lightbox = document.querySelector<HTMLElement>("[data-gallery-lightbox]");
+  const lightboxImage = document.querySelector<HTMLImageElement>("[data-gallery-image]");
+  const lightboxCaption = document.querySelector<HTMLElement>("[data-gallery-caption]");
+  const lightboxCount = document.querySelector<HTMLElement>("[data-gallery-count]");
+  const closeButton = document.querySelector<HTMLButtonElement>("[data-gallery-close]");
+  const previousButton = document.querySelector<HTMLButtonElement>("[data-gallery-prev]");
+  const nextButton = document.querySelector<HTMLButtonElement>("[data-gallery-next]");
+  const thumbnailButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-gallery-thumbnail]"));
+
+  const galleryItems = triggers.map((trigger) => ({
+    src: trigger.getAttribute("data-gallery-src") ?? "",
+    title: trigger.getAttribute("data-gallery-title") ?? "",
+    alt: trigger.getAttribute("data-gallery-alt") ?? "",
+  }));
+
+  let currentIndex = 0;
+  let lastFocusedElement: Element | null = null;
+
+  const showImage = (index: number) => {
+    if (!lightboxImage || !lightboxCaption || !lightboxCount || galleryItems.length === 0) return;
+
+    currentIndex = (index + galleryItems.length) % galleryItems.length;
+    const item = galleryItems[currentIndex];
+    lightboxImage.setAttribute("src", item.src);
+    lightboxImage.setAttribute("alt", item.alt);
+    lightboxCount.textContent = `${currentIndex + 1}/${galleryItems.length}`;
+    lightboxCaption.textContent = item.title;
+
+    thumbnailButtons.forEach((thumbnail, thumbnailIndex) => {
+      const isCurrent = thumbnailIndex === currentIndex;
+      thumbnail.classList.toggle("is-active", isCurrent);
+      thumbnail.setAttribute("aria-current", isCurrent ? "true" : "false");
+    });
+  };
+
+  const openGallery = (index: number) => {
+    if (!lightbox || !closeButton) return;
+
+    lastFocusedElement = document.activeElement;
+    lightbox.removeAttribute("hidden");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-gallery-open");
+    showImage(index);
+    closeButton.focus();
+  };
+
+  const closeGallery = () => {
+    if (!lightbox || !lightboxImage) return;
+
+    lightbox.setAttribute("hidden", "");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-gallery-open");
+    lightboxImage.setAttribute("src", "");
+
+    if (lastFocusedElement instanceof HTMLElement) {
+      lastFocusedElement.focus();
+    }
+  };
+
+  triggers.forEach((trigger, index) => {
+    trigger.addEventListener("click", () => openGallery(index));
+  });
+
+  closeButton?.addEventListener("click", closeGallery);
+  previousButton?.addEventListener("click", () => showImage(currentIndex - 1));
+  nextButton?.addEventListener("click", () => showImage(currentIndex + 1));
+  thumbnailButtons.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => showImage(index));
+  });
+
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeGallery();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox || lightbox.hasAttribute("hidden")) return;
+
+    if (event.key === "Escape") {
+      closeGallery();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showImage(currentIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showImage(currentIndex + 1);
+    }
+  });
+</script>

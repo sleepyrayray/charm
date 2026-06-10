@@ -45,6 +45,9 @@ Already completed:
 29. homepage structure adjusted to use a centered image-style hero, three-column checklist services, embedded quote form, FAQ accordion, and dark footer with the alt logo
 30. Services page aligned with the Davis-inspired structure using a full-width hero, service highlights, category checklists, planning cards, and clearer scope limits
 31. About, Contact, and Quote pages aligned with the new page system, including About FAQ accordion and separate inquiry/quote flows
+32. homepage cleaned-area photos added for the hero, specialties section, and Our Work gallery
+33. Our Work gallery replaced placeholders with a nine-photo grid, hover captions, and a lightbox with thumbnails, counter, arrows, and close control
+34. basic image-copy deterrents added for right-click, dragging, and copying
 
 ## Phase 1 - Direction Lock
 
@@ -127,7 +130,7 @@ Tasks:
 7. Create button styles using the official palette
 8. Create card and section styles that feel clean, fresh, and minimal
 9. Remove glassy-effect styling from the active design direction
-10. Create solid section blocks and image placeholders for future cleaned-area photos
+10. Create solid section blocks and image areas for cleaned-area photos
 11. Make sure the interface stays readable and accessible
 
 Done when:
@@ -136,7 +139,7 @@ Done when:
 2. key UI patterns are reusable
 3. the official logo, palette, and Montserrat typography are integrated cleanly
 4. the site works well without photos or reviews
-5. image placeholders can be swapped for real photos later
+5. selected photos can be swapped later without rebuilding the layout
 
 ## Phase 5 - Core Page Build
 
@@ -154,7 +157,7 @@ Tasks:
 7. Build the footer
 8. Build FAQ blocks for the homepage and About
 9. Build the quote CTA blocks
-10. Add placeholder spaces for cleaned-area photos
+10. Add cleaned-area photo spaces and replace placeholders where selected photos are available
 
 Done when:
 
@@ -235,7 +238,7 @@ Tasks:
 5. Add reviews if available
 6. Add any confirmed trust claims
 7. Add final French copy once reviewed
-8. Replace cleaned-area placeholders with real photos once selected
+8. Keep selected cleaned-area photos updated and add stronger launch photos if better assets become available
 
 Done when:
 

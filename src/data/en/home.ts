@@ -42,22 +42,51 @@ export const home = {
       description: "Shared amenities where clean surfaces help the space feel cared for.",
     },
   ],
-  workPlaceholders: [
+  workGallery: [
     {
-      title: "Lobby areas",
-      description: "Photo placeholder for a cleaned entrance or lobby.",
+      title: "Pool and amenity area",
+      src: "/images/work/pool-area.jpeg",
+      alt: "Clean indoor condo pool and surrounding amenity area.",
     },
     {
-      title: "Hallways",
-      description: "Photo placeholder for shared corridors and walking paths.",
+      title: "Condo hallway",
+      src: "/images/work/hallway-carpet.jpeg",
+      alt: "Clean condo hallway with carpeted flooring.",
     },
     {
-      title: "Shared washrooms",
-      description: "Photo placeholder for common washrooms or support areas.",
+      title: "Shared washroom sinks",
+      src: "/images/work/shared-washroom-sinks.jpeg",
+      alt: "Clean shared washroom vanity and sink area.",
     },
     {
-      title: "Amenity spaces",
-      description: "Photo placeholder for gyms, recreation rooms, or pool-side common areas.",
+      title: "Shared washroom stall",
+      src: "/images/work/shared-washroom-stall.jpeg",
+      alt: "Clean shared washroom stall area.",
+    },
+    {
+      title: "Elevator area",
+      src: "/images/work/elevator-area.jpeg",
+      alt: "Clean elevator entrance area with floor mats.",
+    },
+    {
+      title: "Stairwell",
+      src: "/images/work/stairwell.jpeg",
+      alt: "Clean condo stairwell and landing.",
+    },
+    {
+      title: "Garage area",
+      src: "/images/work/garage-area.png",
+      alt: "Clean indoor condo garage floor area.",
+    },
+    {
+      title: "Polished floor area",
+      src: "/images/work/polished-floor-area.jpeg",
+      alt: "Clean polished wood floor area.",
+    },
+    {
+      title: "Floor detail",
+      src: "/images/work/kitchen-floor-detail.jpeg",
+      alt: "Clean floor detail beside a kitchen area.",
     },
   ],
 };

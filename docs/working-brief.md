@@ -107,7 +107,7 @@ The site should feel:
 9. Keep those item cards clearly informational, with no hover treatment that makes them feel clickable.
 10. Use the official logo and star/sparkle motif sparingly so it feels branded, not busy.
 11. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
-12. Add placeholder spaces for cleaned-area photos until real images are selected.
+12. Use selected cleaned-area photos on the homepage where available, and keep future photo additions easy to swap.
 
 ## Inspiration References
 
@@ -187,10 +187,10 @@ The current design/structure mix should aim for:
 Likely homepage flow:
 
 1. header with logo, nav, language switch, and quote CTA
-2. hero with service message, CTA, and a cleaned-area image placeholder
+2. hero with service message, CTA, and a selected cleaned-area background image
 3. specialties
 4. services offered
-5. our work / cleaned-area image placeholders
+5. our work / cleaned-area image gallery
 6. embedded quote request form
 7. FAQ accordion
 8. footer
@@ -203,7 +203,7 @@ Likely design translation:
 4. no glassy-effect containers
 5. easy-to-scan sections without huge text walls
 6. no section should feel like a wall of information
-7. image placeholders that can be replaced later without changing the whole layout
+7. image areas that can be swapped later without changing the whole layout
 
 ## Current Content Availability
 
@@ -216,18 +216,18 @@ Likely design translation:
 5. Official logo files
 6. Official brand deck
 7. Local Gotham font files for reference
+8. Selected homepage cleaned-area photos for the hero, specialties section, and work gallery
 
 ### Missing
 
-1. Final selected photos
-2. Reviews or testimonials
-3. Exact contact details for public use
-4. Final service-area list
-5. Final service checklist
-6. Confirmation that Gotham can be used as a deployed webfont if the site ever switches away from Montserrat
+1. Reviews or testimonials
+2. Exact contact details for public use
+3. Final service-area list
+4. Final service checklist
+5. Confirmation that Gotham can be used as a deployed webfont if the site ever switches away from Montserrat
 
 Build note:
-The next version can use the official logo and colour palette, plus placeholder image spaces. It should not depend on final photos, reviews, or unconfirmed trust claims.
+The homepage can use the selected cleaned-area photos, official logo, palette, and Montserrat. It should still avoid reviews, trust claims, final contact details, or unsupported proof points until those are confirmed.
 
 ## Site Structure Guidance
 
@@ -251,7 +251,7 @@ Likely supporting sections:
 1. service overview
 2. areas we clean
 3. specialties
-4. work/photo placeholders
+4. work/photo gallery
 5. embedded quote request form
 6. FAQ accordion
 
@@ -292,7 +292,7 @@ Content improvements to make next:
 8. Final French wording for brand subtext
 9. Whether Gotham webfont use is licensed for the live website if the site ever switches away from Montserrat
 10. Whether brand mockup images from the deck are inspiration only or can be used publicly
-11. Which cleaned-area photos should replace the homepage placeholders
+11. Whether the current homepage photo set is final enough for launch
 12. Which email inbox should receive Contact and Quote submissions
 13. Which form delivery method should be used for the static GitHub Pages site
 
@@ -349,3 +349,10 @@ Content improvements to make next:
 6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, embedded quote form, full FAQ, and dark teal footer using the light logo alternative.
 7. Aligned the Services page with the new structure using a full-width hero, compact service highlights, category checklists, planning cards, and clearer outside-scope wording.
 8. Aligned About, Contact, and Quote with the same page system, including the About FAQ accordion and clearer separation between general inquiries and quote requests.
+
+### 2026-06-10
+
+1. Added selected cleaned-area photos to the homepage hero, specialties section, and Our Work section.
+2. Replaced Our Work placeholders with a nine-photo gallery capped at three columns on desktop.
+3. Added a lightbox with previous and next controls, bottom thumbnails, a centered `1/9` counter, image captions, and a plain white `X` close control.
+4. Added basic deterrents against casual image right-clicking, dragging, and copying.

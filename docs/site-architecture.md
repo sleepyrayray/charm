@@ -54,7 +54,7 @@ CHARM translation:
 
 1. Use the official CHARM logo and teal/turquoise palette.
 2. Keep the business focus on condo-building common-area cleaning.
-3. Use placeholder image spaces until real cleaned-area photos are added.
+3. Use selected cleaned-area photos where available, starting with the homepage hero, specialties image, and work gallery.
 4. Use solid, clean sections instead of glassy surfaces.
 5. Keep the site calm and readable, not overly glossy.
 
@@ -116,7 +116,7 @@ Presentation rule:
 Avoid decorative pill labels above homepage sections. Cards should be used for clear category blocks only; simple lists should stay visually simple unless they need stronger separation.
 
 Visual rule:
-Remove the glassy-effect direction. Use solid white, Cloud White, and soft aqua sections with clean borders, simple cards, and image placeholders.
+Remove the glassy-effect direction. Use solid white, Cloud White, and soft aqua sections with clean borders, simple cards, and selected cleaned-area images where available.
 
 ### Section 1: Hero
 
@@ -131,7 +131,7 @@ Content:
 4. Primary CTA: `Request a Quote`
 5. Secondary CTA: keep out of the hero for now so the first action stays focused on quote requests.
 6. Optional phone/email line once public contact details are confirmed
-7. Full-width image-style background placeholder until real photos are ready
+7. Full-width cleaned-area background image
 
 Suggested message direction:
 
@@ -143,7 +143,7 @@ Layout note:
 
 1. Center the main hero copy over the image-style background.
 2. Keep the image area full-width like a service-business landing page.
-3. Use a branded dark teal placeholder if no photo exists yet.
+3. Use a branded dark teal fallback if the photo ever needs to be removed.
 4. Keep the hero direct and calm
 5. Use the logo star/sparkle motif sparingly as an accent, not as a repeated decoration
 
@@ -188,25 +188,34 @@ Layout note:
 ### Section 4: Our Work / Cleaned Areas
 
 Goal:
-Prepare for real cleaned-area photos without depending on them yet.
+Show selected cleaned-area photos without overwhelming the homepage.
 
 Format:
-Image placeholder grid
+Clickable image gallery
 
-Suggested content:
+Current content:
 
-1. Lobby placeholder
-2. Hallway placeholder
-3. Shared washroom placeholder
-4. Amenity area placeholder
+1. Pool and amenity area
+2. Condo hallway
+3. Shared washroom sinks
+4. Shared washroom stall
+5. Elevator area
+6. Stairwell
+7. Garage area
+8. Polished floor area
+9. Floor detail
 
-Placeholder rules:
+Gallery rules:
 
-1. Use neutral blocks, subtle icons, or soft branded gradients until real photos arrive.
-2. Clearly treat them as layout placeholders during development.
-3. Do not imply before/after proof until real photos are available.
-4. Add meaningful alt text once real images are used.
-5. Center the section heading and remove the extra paragraph under it.
+1. Show a maximum of three images per row on desktop.
+2. Keep the section heading centered and remove the extra paragraph under it.
+3. Use white centered captions on hover.
+4. Clicking an image opens a lightbox with previous and next navigation.
+5. The lightbox should show a centered `1/9` counter, a plain white `X` close control, bottom thumbnails, and the current image title.
+6. Hide the site header while the lightbox is open.
+7. Add practical image-copy deterrents such as disabling right-click, drag, and image copy behavior, while understanding this cannot fully protect public web assets.
+8. Keep meaningful alt text for all gallery images.
+9. Do not imply before/after proof or unconfirmed results.
 
 ### Section 5: Quote Request Form
 
@@ -530,7 +539,7 @@ Possible later additions:
 1. FAQ accordion
 2. subtle scroll reveal animation
 3. basic icon system
-4. image placeholder system for future cleaned-area photos
+4. reusable image gallery pattern for cleaned-area photos
 
 ## Features To Avoid In V1
 
@@ -572,14 +581,13 @@ How to combine the official brand system with the Davis-inspired structure:
 5. short page sections and practical content order
 6. official logo usage instead of text-only placeholders
 7. polished without looking corporate or intimidating
-8. image placeholders until real cleaned-area photos are ready
+8. selected cleaned-area photos where available, with easy replacement later
 
 ## Recommended Next Step
 
-Before coding:
+Next:
 
-1. Redesign the homepage around the Davis-inspired section sequence.
-2. Replace glassy surfaces with solid clean cards and soft brand sections.
-3. Add placeholder spaces for cleaned-area photos.
+1. Review the homepage gallery order and photo crop choices.
+2. Confirm what direct contact details can be shown publicly.
+3. Confirm the form delivery method for Contact and Quote submissions.
 4. Keep client login out of V1.
-5. Confirm what direct contact details can be shown publicly.
