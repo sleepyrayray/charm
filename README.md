@@ -187,17 +187,24 @@ The Quote page should collect building-specific details.
 
 Recommended quote fields for V1:
 
-1. Name
-2. Phone number
-3. Email
-4. Building or organisation name
-5. Property address or area
-6. Building type
-7. Areas to clean
-8. Cleaning frequency needed
-9. Preferred language
-10. Preferred contact method
-11. Short message
+1. Full name.
+2. Building or Company name.
+3. Email and phone number.
+4. Preferred language.
+5. Preferred contact method.
+6. Street address, optional unit, city, fixed Quebec province, and postal code.
+7. Building type and optional building size.
+8. Areas to clean.
+9. Cleaning frequency and optional start timeline.
+10. Optional notes or access details.
+11. Optional future availability dates for a call or visit.
+
+Current quote form behavior:
+
+1. The quote request UI is a multi-step estimate wizard, not a single long form.
+2. Validation should happen beside the relevant field.
+3. If the visitor chooses email as the preferred contact method, email is required. If the visitor chooses phone, phone is required. If either is acceptable, at least one of the two is required.
+4. Final form delivery is still pending until a receiving inbox and delivery method are confirmed.
 
 Practical note:
 If the team is more comfortable following up in English than French, the preferred language field becomes operationally important, not just a UX detail.

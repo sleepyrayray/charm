@@ -259,7 +259,10 @@ Homepage content rule:
 The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Keep the hero focused on one quote CTA, use a simple three-column checklist for services on desktop, show the quote request form directly, and keep the FAQ collapsed as an accordion so visitors are not overwhelmed.
 
 Page-role rule:
-Contact is for general inquiries with basic information and a message. Request a Quote is a separate flow for building details, cleaning areas, preferred frequency, language, and follow-up method. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
+Contact is for general inquiries with basic information and a message. Request a Quote is a separate multi-step flow for contact details, property details, cleaning areas, frequency, availability, language, and follow-up method. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
+
+Quote form rule:
+Keep the quote flow clean and guided. Use floating labels, field-level validation, a review step, and sparkle progress indicators. Keep final form delivery disabled until the real receiving inbox and delivery method are confirmed.
 
 Feature rule:
 Do not add client login, online accounts, or a customer portal in V1.

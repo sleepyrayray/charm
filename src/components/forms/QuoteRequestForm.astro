@@ -7,82 +7,682 @@ interface Props {
 
 const {
   noteId = "quote-form-note",
-  note = "This will become the dedicated quote request flow once form delivery is connected.",
-  buttonLabel = "Quote flow coming next",
+  note = "Form delivery is not connected yet. Once CHARM has a destination email or form service, this request can be sent directly.",
+  buttonLabel = "Confirm",
 } = Astro.props;
+
+const progressSteps = [
+  "Contact",
+  "Property",
+  "Areas",
+  "Needs",
+  "Availability",
+  "Review",
+];
+
+const areaOptions = [
+  { value: "Lobbies", label: "Lobbies" },
+  { value: "Hallways", label: "Hallways" },
+  { value: "Stairwells", label: "Stairwells" },
+  { value: "Shared washrooms", label: "Shared washrooms" },
+  { value: "Garbage and recycling areas", label: "Garbage and recycling areas" },
+  { value: "Gyms and recreation areas", label: "Gyms and recreation areas" },
+  { value: "Pool-side areas", label: "Pool-side areas" },
+  { value: "Other shared spaces", label: "Other shared spaces" },
+];
 ---
 
-<form class="quote-form grid gap-4" aria-describedby={noteId}>
-  <div class="grid gap-4 sm:grid-cols-2">
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Name</span>
-      <input class="field" type="text" name="name" placeholder="Your name" />
-    </label>
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Phone</span>
-      <input class="field" type="tel" name="phone" placeholder="Phone number" />
-    </label>
-  </div>
+<form class="quote-form quote-wizard" aria-describedby={noteId} data-quote-wizard novalidate>
+  <ol class="quote-wizard-progress" aria-label="Quote request progress">
+    {progressSteps.map((step, index) => (
+      <li data-progress-step={index} aria-current={index === 0 ? "step" : undefined}>
+        <span aria-hidden="true"></span>
+        <span class="sr-only">{step}</span>
+      </li>
+    ))}
+  </ol>
 
-  <label class="grid gap-2 text-sm font-medium">
-    <span>Email</span>
-    <input class="field" type="email" name="email" placeholder="Email address" />
-  </label>
+  <section class="quote-wizard-step" data-quote-step="0">
+    <div class="quote-step-intro">
+      <h3>Contact details</h3>
+      <p>Tell CHARM who to follow up with and how to reach you.</p>
+    </div>
 
-  <div class="grid gap-4 sm:grid-cols-2">
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Building or organisation</span>
-      <input class="field" type="text" name="building" placeholder="Building or organisation" />
+    <label class="form-field">
+      <span class="field-label">Full name</span>
+      <input class="field" type="text" name="fullName" autocomplete="name" />
+      <small class="field-error" data-error-for="fullName"></small>
     </label>
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Property address or area</span>
-      <input class="field" type="text" name="area" placeholder="Saint-Laurent, Montreal, etc." />
-    </label>
-  </div>
 
-  <div class="grid gap-4 sm:grid-cols-2">
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Building type</span>
-      <input class="field" type="text" name="buildingType" placeholder="Condo building, multi-unit, etc." />
+    <label class="form-field">
+      <span class="field-label">Building or Company name</span>
+      <input class="field" type="text" name="organization" />
     </label>
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Cleaning frequency needed</span>
-      <input class="field" type="text" name="frequency" placeholder="Daily, weekly, custom" />
+
+    <div class="form-grid-2">
+      <label class="form-field">
+        <span class="field-label">Email</span>
+        <input class="field" type="email" name="email" autocomplete="email" />
+        <small class="field-error" data-error-for="email"></small>
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Phone</span>
+        <input class="field" type="tel" name="phone" autocomplete="tel" />
+        <small class="field-error" data-error-for="phone"></small>
+      </label>
+    </div>
+
+    <div class="form-grid-2">
+      <label class="form-field form-field-always-float">
+        <span class="field-label">Preferred language</span>
+        <select class="field" name="language">
+          <option value="">Select</option>
+          <option value="English">English</option>
+          <option value="French">French</option>
+        </select>
+        <small class="field-error" data-error-for="language"></small>
+      </label>
+
+      <label class="form-field form-field-always-float">
+        <span class="field-label">Preferred contact method</span>
+        <select class="field" name="contactMethod">
+          <option value="">Select</option>
+          <option value="Email">Email</option>
+          <option value="Phone">Phone</option>
+          <option value="Either email or phone">Either email or phone</option>
+        </select>
+        <small class="field-error" data-error-for="contactMethod"></small>
+      </label>
+    </div>
+  </section>
+
+  <section class="quote-wizard-step" data-quote-step="1" hidden>
+    <div class="quote-step-intro">
+      <h3>Property details</h3>
+      <p>Keep this simple for now. CHARM can confirm details during follow-up.</p>
+    </div>
+
+    <label class="form-field">
+      <span class="field-label">Street address</span>
+      <input class="field" type="text" name="streetAddress" autocomplete="street-address" />
+      <small class="field-error" data-error-for="streetAddress"></small>
     </label>
-  </div>
 
-  <label class="grid gap-2 text-sm font-medium">
-    <span>Areas to clean</span>
-    <input class="field" type="text" name="areas" placeholder="Lobby, hallways, stairwells, gym, etc." />
-  </label>
+    <label class="form-field">
+      <span class="field-label">Unit, apartment, suite, etc.</span>
+      <input class="field" type="text" name="unit" autocomplete="address-line2" />
+    </label>
 
-  <div class="grid gap-4 sm:grid-cols-2">
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Preferred language</span>
-      <select class="field" name="language">
-        <option>English</option>
-        <option>French</option>
+    <div class="form-grid-3">
+      <label class="form-field">
+        <span class="field-label">City</span>
+        <input class="field" type="text" name="city" autocomplete="address-level2" />
+        <small class="field-error" data-error-for="city"></small>
+      </label>
+
+      <label class="form-field form-field-always-float">
+        <span class="field-label">Province</span>
+        <input class="field" type="text" name="province" value="Quebec" autocomplete="address-level1" readonly />
+      </label>
+
+      <label class="form-field">
+        <span class="field-label">Postal code</span>
+        <input class="field" type="text" name="postalCode" autocomplete="postal-code" />
+        <small class="field-error" data-error-for="postalCode"></small>
+      </label>
+    </div>
+
+    <label class="form-field form-field-always-float">
+      <span class="field-label">Building type</span>
+      <select class="field" name="buildingType">
+        <option value="">Select</option>
+        <option value="Condo building">Condo building</option>
+        <option value="Apartment building / multi-unit">Apartment building / multi-unit</option>
+        <option value="Property-managed building">Property-managed building</option>
+        <option value="Other shared building">Other shared building</option>
+      </select>
+      <small class="field-error" data-error-for="buildingType"></small>
+    </label>
+
+    <label class="form-field">
+      <span class="field-label">Floors, units, or building size</span>
+      <input class="field" type="text" name="propertySize" />
+    </label>
+  </section>
+
+  <section class="quote-wizard-step" data-quote-step="2" hidden>
+    <div class="quote-step-intro">
+      <h3>Areas to clean</h3>
+      <p>Select the common areas you want included in the quote.</p>
+    </div>
+
+    <fieldset class="quote-fieldset quote-list-fieldset" data-fieldset="areas">
+      <legend>Which areas need cleaning?</legend>
+      <div class="quote-choice-grid">
+        {areaOptions.map((area) => (
+          <label class="quote-choice">
+            <input type="checkbox" name="areas" value={area.value} data-other-area={area.value === "Other shared spaces" ? "true" : undefined} />
+            <span>{area.label}</span>
+          </label>
+        ))}
+      </div>
+      <small class="field-error fieldset-error" data-error-for-fieldset="areas"></small>
+    </fieldset>
+
+    <label class="form-field" data-other-area-wrap hidden>
+      <span class="field-label">Other area details</span>
+      <textarea class="field" name="otherAreaDetails" maxlength="500" rows="1" data-auto-grow></textarea>
+      <small class="field-error" data-error-for="otherAreaDetails"></small>
+    </label>
+  </section>
+
+  <section class="quote-wizard-step" data-quote-step="3" hidden>
+    <div class="quote-step-intro">
+      <h3>Cleaning needs</h3>
+      <p>Share the schedule and any details that help CHARM prepare a useful estimate.</p>
+    </div>
+
+    <label class="form-field form-field-always-float">
+      <span class="field-label">How often?</span>
+      <select class="field" name="frequency">
+        <option value="">Select</option>
+        <option value="Daily">Daily</option>
+        <option value="Several times per week">Several times per week</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Bi-weekly">Bi-weekly</option>
+        <option value="Custom schedule">Custom schedule</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
+      <small class="field-error" data-error-for="frequency"></small>
+    </label>
+
+    <label class="form-field form-field-always-float">
+      <span class="field-label">When should it start?</span>
+      <select class="field" name="timeline">
+        <option value="">Select</option>
+        <option value="As soon as possible">As soon as possible</option>
+        <option value="Within 2 weeks">Within 2 weeks</option>
+        <option value="Within 1 month">Within 1 month</option>
+        <option value="Planning ahead">Planning ahead</option>
+        <option value="Not sure yet">Not sure yet</option>
       </select>
     </label>
-    <label class="grid gap-2 text-sm font-medium">
-      <span>Preferred contact method</span>
-      <select class="field" name="contactMethod">
-        <option>Email</option>
-        <option>Phone</option>
-      </select>
+
+    <label class="form-field">
+      <span class="field-label">Anything we should know?</span>
+      <textarea class="field" name="cleaningNotes" maxlength="500" rows="1" data-auto-grow></textarea>
     </label>
-  </div>
+  </section>
 
-  <label class="grid gap-2 text-sm font-medium">
-    <span>Message</span>
-    <textarea class="field min-h-36" name="message" placeholder="Tell CHARM a little about the property and cleaning needs."></textarea>
-  </label>
+  <section class="quote-wizard-step" data-quote-step="4" hidden>
+    <div class="quote-step-intro">
+      <h3>Availability</h3>
+      <p>Optional, but helpful if CHARM should call or visit the building before quoting.</p>
+    </div>
 
-  <p id={noteId} class="text-sm leading-7 text-[var(--muted)]">
+    <label class="form-field form-field-always-float">
+      <span class="field-label">What day works best?</span>
+      <span class="date-field-shell">
+        <input class="field date-display-field" type="text" autocomplete="off" readonly data-date-display />
+        <input class="date-picker-native" type="date" name="preferredDate" aria-label="What day works best?" data-date-picker />
+        <span class="date-placeholder">Date</span>
+        <svg class="date-icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7 3v4M17 3v4M4 9h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"></path>
+        </svg>
+      </span>
+    </label>
+
+    <label class="form-field form-field-always-float">
+      <span class="field-label">What is another day that works?</span>
+      <span class="date-field-shell">
+        <input class="field date-display-field" type="text" autocomplete="off" readonly data-date-display />
+        <input class="date-picker-native" type="date" name="secondDate" aria-label="What is another day that works?" data-date-picker />
+        <span class="date-placeholder">Date</span>
+        <svg class="date-icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7 3v4M17 3v4M4 9h16M5 5h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"></path>
+        </svg>
+      </span>
+    </label>
+
+    <fieldset class="quote-fieldset quote-list-fieldset">
+      <legend>Best time?</legend>
+      <div class="quote-choice-grid">
+        <label class="quote-choice">
+          <input type="checkbox" name="preferredTimes" value="Morning" />
+          <span>Morning</span>
+        </label>
+        <label class="quote-choice">
+          <input type="checkbox" name="preferredTimes" value="Afternoon" />
+          <span>Afternoon</span>
+        </label>
+        <label class="quote-choice">
+          <input type="checkbox" name="preferredTimes" value="Evening" />
+          <span>Evening</span>
+        </label>
+        <label class="quote-choice">
+          <input type="checkbox" name="preferredTimes" value="Flexible" />
+          <span>Flexible</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <label class="form-field">
+      <span class="field-label">Any access notes?</span>
+      <textarea class="field" name="accessNotes" maxlength="500" rows="1" data-auto-grow></textarea>
+    </label>
+  </section>
+
+  <section class="quote-wizard-step quote-review-step" data-quote-step="5" hidden>
+    <div class="quote-step-intro">
+      <h3>Review</h3>
+      <p>Check the details before sending. Submission is paused until form delivery is connected.</p>
+    </div>
+
+    <dl class="quote-review-list" data-review-summary></dl>
+    <p class="quote-confirm-note">
+      By confirming, you agree to CHARM's terms and conditions. Terms and conditions will be added before launch.
+    </p>
+  </section>
+
+  <p class="quote-wizard-error" data-step-error role="alert" aria-live="polite" hidden></p>
+
+  <p id={noteId} class="form-note">
     {note}
   </p>
 
-  <div class="flex justify-center pt-2">
-    <button class="button-primary opacity-70" type="button">{buttonLabel}</button>
+  <div class="quote-wizard-actions">
+    <button class="button-secondary" type="button" data-quote-back hidden>Back</button>
+    <button class="button-primary" type="button" data-quote-next>Next</button>
+    <button class="button-primary quote-wizard-submit" type="button" data-quote-submit disabled hidden>{buttonLabel}</button>
   </div>
 </form>
+
+<script>
+  const wizardForms = document.querySelectorAll<HTMLFormElement>("[data-quote-wizard]");
+
+  type ValidationResult = {
+    message: string;
+    fields: Record<string, string>;
+    fieldsets?: Record<string, string>;
+  };
+
+  const getField = (form: HTMLFormElement, name: string) =>
+    form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+
+  const getValue = (form: HTMLFormElement, name: string) => getField(form, name)?.value.trim() ?? "";
+
+  const getCheckedValues = (form: HTMLFormElement, name: string) =>
+    Array.from(form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)).map(
+      (input) => input.value,
+    );
+
+  const setInvalidFields = (
+    form: HTMLFormElement,
+    fieldMessages: Record<string, string> = {},
+    fieldsetMessages: Record<string, string> = {},
+  ) => {
+    form.querySelectorAll("[aria-invalid='true']").forEach((field) => field.removeAttribute("aria-invalid"));
+    form.querySelectorAll<HTMLElement>("[data-error-for], [data-error-for-fieldset]").forEach((error) => {
+      error.textContent = "";
+    });
+    form
+      .querySelectorAll("[data-fieldset-invalid='true']")
+      .forEach((fieldset) => fieldset.removeAttribute("data-fieldset-invalid"));
+
+    Object.entries(fieldMessages).forEach(([name, message]) => {
+      const field = getField(form, name);
+      field?.setAttribute("aria-invalid", "true");
+
+      const error = form.querySelector<HTMLElement>(`[data-error-for="${name}"]`);
+      if (error) error.textContent = message;
+    });
+
+    Object.entries(fieldsetMessages).forEach(([name, message]) => {
+      form.querySelector<HTMLElement>(`[data-fieldset="${name}"]`)?.setAttribute("data-fieldset-invalid", "true");
+
+      const error = form.querySelector<HTMLElement>(`[data-error-for-fieldset="${name}"]`);
+      if (error) error.textContent = message;
+    });
+  };
+
+  const reviewRows = [
+    ["Full name", "fullName"],
+    ["Building or Company name", "organization"],
+    ["Email", "email"],
+    ["Phone", "phone"],
+    ["Preferred language", "language"],
+    ["Preferred contact method", "contactMethod"],
+    ["Street address", "streetAddress"],
+    ["Unit, apartment, suite, etc.", "unit"],
+    ["City", "city"],
+    ["Province", "province"],
+    ["Postal code", "postalCode"],
+    ["Building type", "buildingType"],
+    ["Floors, units, or building size", "propertySize"],
+    ["Areas to clean", "areas"],
+    ["Other area details", "otherAreaDetails"],
+    ["How often?", "frequency"],
+    ["When should it start?", "timeline"],
+    ["Anything we should know?", "cleaningNotes"],
+    ["What day works best?", "preferredDate"],
+    ["What is another day that works?", "secondDate"],
+    ["Best time?", "preferredTimes"],
+    ["Any access notes?", "accessNotes"],
+  ];
+
+  wizardForms.forEach((form) => {
+    const steps = Array.from(form.querySelectorAll<HTMLElement>("[data-quote-step]"));
+    const progressItems = Array.from(form.querySelectorAll<HTMLElement>("[data-progress-step]"));
+    const backButton = form.querySelector<HTMLButtonElement>("[data-quote-back]");
+    const nextButton = form.querySelector<HTMLButtonElement>("[data-quote-next]");
+    const submitButton = form.querySelector<HTMLButtonElement>("[data-quote-submit]");
+    const stepError = form.querySelector<HTMLElement>("[data-step-error]");
+    const reviewSummary = form.querySelector<HTMLDListElement>("[data-review-summary]");
+    const otherAreaInput = form.querySelector<HTMLInputElement>("[data-other-area='true']");
+    const otherAreaWrap = form.querySelector<HTMLElement>("[data-other-area-wrap]");
+    const datePickers = Array.from(form.querySelectorAll<HTMLInputElement>("[data-date-picker]"));
+    const autoGrowFields = Array.from(form.querySelectorAll<HTMLTextAreaElement>("[data-auto-grow]"));
+    const areaFieldset = form.querySelector<HTMLElement>("[data-fieldset='areas']");
+    const floatingFields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(".field"));
+    let activeStep = 0;
+
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    const tomorrowIso = new Date(tomorrow.getTime() - tomorrow.getTimezoneOffset() * 60000)
+      .toISOString()
+      .slice(0, 10);
+
+    const syncFloatingState = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
+      const fieldWrap = field.closest<HTMLElement>(".form-field");
+      if (!fieldWrap) return;
+
+      if (field.value.trim()) {
+        fieldWrap.setAttribute("data-has-value", "true");
+      } else {
+        fieldWrap.removeAttribute("data-has-value");
+      }
+    };
+
+    const resizeTextarea = (field: HTMLTextAreaElement) => {
+      field.style.height = "";
+      field.style.height = `${field.scrollHeight}px`;
+    };
+
+    const showError = (validation: ValidationResult = { message: "", fields: {} }) => {
+      if (stepError) {
+        stepError.textContent = validation.message;
+        stepError.hidden = !validation.message;
+      }
+
+      setInvalidFields(form, validation.fields, validation.fieldsets);
+
+      const firstInvalid = Object.keys(validation.fields)
+        .map((name) => getField(form, name))
+        .find((field): field is HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement => Boolean(field));
+
+      firstInvalid?.focus();
+    };
+
+    const toggleOtherArea = () => {
+      if (!otherAreaInput || !otherAreaWrap) return;
+
+      otherAreaWrap.hidden = !otherAreaInput.checked;
+
+      if (otherAreaInput.checked) {
+        const details = getField(form, "otherAreaDetails");
+        if (details instanceof HTMLTextAreaElement) resizeTextarea(details);
+      }
+
+      if (!otherAreaInput.checked) {
+        const details = getField(form, "otherAreaDetails");
+        if (details) details.value = "";
+      }
+    };
+
+    const buildReview = () => {
+      if (!reviewSummary) return;
+
+      reviewSummary.textContent = "";
+
+      reviewRows.forEach(([label, name]) => {
+        const term = document.createElement("dt");
+        const value = document.createElement("dd");
+        term.textContent = label;
+
+        if (name === "areas" || name === "preferredTimes") {
+          value.textContent = getCheckedValues(form, name).join(", ") || "Not provided";
+        } else {
+          value.textContent = getValue(form, name) || "Not provided";
+        }
+
+        reviewSummary.append(term, value);
+      });
+    };
+
+    const setStep = (stepIndex: number) => {
+      activeStep = Math.max(0, Math.min(stepIndex, steps.length - 1));
+
+      steps.forEach((step, index) => {
+        step.hidden = index !== activeStep;
+      });
+
+      progressItems.forEach((item, index) => {
+        item.toggleAttribute("data-active", index === activeStep);
+        item.toggleAttribute("data-complete", index < activeStep);
+
+        if (index === activeStep) {
+          item.setAttribute("aria-current", "step");
+        } else {
+          item.removeAttribute("aria-current");
+        }
+      });
+
+      if (backButton) backButton.hidden = activeStep === 0;
+      if (nextButton) nextButton.hidden = activeStep === steps.length - 1;
+      if (submitButton) submitButton.hidden = activeStep !== steps.length - 1;
+
+      if (activeStep === steps.length - 1) buildReview();
+
+      showError();
+    };
+
+    const validateStep = (stepIndex: number): ValidationResult => {
+      if (stepIndex === 0) {
+        if (!getValue(form, "fullName")) {
+          return {
+            message: "Full name is required.",
+            fields: { fullName: "Full name is required." },
+          };
+        }
+
+        if (!getValue(form, "language")) {
+          return {
+            message: "Preferred language is required.",
+            fields: { language: "Preferred language is required." },
+          };
+        }
+
+        const emailField = getField(form, "email") as HTMLInputElement | null;
+        const contactMethod = getValue(form, "contactMethod");
+
+        if (!getValue(form, "contactMethod")) {
+          return {
+            message: "Preferred contact method is required.",
+            fields: { contactMethod: "Preferred contact method is required." },
+          };
+        }
+
+        if (contactMethod === "Email" && !getValue(form, "email")) {
+          return {
+            message: "Email is required when email is your preferred contact method.",
+            fields: { email: "Email is required when email is your preferred contact method." },
+          };
+        }
+
+        if (contactMethod === "Phone" && !getValue(form, "phone")) {
+          return {
+            message: "Phone is required when phone is your preferred contact method.",
+            fields: { phone: "Phone is required when phone is your preferred contact method." },
+          };
+        }
+
+        if (contactMethod === "Either email or phone" && !getValue(form, "email") && !getValue(form, "phone")) {
+          return {
+            message: "Email or phone number must be provided.",
+            fields: {
+              email: "Email or phone number must be provided.",
+              phone: "Email or phone number must be provided.",
+            },
+          };
+        }
+
+        if (emailField?.value.trim() && !emailField.validity.valid) {
+          return {
+            message: "Please enter a valid email address.",
+            fields: { email: "Please enter a valid email address." },
+          };
+        }
+      }
+
+      if (stepIndex === 1) {
+        if (!getValue(form, "streetAddress")) {
+          return {
+            message: "Street address is required.",
+            fields: { streetAddress: "Street address is required." },
+          };
+        }
+
+        if (!getValue(form, "city")) {
+          return {
+            message: "City is required.",
+            fields: { city: "City is required." },
+          };
+        }
+
+        if (!getValue(form, "postalCode")) {
+          return {
+            message: "Postal code is required.",
+            fields: { postalCode: "Postal code is required." },
+          };
+        }
+
+        if (!getValue(form, "buildingType")) {
+          return {
+            message: "Building type is required.",
+            fields: { buildingType: "Building type is required." },
+          };
+        }
+      }
+
+      if (stepIndex === 2) {
+        if (getCheckedValues(form, "areas").length === 0) {
+          return {
+            message: "At least one area must be selected.",
+            fields: {},
+            fieldsets: { areas: "At least one area must be selected." },
+          };
+        }
+
+        if (otherAreaInput?.checked && !getValue(form, "otherAreaDetails")) {
+          return {
+            message: "Other area details are required.",
+            fields: { otherAreaDetails: "Other area details are required." },
+          };
+        }
+      }
+
+      if (stepIndex === 3 && !getValue(form, "frequency")) {
+        return {
+          message: "Cleaning frequency is required.",
+          fields: { frequency: "Cleaning frequency is required." },
+        };
+      }
+
+      return { message: "", fields: {} };
+    };
+
+    const clearResolvedError = (event: Event) => {
+      const target = event.target;
+
+      if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLTextAreaElement)) {
+        return;
+      }
+
+      syncFloatingState(target);
+      target.removeAttribute("aria-invalid");
+      form.querySelector<HTMLElement>(`[data-error-for="${target.name}"]`)?.replaceChildren();
+
+      if ((target.name === "email" || target.name === "phone") && (getValue(form, "email") || getValue(form, "phone"))) {
+        getField(form, "email")?.removeAttribute("aria-invalid");
+        getField(form, "phone")?.removeAttribute("aria-invalid");
+        form.querySelector<HTMLElement>('[data-error-for="email"]')?.replaceChildren();
+        form.querySelector<HTMLElement>('[data-error-for="phone"]')?.replaceChildren();
+      }
+
+      if (target.name === "contactMethod") {
+        getField(form, "email")?.removeAttribute("aria-invalid");
+        getField(form, "phone")?.removeAttribute("aria-invalid");
+        form.querySelector<HTMLElement>('[data-error-for="email"]')?.replaceChildren();
+        form.querySelector<HTMLElement>('[data-error-for="phone"]')?.replaceChildren();
+      }
+
+      if (target.name === "areas" && getCheckedValues(form, "areas").length > 0) {
+        areaFieldset?.removeAttribute("data-fieldset-invalid");
+        form.querySelector<HTMLElement>('[data-error-for-fieldset="areas"]')?.replaceChildren();
+      }
+
+      if (stepError) {
+        stepError.textContent = "";
+        stepError.hidden = true;
+      }
+    };
+
+    nextButton?.addEventListener("click", () => {
+      const validation = validateStep(activeStep);
+
+      if (validation.message) {
+        showError(validation);
+        return;
+      }
+
+      setStep(activeStep + 1);
+    });
+
+    backButton?.addEventListener("click", () => setStep(activeStep - 1));
+    form.addEventListener("input", clearResolvedError);
+    form.addEventListener("change", clearResolvedError);
+
+    autoGrowFields.forEach((field) => {
+      field.addEventListener("input", () => resizeTextarea(field));
+      resizeTextarea(field);
+    });
+
+    otherAreaInput?.addEventListener("change", toggleOtherArea);
+
+    datePickers.forEach((input) => {
+      const displayField = input.parentElement?.querySelector<HTMLInputElement>("[data-date-display]");
+      input.min = tomorrowIso;
+
+      input.addEventListener("click", () => {
+        try {
+          input.showPicker?.();
+        } catch {
+          // Some browsers only allow showPicker from direct user gestures.
+        }
+      });
+
+      input.addEventListener("change", () => {
+        if (displayField) {
+          displayField.value = input.value;
+          syncFloatingState(displayField);
+        }
+      });
+    });
+
+    floatingFields.forEach(syncFloatingState);
+    toggleOtherArea();
+    setStep(0);
+  });
+</script>

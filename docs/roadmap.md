@@ -48,6 +48,7 @@ Already completed:
 32. homepage cleaned-area photos added for the hero, specialties section, and Our Work gallery
 33. Our Work gallery replaced placeholders with a nine-photo grid, hover captions, and a lightbox with thumbnails, counter, arrows, and close control
 34. basic image-copy deterrents added for right-click, dragging, and copying
+35. quote request UI rebuilt as a multi-step estimate wizard with floating labels, field-level validation, contact-method rules, future-date availability fields, review step, and CHARM sparkle progress indicators
 
 ## Phase 1 - Direction Lock
 
@@ -173,8 +174,8 @@ Make lead capture practical and easy.
 Tasks:
 
 1. Build the general contact inquiry form UI
-2. Build the detailed quote request form UI
-3. Add validation
+2. Build the detailed quote request form UI - done for the frontend wizard
+3. Add validation - done for the frontend quote wizard
 4. Choose the form delivery method after the receiving inbox, required fields, confirmation message, and spam approach are confirmed
 5. Add contact details once confirmed
 6. Add confirmation/success states
@@ -182,8 +183,8 @@ Tasks:
 Done when:
 
 1. a visitor can submit a general inquiry
-2. a visitor can submit a quote request
-3. both forms are clear and easy to complete
+2. a visitor can submit a quote request through the chosen delivery method
+3. both forms are clear, easy to complete, and connected end to end
 
 ## Phase 7 - SEO And Accessibility
 

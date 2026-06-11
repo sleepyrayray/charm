@@ -226,9 +226,20 @@ Content:
 
 1. `Get an estimate` heading
 2. short reminder of the details needed
-3. embedded quote request form
+3. embedded multi-step quote request form
 4. clear note until form delivery is connected
-5. centered form action button
+5. field-level validation messages
+6. centered confirmation action
+
+Quote form behavior:
+
+1. Use compact steps for contact details, property details, areas to clean, cleaning needs, availability, and review.
+2. Use floating field labels so the form feels polished without extra label clutter.
+3. Use field-level validation messages with a small exclamation icon instead of one large error banner.
+4. Require email when email is the preferred contact method, phone when phone is preferred, or at least one of the two when either method is acceptable.
+5. Keep Province fixed to Quebec for V1.
+6. Use future-date availability fields only, with today and past dates unavailable.
+7. Keep the final submit disabled until form delivery is connected.
 
 ### Section 6: FAQ
 
@@ -468,17 +479,18 @@ Collect the practical building details needed for a cleaning quote.
 
 ### Recommended Form Fields
 
-1. Name
-2. Phone
-3. Email
-4. Building or organisation name
-5. Property address or area
-6. Building type
-7. Areas to clean
-8. Cleaning frequency needed
-9. Preferred language
-10. Preferred contact method
-11. Message
+1. full name
+2. building or company name
+3. email and phone
+4. preferred language
+5. preferred contact method
+6. street address, unit, city, fixed Quebec province, and postal code
+7. building type and optional building size
+8. areas to clean
+9. cleaning frequency and optional start timeline
+10. optional notes
+11. optional availability dates and preferred time
+12. review step before confirmation
 
 Layout note:
 Quote should collect building-specific details and should not feel like the same form as Contact.
