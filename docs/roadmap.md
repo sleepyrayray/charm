@@ -49,6 +49,7 @@ Already completed:
 33. Our Work gallery replaced placeholders with a nine-photo grid, hover captions, and a lightbox with thumbnails, counter, arrows, and close control
 34. basic image-copy deterrents added for right-click, dragging, and copying
 35. quote request UI rebuilt as a multi-step estimate wizard with floating labels, field-level validation, contact-method rules, future-date availability fields, review step, and CHARM sparkle progress indicators
+36. FAQ accordions simplified with divider lines, CHARM sparkle toggles, and no extra homepage About CTA
 
 ## Phase 1 - Direction Lock
 

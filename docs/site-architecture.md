@@ -253,7 +253,7 @@ Suggested questions:
 3. How do quote requests work?
 
 Layout note:
-Show the full current FAQ on the homepage and keep it mirrored on the About page for now. Use a collapsed accordion, keep the question list narrower than the main content width, and center the `Read more about CHARM` link below it.
+Show the full current FAQ on the homepage and keep it mirrored on the About page for now. Use a collapsed accordion, keep the question list narrower than the main content width, separate questions with simple divider lines instead of individual cards, and use the CHARM sparkle motif for the closed state with a matching flat line for the open state.
 
 ## Supporting Content Moved Off The Homepage
 
