@@ -85,7 +85,8 @@ Top row:
 
 1. CHARM logo or compact icon logo
 2. accessible text label for `CHARM`
-3. hamburger menu
+3. visible `Request a Quote` button
+4. hamburger menu
 
 Mobile menu items:
 
@@ -93,8 +94,7 @@ Mobile menu items:
 2. Services
 3. About
 4. Contact
-5. Request a Quote
-6. FR
+5. French or English language option
 
 ### Navbar Behavior
 
@@ -103,7 +103,8 @@ Mobile menu items:
 3. Keep it compact
 4. The quote CTA should stay easy to find at all times
 5. Use Charm Turquoise `#007887` or a high-contrast neutral treatment for the CTA
-6. Do not add a client login link unless the business later adopts a real client portal
+6. Use solid brand-colour button states; avoid transparent hover states that reduce contrast on dark teal sections
+7. Do not add a client login link unless the business later adopts a real client portal
 
 ## Homepage Wireframe
 

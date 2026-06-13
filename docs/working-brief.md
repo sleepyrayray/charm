@@ -108,6 +108,9 @@ The site should feel:
 10. Use the official logo and star/sparkle motif sparingly so it feels branded, not busy.
 11. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
 12. Use selected cleaned-area photos on the homepage where available, and keep future photo additions easy to swap.
+13. Use a subtle ScrollReveal-style fade-up on inner content parts, not the navbar, footer, or whole layout wrappers; do not delay actual HTML content, and respect reduced-motion preferences.
+14. Use solid Antiman-inspired hover/click states for nav links and buttons, pairing dark teal with Cloud White or Aqua Mist so buttons stay readable on both light and dark sections.
+15. Keep the shared desktop content shell slightly wider so photo-and-copy sections feel less cramped on large screens.
 
 ## Inspiration References
 

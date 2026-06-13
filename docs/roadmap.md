@@ -50,6 +50,10 @@ Already completed:
 34. basic image-copy deterrents added for right-click, dragging, and copying
 35. quote request UI rebuilt as a multi-step estimate wizard with floating labels, field-level validation, contact-method rules, future-date availability fields, review step, and CHARM sparkle progress indicators
 36. FAQ accordions simplified with divider lines, CHARM sparkle toggles, and no extra homepage About CTA
+37. subtle content-part scroll reveal effect added with stagger timing and reduced-motion support
+38. mobile header updated with a visible quote CTA and hamburger menu for nav and language links
+39. desktop content shell widened for roomier homepage sections
+40. button and nav interactions refreshed with solid Antiman-inspired hover states that keep contrast readable
 
 ## Phase 1 - Direction Lock
 

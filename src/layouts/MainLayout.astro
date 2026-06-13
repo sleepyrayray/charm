@@ -25,6 +25,9 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
     <meta name="theme-color" content="#007887" />
     <link rel="icon" type="image/png" href={brandIcon} />
     <link rel="apple-touch-icon" href={brandIcon} />
+    <script is:inline>
+      document.documentElement.classList.add("reveal-ready");
+    </script>
   </head>
   <body>
     <Header locale={locale} currentPath={currentPath} />
@@ -63,6 +66,71 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
           event.preventDefault();
         }
       });
+
+      const revealSelector = [
+        ".home-hero-copy > *",
+        ".home-specialties-image",
+        ".home-specialty-item",
+        ".home-section-heading",
+        ".home-check-list li",
+        ".home-section-link",
+        ".home-work-photo",
+        ".home-quote-panel > div",
+        ".home-quote-panel .quote-form",
+        ".home-faq-list details",
+        ".services-hero-copy > *",
+        ".services-highlight-card",
+        ".services-section-heading",
+        ".services-category-card",
+        ".services-plan-card",
+        ".services-scope-card",
+        ".services-final-cta",
+        ".page-hero-copy > *",
+        ".about-summary-card",
+        ".about-info-card",
+        ".about-process-card",
+        ".page-section-heading",
+        ".page-faq-list details",
+        ".form-intro-card",
+        ".form-card",
+        ".panel.section-card",
+      ].join(", ");
+      const revealItems = Array.from(document.querySelectorAll<HTMLElement>(revealSelector));
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const revealGroups = new Map<Element, number>();
+      const revealAll = () => {
+        revealItems.forEach((item) => item.classList.add("is-revealed"));
+      };
+
+      if (revealItems.length > 0) {
+        revealItems.forEach((item) => {
+          const group = item.closest("section") ?? item.parentElement ?? item;
+          const groupIndex = revealGroups.get(group) ?? 0;
+          revealGroups.set(group, groupIndex + 1);
+          item.style.setProperty("--reveal-delay", `${Math.min(groupIndex * 90, 360)}ms`);
+        });
+
+        if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) {
+          revealAll();
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-revealed");
+                observer.unobserve(entry.target);
+              });
+            },
+            {
+              rootMargin: "0px 0px -10% 0px",
+              threshold: 0.12,
+            },
+          );
+
+          revealItems.forEach((item) => revealObserver.observe(item));
+        }
+      }
     </script>
   </body>
 </html>
