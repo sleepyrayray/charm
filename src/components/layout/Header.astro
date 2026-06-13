@@ -60,8 +60,6 @@ const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
         </div>
 
         <div class="mobile-header-actions md:hidden">
-          <a href={quoteHref} class="button-primary mobile-quote-button">{site.quoteLabel}</a>
-
           <details class="mobile-nav-menu">
             <summary aria-label={menuLabel}>
               <span></span>
@@ -70,6 +68,8 @@ const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
             </summary>
 
             <div class="mobile-nav-dropdown">
+              <a href={quoteHref} class="mobile-nav-link mobile-quote-link">{site.quoteLabel}</a>
+
               {navigation.map((item) => {
                 const active = routePath === item.href;
 

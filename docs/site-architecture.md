@@ -85,26 +85,27 @@ Top row:
 
 1. CHARM logo or compact icon logo
 2. accessible text label for `CHARM`
-3. visible `Request a Quote` button
-4. hamburger menu
+3. hamburger menu
 
 Mobile menu items:
 
-1. Home
-2. Services
-3. About
-4. Contact
-5. French or English language option
+1. Request a Quote
+2. Home
+3. Services
+4. About
+5. Contact
+6. French or English language option
 
 ### Navbar Behavior
 
 1. Sticky on scroll
 2. Use a solid or near-solid white surface for clarity
 3. Keep it compact
-4. The quote CTA should stay easy to find at all times
+4. On mobile, keep the quote CTA inside the hamburger menu to avoid crowding the header
 5. Use Charm Turquoise `#007887` or a high-contrast neutral treatment for the CTA
 6. Use solid brand-colour button states; avoid transparent hover states that reduce contrast on dark teal sections
-7. Do not add a client login link unless the business later adopts a real client portal
+7. Keep white-button hover states calm by using Cloud White, Charm Turquoise, and Teal Foam instead of bright Aqua Mist fills
+8. Do not add a client login link unless the business later adopts a real client portal
 
 ## Homepage Wireframe
 
@@ -212,7 +213,7 @@ Gallery rules:
 2. Keep the section heading centered and remove the extra paragraph under it.
 3. Use white centered captions on hover.
 4. Clicking an image opens a lightbox with previous and next navigation.
-5. The lightbox should show a centered `1/9` counter, a plain white `X` close control, bottom thumbnails, and the current image title.
+5. The lightbox should show a centered `1/9` counter, a circular crossed-bar close control, bottom thumbnails, and the current image title.
 6. Hide the site header while the lightbox is open.
 7. Add practical image-copy deterrents such as disabling right-click, drag, and image copy behavior, while understanding this cannot fully protect public web assets.
 8. Keep meaningful alt text for all gallery images.
@@ -311,12 +312,12 @@ Give a fuller breakdown of what CHARM actually cleans.
 
 ### Recommended Structure
 
-1. Full-width intro hero
-2. Three service-fit highlights
-3. Common areas we clean
-4. Service planning
-5. Outside cleaning scope
-6. Quote CTA
+1. Simple intro hero
+2. `Why choose our services?` one-column reason list
+3. Expanded service detail rows
+4. Outside cleaning scope
+5. Service-specific FAQ
+6. Quote CTA reminder
 
 ### Suggested Page Sections
 
@@ -324,46 +325,33 @@ Give a fuller breakdown of what CHARM actually cleans.
 
 1. clear page title
 2. short summary paragraph
-3. primary quote CTA
-4. secondary question/contact CTA
 
 Layout note:
-Use the same full-width teal hero direction as the homepage, but keep the page shorter and more practical.
+Keep this hero simple with no logo and no buttons. Use a bright, clean surface so the page feels connected to the homepage without repeating the homepage hero.
 
-#### Service-Fit Highlights
+#### Why Choose Our Services
 
-1. shared spaces
-2. recurring upkeep
-3. clear limits
-
-Layout note:
-Use compact cards directly below the hero so visitors understand fit before reading the longer service breakdown.
-
-#### Common Areas We Clean
-
-Group services into simple categories:
-
-1. entrance and lobby areas
-2. hallways and stairwells
-3. shared washrooms
-4. garbage and recycling spaces
-5. gyms and recreational spaces
-6. pool-side common areas
+1. focused on condo common areas
+2. easy to plan recurring upkeep
+3. clear cleaning boundaries
+4. local Montreal service
 
 Layout note:
-Use category cards with simple checklist-style rows inside. Avoid making every item look like a separate clickable card.
+Use a one-column list with CHARM sparkle icons, similar in spirit to the homepage services checklist but with more explanatory copy.
 
-#### Service Planning
+#### Expanded Services
 
-1. condo buildings
-2. multi-unit residential buildings
-3. other shared residential properties if applicable
-4. daily recurring service
-5. weekly recurring service
-6. custom frequency
+Show the six current services in alternating image/text rows:
 
-Note:
-Only keep options that are truly offered.
+1. lobbies
+2. hallways
+3. stairwells
+4. shared washrooms
+5. garbage and recycling areas
+6. gyms and recreation areas
+
+Layout note:
+Use image placeholders until real photos are provided. On desktop, alternate image and description positions while keeping a simple stacked layout on mobile.
 
 #### Outside Cleaning Scope
 
@@ -375,10 +363,14 @@ Only keep options that are truly offered.
 Layout note:
 Use clear wording that explains limits without sounding negative or defensive.
 
+#### Services FAQ
+
+Use the same divider-line accordion structure as the homepage FAQ, but with service-specific questions.
+
 #### CTA
 
-1. request a quote
-2. contact us
+1. short reminder to request a quote
+2. button to the dedicated Quote page
 
 ## About Page Wireframe
 

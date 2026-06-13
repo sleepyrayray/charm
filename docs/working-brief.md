@@ -109,8 +109,9 @@ The site should feel:
 11. Shift away from the temporary pastel startup look toward the official fresh, clean, turquoise-led identity.
 12. Use selected cleaned-area photos on the homepage where available, and keep future photo additions easy to swap.
 13. Use a subtle ScrollReveal-style fade-up on inner content parts, not the navbar, footer, or whole layout wrappers; do not delay actual HTML content, and respect reduced-motion preferences.
-14. Use solid Antiman-inspired hover/click states for nav links and buttons, pairing dark teal with Cloud White or Aqua Mist so buttons stay readable on both light and dark sections.
+14. Use solid Antiman-inspired hover/click states for nav links and buttons, pairing Charm Turquoise, Teal Foam, Cloud White, and white so buttons stay readable without bright Aqua Mist hover fills.
 15. Keep the shared desktop content shell slightly wider so photo-and-copy sections feel less cramped on large screens.
+16. Avoid hover lift on buttons and controls; use colour, border, and subtle icon changes instead.
 
 ## Inspiration References
 
@@ -353,7 +354,7 @@ Content improvements to make next:
 4. Removed the glassy-effect direction from the active design plan.
 5. Started the homepage redesign with a Davis-inspired flow, solid sections, direct transparent-logo usage, and cleaned-area placeholders.
 6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, embedded quote form, full FAQ, and dark teal footer using the light logo alternative.
-7. Aligned the Services page with the new structure using a full-width hero, compact service highlights, category checklists, planning cards, and clearer outside-scope wording.
+7. Aligned the Services page with the new structure using a full-width hero, compact service highlights, category checklists, and clearer outside-scope wording.
 8. Aligned About, Contact, and Quote with the same page system, including the About FAQ accordion and clearer separation between general inquiries and quote requests.
 
 ### 2026-06-10
@@ -362,3 +363,12 @@ Content improvements to make next:
 2. Replaced Our Work placeholders with a nine-photo gallery capped at three columns on desktop.
 3. Added a lightbox with previous and next controls, bottom thumbnails, a centered `1/9` counter, image captions, and a plain white `X` close control.
 4. Added basic deterrents against casual image right-clicking, dragging, and copying.
+
+### 2026-06-13
+
+1. Treated the homepage as good enough for now and shifted focus to the Services page.
+2. Reworked the Services page plan to avoid duplicating homepage content.
+3. Set the Services page structure to a simple title hero, one-column reasons list, six expanded service rows with image placeholders, outside-scope clarification, service-specific FAQ, and quote CTA reminder.
+4. Moved the mobile quote CTA into the hamburger menu to keep the header cleaner.
+5. Replaced the gallery lightbox text `X` with a circular crossed-bar close control.
+6. Removed hover lift from buttons and controls; colour and border changes should carry hover states instead.

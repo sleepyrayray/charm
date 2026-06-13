@@ -43,7 +43,7 @@ Already completed:
 27. client login excluded from V1 unless the business adopts a real portal later
 28. homepage Davis-inspired redesign started with solid sections and cleaned-area placeholders
 29. homepage structure adjusted to use a centered image-style hero, three-column checklist services, embedded quote form, FAQ accordion, and dark footer with the alt logo
-30. Services page aligned with the Davis-inspired structure using a full-width hero, service highlights, category checklists, planning cards, and clearer scope limits
+30. Services page aligned with the Davis-inspired structure using a full-width hero, service highlights, category checklists, and clearer scope limits
 31. About, Contact, and Quote pages aligned with the new page system, including About FAQ accordion and separate inquiry/quote flows
 32. homepage cleaned-area photos added for the hero, specialties section, and Our Work gallery
 33. Our Work gallery replaced placeholders with a nine-photo grid, hover captions, and a lightbox with thumbnails, counter, arrows, and close control
@@ -51,9 +51,11 @@ Already completed:
 35. quote request UI rebuilt as a multi-step estimate wizard with floating labels, field-level validation, contact-method rules, future-date availability fields, review step, and CHARM sparkle progress indicators
 36. FAQ accordions simplified with divider lines, CHARM sparkle toggles, and no extra homepage About CTA
 37. subtle content-part scroll reveal effect added with stagger timing and reduced-motion support
-38. mobile header updated with a visible quote CTA and hamburger menu for nav and language links
+38. mobile header updated with the quote CTA inside the hamburger menu with nav and language links
 39. desktop content shell widened for roomier homepage sections
 40. button and nav interactions refreshed with solid Antiman-inspired hover states that keep contrast readable
+41. Services page reworked with a simple hero, one-column reasons list, six expanded service rows with image placeholders, service FAQ, and no planning section
+42. mobile quote CTA moved into the hamburger menu, white-button hover colours calmed down, gallery close control restyled, and button hover lift removed
 
 ## Phase 1 - Direction Lock
 
