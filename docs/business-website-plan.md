@@ -25,14 +25,14 @@ This plan is valuable even if the long-term career changes later. It builds tran
 
 The best positioning is not "I make websites for anyone." The stronger positioning is:
 
-> I help local service businesses look professional online and get more quote requests.
+> I help local service businesses look professional online and get more direct inquiries.
 
 For the family cleaning business, that means the website should help visitors answer five questions quickly:
 
 1. Is this a real and trustworthy cleaning business?
 2. Do they clean condo common areas like ours?
 3. What areas are served?
-4. How can I request a quote?
+4. How can I contact them?
 5. Can I communicate in English or French?
 
 ## Main Business Goal
@@ -41,7 +41,7 @@ The website should help the cleaning business get more direct clients, rather th
 
 The site should support:
 
-1. Direct quote requests from condo syndicates, property managers, and building administrators.
+1. Direct inquiries from condo syndicates, property managers, and building administrators.
 2. Clear service information for common-area cleaning.
 3. Trust through reviews, honest business details, and clear scope.
 4. Local search visibility for condo-building cleaning terms.
@@ -57,7 +57,7 @@ The full system should include:
 2. Google Business Profile
 3. Review collection process
 4. Work-quality photos of common areas when available
-5. Clear quote request form and separate contact inquiry form
+5. Clear homepage contact form plus a contact modal opened from repeated `Contact Us` buttons
 6. Simple social media presence
 7. Outreach to potential clients
 8. Follow-up process for inquiries
@@ -73,8 +73,7 @@ Recommended pages:
 1. Home
 2. Services
 3. About
-4. Contact
-5. Request a Quote
+4. Contact page and legacy `/quote` fallback route
 
 Optional later pages:
 
@@ -100,7 +99,7 @@ Collect this information before or during the first build:
 8. Whether recurring daily, weekly, or custom schedules are offered
 9. Exact common-area services offered, such as lobbies, hallways, stairwells, elevators, washrooms, garbage rooms, gyms, and pool-side areas
 10. Exact building types served
-11. What is not offered, such as repairs, technical maintenance, or water treatment
+11. Common client questions that should be answered through the contact flow or FAQ
 12. Hours of operation or expected response time
 13. Preferred contact method
 14. English/French communication details
@@ -114,12 +113,12 @@ Do not publish claims that are not confirmed.
 
 ### Home Page
 
-Purpose: Give visitors confidence quickly and push them toward requesting a quote.
+Purpose: Give visitors confidence quickly and push them toward contacting CHARM.
 
 Suggested sections:
 
 1. Hero section with clear condo-building and location message
-2. Main call to action: request a quote
+2. Main call to action: contact CHARM
 3. Short service overview
 4. Why choose this business
 5. Service area note
@@ -138,8 +137,7 @@ Suggested sections:
 4. Gym, pool-side, and recreational-area cleaning
 5. Recurring schedules
 6. What is commonly included
-7. What is not included, such as maintenance or repairs
-8. Quote request CTA
+7. Contact CTA
 
 ### About Page
 
@@ -152,24 +150,13 @@ Suggested sections:
 3. Areas served
 4. English/French support
 5. Honest note about how the team works
-6. FAQ at the bottom, including the quote process
+6. FAQ at the bottom, including the contact process
 
-### Contact Page
+### Contact Flow
 
-Purpose: Make it easy to send a general inquiry.
+Purpose: Collect the basic details needed for follow-up.
 
-Recommended form fields:
-
-1. Name
-2. Phone
-3. Email
-4. Message
-
-Also include a clear button to request a quote.
-
-### Request A Quote Page
-
-Purpose: Collect the building details needed for pricing and follow-up.
+The homepage should keep an inline contact form, and the same contact experience should open as a modal when visitors click `Contact Us`. The `/contact` page should stay available as a fallback route, and `/quote` can remain as a legacy fallback so older links do not break.
 
 Recommended form fields:
 
@@ -177,13 +164,9 @@ Recommended form fields:
 2. Phone
 3. Email
 4. Building or organisation name
-5. Neighbourhood or city
-6. Building type
-7. Areas to clean
-8. Cleaning frequency needed
-9. Preferred language
-10. Preferred contact method
-11. Message
+5. Preferred language
+6. Preferred contact method
+7. Message
 
 ## Design Direction
 
@@ -262,7 +245,7 @@ The family cleaning business should become the first case study.
 
 Case study angle:
 
-> Designed and built a bilingual lead-generation website for a condo-building common-area cleaning service, including service structure, quote flow, trust messaging, and local SEO foundation.
+> Designed and built a bilingual lead-generation website for a condo-building common-area cleaning service, including service structure, contact flow, trust messaging, and local SEO foundation.
 
 The portfolio should show:
 
@@ -273,7 +256,7 @@ The portfolio should show:
 5. Screenshots
 6. Features built
 7. What was learned
-8. Any measurable results later, such as quote requests, calls, reviews, or Google profile improvements
+8. Any measurable results later, such as contact inquiries, calls, reviews, or Google profile improvements
 
 ## Mockup Website Ideas
 
@@ -299,13 +282,13 @@ Do not build too many mockups before trying to find clients. Three strong exampl
 
 Possible beginner offer:
 
-> I build simple, professional websites for local service businesses so customers can understand your services, trust you, and request a quote.
+> I build simple, professional websites for local service businesses so customers can understand your services, trust you, and get in touch.
 
 Starter package:
 
 1. One-page or small multi-page website
 2. Mobile-friendly design
-3. Contact and quote forms
+3. Contact forms
 4. Basic SEO setup
 5. Google Business Profile cleanup checklist
 6. Review link setup
@@ -358,7 +341,7 @@ Create a simple spreadsheet with:
 6. Service needed
 7. Frequency
 8. Status
-9. Quote amount
+9. Follow-up notes or quote amount if provided later
 10. Outcome
 11. Review requested
 
@@ -384,7 +367,7 @@ The goal is consistent progress, not trying to do everything in one weekend.
 Track simple numbers:
 
 1. Website live or not
-2. Number of quote form submissions
+2. Number of contact form submissions
 3. Number of phone/email inquiries
 4. Number of Google reviews
 5. Number of outreach messages sent

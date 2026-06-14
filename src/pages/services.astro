@@ -6,48 +6,32 @@ import { pathWithBase } from "../lib/paths";
 ---
 
 <MainLayout title="Services | CHARM" description="Common-area cleaning services for condo buildings in Saint-Laurent and nearby Montreal.">
-  <section class="services-hero">
-    <div class="services-hero-overlay">
-      <div class="services-hero-copy shell">
-        <h1>{servicesPage.title}</h1>
-        <p>{servicesPage.intro}</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section services-reasons-section">
-    <div class="shell">
-      <div class="services-section-heading">
-        <h2>Why choose our services?</h2>
-        <p>{servicesPage.reasonsIntro}</p>
-      </div>
-
-      <ul class="services-reason-list">
-        {servicesPage.reasons.map((item) => (
-          <li>
-            <div>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
   <section class="services-section services-details-section">
     <div class="shell">
-      <div class="services-section-heading">
-        <h2>Services offered in more detail</h2>
-        <p>{servicesPage.serviceDetailsIntro}</p>
+      <div class="services-intro-panel">
+        <h1>{servicesPage.heroTitle}</h1>
+        <p>{servicesPage.intro}</p>
       </div>
 
       <div class="services-detail-stack">
         {servicesPage.serviceDetails.map((service) => (
           <article class="services-detail-row">
-            <div class="services-image-placeholder" aria-label={service.placeholder}>
-              <span>{service.placeholder}</span>
-            </div>
+            {service.image ? (
+              <figure class="services-detail-image">
+                <img
+                  src={pathWithBase(service.image.src)}
+                  alt={service.image.alt}
+                  width={service.image.width}
+                  height={service.image.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            ) : (
+              <div class="services-image-placeholder" aria-label={service.placeholder}>
+                <span>{service.placeholder}</span>
+              </div>
+            )}
 
             <div class="services-detail-copy">
               <h3>{service.title}</h3>
@@ -64,22 +48,12 @@ import { pathWithBase } from "../lib/paths";
     </div>
   </section>
 
-  <section class="services-section">
-    <div class="shell">
-      <div class="services-scope-card">
-        <div>
-          <h2>Outside CHARM's cleaning scope</h2>
-          <p>{servicesPage.notIncludedIntro}</p>
-        </div>
-
-        <ul class="services-scope-list">
-          {servicesPage.notIncluded.map((item) => (
-            <li>
-              <span>{item.title}</span>
-              <small>{item.description}</small>
-            </li>
-          ))}
-        </ul>
+  <section class="services-section services-final-section">
+    <div class="services-final-cta">
+      <div class="services-final-cta-content">
+        <h2>{servicesPage.finalCta.title}</h2>
+        <p>{servicesPage.finalCta.description}</p>
+        <a class="button-primary" href={pathWithBase("/contact")}>{site.contactLabel}</a>
       </div>
     </div>
   </section>
@@ -87,7 +61,7 @@ import { pathWithBase } from "../lib/paths";
   <section class="services-section">
     <div class="shell">
       <div class="services-section-heading services-section-heading-center">
-        <h2>Services FAQ</h2>
+        <h2>Services Questions</h2>
       </div>
 
       <div class="home-faq-list services-faq-list">
@@ -99,16 +73,6 @@ import { pathWithBase } from "../lib/paths";
             <p>{item.answer}</p>
           </details>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section services-final-section">
-    <div class="shell">
-      <div class="services-final-cta">
-        <h2>{servicesPage.finalCta.title}</h2>
-        <p>{servicesPage.finalCta.description}</p>
-        <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
       </div>
     </div>
   </section>

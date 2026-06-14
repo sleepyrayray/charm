@@ -161,8 +161,8 @@ CHARM can stand out by being:
 1. More focused on condo common-area cleaning only
 2. Cleaner and easier to scan than generic janitorial sites
 3. Bilingual
-4. More direct about what is included and what is not included
-5. Easy to contact for a quote
+4. Easier to contact for service questions and follow-up
+5. Easy to contact from any key page
 
 ## Technical Notes
 

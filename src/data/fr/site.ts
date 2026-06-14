@@ -4,12 +4,11 @@ export const site = {
   description:
     "Version francaise en preparation pour le site CHARM.",
   languageLabel: "EN",
-  quoteLabel: "Demander un devis",
+  contactLabel: "Nous contacter",
 };
 
 export const navigation = [
   { href: "/fr", label: "Accueil" },
   { href: "/fr/services", label: "Services" },
   { href: "/fr/about", label: "A propos" },
-  { href: "/fr/contact", label: "Contact" },
 ];

@@ -10,7 +10,7 @@ This project will deliver a small business website focused on four things:
 
 1. Clearly explain what the business offers.
 2. Build trust quickly with local visitors.
-3. Make it easy to request a quote or get in touch.
+3. Make it easy to send a contact message.
 4. Support both English and French from day one.
 
 This is not meant to be a flashy marketing site. It should feel clear, local, reliable, and easy to use on a phone.
@@ -20,18 +20,18 @@ This is not meant to be a flashy marketing site. It should feel clear, local, re
 The following assumptions are guiding the initial plan and should be confirmed before launch:
 
 1. Version 1 is a brochure-style lead generation website, not an online booking or payment system.
-2. Primary contact methods will be phone, email, a general inquiry form, and a separate quote request form.
+2. Primary contact methods will be phone, email, the homepage contact form, and a contact modal opened from `Contact Us` buttons.
 3. The main service area is Saint-Laurent, with additional nearby Montreal neighborhoods served when practical.
 4. The site will have full English and French content, written or reviewed manually rather than auto-translated at runtime.
 5. If the business does not have a public office, the site will emphasize service areas instead of publishing a full street address.
 6. Reviews/testimonials are not available yet and can be added later if they are collected with permission.
-7. Services are focused on recurring cleaning for condo buildings and shared spaces. Maintaining cleanliness in shared spaces is in scope, but repairs, technical maintenance, and non-cleaning building work are out of scope unless confirmed later.
+7. Services are focused on recurring cleaning for condo buildings and shared spaces, with final service details confirmed through contact messages and follow-up conversations.
 8. The public-facing brand should be `CHARM`, with `Service de Nettoyage` or `Cleaning Services` used as supporting subtext when needed. The footer and legal pages can use the full legal name `CHARM SERVICE DE NETTOYAGE s.e.n.c.`.
 
 ## Business Goals
 
 1. Reduce dependence on referral or subcontracted work from another company.
-2. Increase direct quote requests from condo syndicates, property managers, and building administrators.
+2. Increase direct contact inquiries from condo syndicates, property managers, and building administrators.
 3. Present the business as professional, dependable, and easy to contact.
 4. Give potential clients enough information to decide whether to reach out.
 5. Support bilingual communication so English- and French-speaking visitors can use the site comfortably.
@@ -43,7 +43,7 @@ Visitors should be able to answer the following questions within a few seconds:
 1. Is this a real, trustworthy local cleaning business?
 2. Do they clean condo common areas and building facilities like ours?
 3. Do they serve my area in Montreal?
-4. How do I contact them or request a quote?
+4. How do I contact them?
 5. Can I communicate in English or French?
 
 ## Target Audience
@@ -83,7 +83,7 @@ To keep the first version focused, the following are out of scope unless the bus
 ### Home
 
 Purpose:
-Introduce the business, build trust quickly, explain the service area and cleaning focus, and push visitors toward the dedicated quote request flow.
+Introduce the business, build trust quickly, explain the service area and cleaning focus, and push visitors toward the simple contact flow.
 
 Must include:
 
@@ -96,7 +96,7 @@ Must include:
 ### Services
 
 Purpose:
-Explain what types of cleaning are offered, who they are for, and what a potential client should expect before asking for a quote.
+Explain what types of cleaning are offered, who they are for, and what a potential client should expect before getting in touch.
 
 Must include:
 
@@ -104,7 +104,7 @@ Must include:
 2. What common areas are included or commonly included.
 3. Types of buildings and facilities served.
 4. Service area reminder.
-5. CTA to request a quote.
+5. CTA to contact CHARM.
 
 ### About
 
@@ -123,30 +123,15 @@ Must include:
 ### Contact
 
 Purpose:
-Give visitors a simple way to send a general inquiry or message that is not a full quote request.
+Collect a short, practical message from potential clients. In the current site direction, the homepage keeps an inline contact form, `Contact Us` CTAs open the same form in a global modal, and the `/contact` route stays available as a fallback. The `/quote` route can remain as a legacy redirect-style fallback so older links do not break.
 
 Must include:
 
-1. Basic inquiry form.
-2. Name, phone, email, and message fields.
-3. Button or link to the dedicated quote request page.
-4. Phone and email once confirmed.
-
-### Request A Quote
-
-Purpose:
-Collect the practical building details needed for a cleaning quote.
-
-Must include:
-
-1. Quote request form.
-2. Building or organisation details.
-3. Property address or area.
-4. Building type.
-5. Areas to clean.
-6. Cleaning frequency needed.
-7. Preferred language and contact method.
-8. Message field.
+1. Contact form.
+2. Full name.
+3. Email and phone number.
+4. Preferred language and contact method.
+5. Message field for questions, building details, or extra context.
 
 ### Reviews / Testimonials Section
 
@@ -163,7 +148,7 @@ Recommended placement:
 
 1. Bilingual English/French support with a clear language switcher.
 2. Mobile-first responsive layout.
-3. Strong, repeated CTA for quote requests plus a separate contact path for general inquiries.
+3. Strong, repeated CTA for contact messages through the homepage form and modal form.
 4. Testimonials or reviews as trust signals.
 5. Service-area messaging for Montreal and Saint-Laurent.
 6. SEO-ready page metadata and structured content.
@@ -172,39 +157,34 @@ Recommended placement:
 
 ## Lead Capture Requirements
 
-The site should separate general inquiries from quote requests.
+The site should prioritize simple contact messages because the main lead-generation goal is direct condo-building cleaning contracts. The first form should feel quick and low-pressure; detailed quoting questions can happen later by email or phone.
 
-The Contact page should stay short and simple.
+The contact flow should collect only enough information to let CHARM reply properly.
 
 Recommended contact fields for V1:
 
-1. Name
-2. Phone number
-3. Email
-4. Short message
-
-The Quote page should collect building-specific details.
-
-Recommended quote fields for V1:
-
 1. Full name.
-2. Building or Company name.
-3. Email and phone number.
+2. Email.
+3. Phone number.
 4. Preferred language.
 5. Preferred contact method.
-6. Street address, optional unit, city, fixed Quebec province, and postal code.
-7. Building type and optional building size.
-8. Areas to clean.
-9. Cleaning frequency and optional start timeline.
-10. Optional notes or access details.
-11. Optional future availability dates for a call or visit.
+6. Message.
 
-Current quote form behavior:
+Current contact form behavior:
 
-1. The quote request UI is a multi-step estimate wizard, not a single long form.
+1. The contact form is one page, not a multi-step wizard.
 2. Validation should happen beside the relevant field.
 3. If the visitor chooses email as the preferred contact method, email is required. If the visitor chooses phone, phone is required. If either is acceptable, at least one of the two is required.
 4. Final form delivery is still pending until a receiving inbox and delivery method are confirmed.
+
+Removed from V1 form:
+
+1. Property address fields.
+2. Building type fields.
+3. Areas-to-clean checklists.
+4. Cleaning frequency fields.
+5. Availability/date fields.
+6. Review step.
 
 Practical note:
 If the team is more comfortable following up in English than French, the preferred language field becomes operationally important, not just a UX detail.
@@ -279,7 +259,7 @@ The visual style should be:
 Current structure reference:
 
 1. The next design direction uses [Davis Janitorial](https://davisjanitorial.com/) as a service-business structure reference.
-2. CHARM should borrow the homepage rhythm, quote CTA placement, services-offered flow, work/photo section, and FAQ/support rhythm.
+2. CHARM should borrow the homepage rhythm, contact CTA placement, services-offered flow, work/photo section, and FAQ/support rhythm.
 3. CHARM should not copy Davis Janitorial's branding, wording, imagery, residential positioning, client login, or customer portal features.
 
 Official brand direction:
@@ -389,7 +369,7 @@ The following business inputs should be collected early because they affect both
 3. Final service list.
 4. Exact common-area tasks offered, such as lobbies, hallways, stairwells, elevators, washrooms, garbage rooms, gyms, and pool-side areas.
 5. Cleaning frequencies offered, such as daily, weekly, or custom schedules.
-6. What is explicitly excluded, such as maintenance, repairs, or water treatment.
+6. Common client questions that should be answered through the contact flow or FAQ.
 7. Testimonials that can be published.
 8. Team or business photos, if available.
 9. Hours of operation or expected response time.
@@ -416,7 +396,7 @@ Current confirmed gaps:
 3. Gotham webfont usage can be revisited later if a valid web license is confirmed
 
 Build implication:
-The homepage now uses selected cleaned-area photos for the hero, specialties section, and work gallery. The site should still avoid unconfirmed reviews, trust claims, and final contact details until those are provided.
+The homepage now uses selected cleaned-area photos for the hero, services section, and work gallery. The site should still avoid unconfirmed reviews, trust claims, and final contact details until those are provided.
 
 ## Roadmap
 
@@ -450,7 +430,6 @@ The base Astro project is now initialized. The structure below reflects the curr
 |  |  |  |- home.ts
 |  |  |  |- services.ts
 |  |  |  |- contact.ts
-|  |  |  |- quote.ts
 |  |  |  `- site.ts
 |  |  `- fr/
 |  |     `- site.ts
@@ -571,9 +550,9 @@ Still to confirm:
 Post-deployment checks:
 
 1. Confirm both English and French routes load correctly
-2. Confirm all CTA buttons point to the intended quote or contact path
+2. Confirm all CTA buttons open the contact modal or use the fallback contact route correctly
 3. Confirm metadata, sitemap, and robots behavior
-4. Confirm the quote and contact flows work end to end once connected
+4. Confirm the contact form works end to end once connected
 
 ## Definition Of A Successful V1 Launch
 
@@ -581,6 +560,6 @@ Version 1 is successful if it does the following reliably:
 
 1. Presents the business clearly in English and French.
 2. Explains services and service area without confusion.
-3. Gives condo syndicates, property managers, or building admins a simple way to request a quote.
+3. Gives condo syndicates, property managers, or building admins a simple way to contact CHARM.
 4. Builds enough trust for direct building-service inquiries.
 5. Can be updated later without rewriting the entire project.

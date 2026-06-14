@@ -1,16 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import QuoteRequestForm from "../components/forms/QuoteRequestForm.astro";
-import { quotePage } from "../data/en/quote";
+import ContactForm from "../components/forms/ContactForm.astro";
+import { contactPage } from "../data/en/contact";
 import { site } from "../data/en/site";
 ---
 
-<MainLayout title="Request a Quote | CHARM" description={site.description}>
+<MainLayout title="Contact | CHARM" description={site.description}>
   <section class="page-hero page-hero-compact">
     <div class="page-hero-overlay">
       <div class="page-hero-copy shell">
-        <h1>{quotePage.title}</h1>
-        <p>{quotePage.intro}</p>
+        <h1>{contactPage.title}</h1>
+        <p>{contactPage.intro}</p>
       </div>
     </div>
   </section>
@@ -19,17 +19,17 @@ import { site } from "../data/en/site";
     <div class="shell">
       <div class="form-page-grid">
         <aside class="form-intro-card">
-          <p class="form-kicker">Quote request</p>
-          <h2>Use Quote for building details.</h2>
-          <p>{quotePage.note}</p>
+          <p class="form-kicker">Contact Form</p>
+          <h2>Send a Simple Message.</h2>
+          <p>{contactPage.note}</p>
 
           <ul class="page-check-list">
-            {quotePage.quoteFit.map((item) => <li>{item}</li>)}
+            {contactPage.checklist.map((item) => <li>{item}</li>)}
           </ul>
         </aside>
 
         <div class="form-card">
-          <QuoteRequestForm />
+          <ContactForm />
         </div>
       </div>
     </div>

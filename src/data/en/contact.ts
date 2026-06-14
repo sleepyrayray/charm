@@ -1,12 +1,13 @@
 export const contactPage = {
-  title: "Contact CHARM with a general inquiry.",
+  title: "Contact CHARM.",
   intro:
-    "Use this page for general questions, basic inquiries, or messages that are not ready for a full quote request.",
+    "Send a message with your contact details, building information, or questions. CHARM can follow up by your preferred method.",
   note:
-    "Need pricing for a building? Use the quote request page so CHARM can collect the right property details.",
-  contactFit: [
-    "general questions",
-    "basic follow-up messages",
-    "questions before requesting a quote",
+    "The contact form is ready now. Email delivery will be connected once CHARM confirms the receiving inbox or form service.",
+  checklist: [
+    "Your Name",
+    "Email or Phone",
+    "Preferred Contact Method",
+    "Message or Questions",
   ],
 };

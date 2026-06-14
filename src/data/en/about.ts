@@ -1,28 +1,28 @@
 export const aboutPage = {
-  title: "A straightforward local service for shared building spaces.",
+  title: "A Straightforward Local Service for Shared Building Spaces.",
   intro:
     "CHARM provides focused condo-building cleaning for Saint-Laurent and nearby Montreal areas, with an emphasis on clarity, dependable service, and recurring upkeep.",
   summary:
     "CHARM is made for condo boards, property managers, and people responsible for keeping shared residential spaces clean and presentable.",
   focus: [
-    "Condo-building common-area cleaning",
-    "Recurring cleanliness upkeep",
-    "A cleaner and more focused alternative to generic janitorial messaging",
+    "Condo-Building Common-Area Cleaning",
+    "Recurring Cleanliness Upkeep",
+    "A Cleaner and More Focused Alternative to Generic Janitorial Messaging",
   ],
   values: ["Reliable", "Respectful", "Clear", "Consistent"],
-  area: ["Saint-Laurent", "Nearby Montreal areas"],
-  language: ["English-first experience", "French route structure prepared"],
+  area: ["Saint-Laurent", "Nearby Montreal Areas"],
+  language: ["English-First Experience", "French Route Structure Prepared"],
   process: [
     {
-      title: "Share the building details",
+      title: "Share the Building Details",
       description: "Send the type of building, shared spaces, and cleaning frequency you have in mind.",
     },
     {
-      title: "Confirm the cleaning scope",
-      description: "CHARM can review what areas are included and what is outside the cleaning service.",
+      title: "Review the Cleaning Priorities",
+      description: "CHARM can review the common areas, schedule, and building priorities before the next step.",
     },
     {
-      title: "Plan the next step",
+      title: "Plan the Next Step",
       description: "The goal is a simple follow-up path before any recurring cleaning plan is confirmed.",
     },
   ],
@@ -35,17 +35,12 @@ export const aboutPage = {
     {
       question: "Do you offer recurring cleaning?",
       answer:
-        "Yes. CHARM focuses on recurring cleanliness upkeep for shared building spaces, with the exact schedule confirmed during the quote process.",
+        "Yes. CHARM focuses on recurring cleanliness upkeep for shared building spaces, with the exact schedule discussed during follow-up.",
     },
     {
-      question: "How does the quote process work?",
+      question: "How does the contact process work?",
       answer:
-        "Use the quote request page to share the building, areas to clean, and preferred schedule. CHARM can then follow up, clarify the details, and discuss the next step.",
-    },
-    {
-      question: "Do you handle repairs or technical maintenance?",
-      answer:
-        "No. CHARM is positioned around cleaning and cleanliness upkeep, not repairs, technical maintenance, or pool water maintenance.",
+        "Use the contact form to share your name, preferred contact method, and message. CHARM can then follow up, clarify the details, and discuss the next step.",
     },
     {
       question: "Can we contact CHARM in English or French?",

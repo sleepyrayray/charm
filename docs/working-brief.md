@@ -49,7 +49,7 @@ Core audience:
 8. Gyms
 9. Recurring cleanliness upkeep for shared spaces
 
-### Out Of Scope
+### Internal Service Boundaries
 
 1. Home cleaning
 2. Private in-unit residential cleaning unless confirmed later
@@ -60,6 +60,9 @@ Core audience:
 
 Clarification:
 If "maintenance" means maintaining cleanliness through recurring cleaning, that is in scope.
+
+Public-content rule:
+Do not create a front-facing "what we do not offer" section. Keep the website focused on strengths and use follow-up conversations to clarify edge cases.
 
 ## Current Design Direction
 
@@ -112,6 +115,7 @@ The site should feel:
 14. Use solid Antiman-inspired hover/click states for nav links and buttons, pairing Charm Turquoise, Teal Foam, Cloud White, and white so buttons stay readable without bright Aqua Mist hover fills.
 15. Keep the shared desktop content shell slightly wider so photo-and-copy sections feel less cramped on large screens.
 16. Avoid hover lift on buttons and controls; use colour, border, and subtle icon changes instead.
+17. Use consistent title case for visible headings, buttons, card titles, form labels, and UI labels. Keep small connector words lowercase when appropriate, as in `Contact Us`.
 
 ## Inspiration References
 
@@ -163,13 +167,12 @@ Reference:
 What to borrow:
 
 1. Practical service-business homepage structure
-2. Clear quote-first CTA rhythm
-3. Short specialties section
-4. Services-offered section
-5. Work/photo section
-6. Estimate or quote section near the bottom
-7. Common questions near the end
-8. Simple footer navigation and contact paths
+2. Clear contact-first CTA rhythm
+3. Services-offered section paired with a cleaned-space image
+4. Work/photo section
+5. Contact section near the bottom
+6. Common questions near the end
+7. Simple footer navigation and contact paths
 
 What not to copy directly:
 
@@ -190,14 +193,13 @@ The current design/structure mix should aim for:
 
 Likely homepage flow:
 
-1. header with logo, nav, language switch, and quote CTA
+1. header with logo, nav, language switch, and contact CTA
 2. hero with service message, CTA, and a selected cleaned-area background image
-3. specialties
-4. services offered
-5. our work / cleaned-area image gallery
-6. embedded quote request form
-7. FAQ accordion
-8. footer
+3. services offered paired with the lobby image
+4. our work / cleaned-area image gallery
+5. contact CTA that opens the global modal
+6. FAQ accordion with soft answer reveal
+7. footer
 
 Likely design translation:
 
@@ -220,7 +222,7 @@ Likely design translation:
 5. Official logo files
 6. Official brand deck
 7. Local Gotham font files for reference
-8. Selected homepage cleaned-area photos for the hero, specialties section, and work gallery
+8. Selected homepage cleaned-area photos for the hero, services image section, and work gallery
 
 ### Missing
 
@@ -247,26 +249,24 @@ Likely core pages:
 1. Home
 2. Services
 3. About
-4. Contact
-5. Request a Quote
+4. Contact page and legacy `/quote` fallback route
 
 Likely supporting sections:
 
 1. service overview
 2. areas we clean
-3. specialties
-4. work/photo gallery
-5. embedded quote request form
-6. FAQ accordion
+3. work/photo gallery
+4. contact CTA
+5. FAQ accordion with soft answer reveal
 
 Homepage content rule:
-The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Keep the hero focused on one quote CTA, use a simple three-column checklist for services on desktop, show the quote request form directly, and keep the FAQ collapsed as an accordion so visitors are not overwhelmed.
+The homepage should follow a practical Davis-inspired service-site flow, but still stay short and selective. Keep the hero focused on one contact CTA, place the services checklist beside the lobby image, keep the inline contact form on the homepage, open the same contact form in a modal when visitors click `Contact Us`, and keep the FAQ collapsed as an accordion so visitors are not overwhelmed.
 
 Page-role rule:
-Contact is for general inquiries with basic information and a message. Request a Quote is a separate multi-step flow for contact details, property details, cleaning areas, frequency, availability, language, and follow-up method. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
+The site now uses a simple one-page contact form instead of a multi-step quote wizard. The homepage keeps the form inline, `Contact Us` opens the same form in a global modal, `/contact` is the direct fallback route, and `/quote` remains only as a legacy fallback so older links do not break. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
 
-Quote form rule:
-Keep the quote flow clean and guided. Use floating labels, field-level validation, a review step, and sparkle progress indicators. Keep final form delivery disabled until the real receiving inbox and delivery method are confirmed.
+Contact form rule:
+Keep the form short and direct. Collect full name, email, phone, preferred language, preferred contact method, and a message. Use floating labels and field-level validation. Keep final form delivery disabled until the real receiving inbox and delivery method are confirmed.
 
 Feature rule:
 Do not add client login, online accounts, or a customer portal in V1.
@@ -277,7 +277,7 @@ Safe early messaging:
 
 1. CHARM provides recurring cleaning for condo common areas in Saint-Laurent and nearby Montreal areas.
 2. The business helps keep shared spaces clean, presentable, and well maintained from a cleanliness standpoint.
-3. The focus is on clear communication, dependable service, and straightforward quote requests.
+3. The focus is on clear communication, dependable service, and straightforward contact messages.
 
 Content improvements to make next:
 
@@ -300,7 +300,7 @@ Content improvements to make next:
 9. Whether Gotham webfont use is licensed for the live website if the site ever switches away from Montserrat
 10. Whether brand mockup images from the deck are inspiration only or can be used publicly
 11. Whether the current homepage photo set is final enough for launch
-12. Which email inbox should receive Contact and Quote submissions
+12. Which email inbox should receive contact submissions
 13. Which form delivery method should be used for the static GitHub Pages site
 
 ## Decision Log
@@ -314,7 +314,7 @@ Content improvements to make next:
 
 1. Set `CHARM` as the public-facing brand.
 2. Set `Service de Nettoyage` / `Cleaning Services` as supporting subtext.
-3. Confirmed recurring cleanliness maintenance is in scope, but repairs and technical maintenance are not.
+3. Confirmed recurring cleanliness upkeep as the main service direction for shared condo-building spaces.
 4. Initially set the temporary design direction to minimal, pastel-like, and purple-led before the later teal direction.
 
 ### 2026-04-29
@@ -353,13 +353,13 @@ Content improvements to make next:
 3. Confirmed cleaned-area image placeholders should be added until real photos are shared.
 4. Removed the glassy-effect direction from the active design plan.
 5. Started the homepage redesign with a Davis-inspired flow, solid sections, direct transparent-logo usage, and cleaned-area placeholders.
-6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, embedded quote form, full FAQ, and dark teal footer using the light logo alternative.
-7. Aligned the Services page with the new structure using a full-width hero, compact service highlights, category checklists, and clearer outside-scope wording.
-8. Aligned About, Contact, and Quote with the same page system, including the About FAQ accordion and clearer separation between general inquiries and quote requests.
+6. Adjusted the homepage toward the Davis-style centered image hero, checklist services, contact CTA, full FAQ, and dark teal footer using the light logo alternative.
+7. Aligned the Services page with the new structure using compact service highlights and category checklists.
+8. Aligned About and Contact with the same page system, including the About FAQ accordion and clearer lead-capture flow.
 
 ### 2026-06-10
 
-1. Added selected cleaned-area photos to the homepage hero, specialties section, and Our Work section.
+1. Added selected cleaned-area photos to the homepage hero, services image section, and Our Work section.
 2. Replaced Our Work placeholders with a nine-photo gallery capped at three columns on desktop.
 3. Added a lightbox with previous and next controls, bottom thumbnails, a centered `1/9` counter, image captions, and a plain white `X` close control.
 4. Added basic deterrents against casual image right-clicking, dragging, and copying.
@@ -368,7 +368,16 @@ Content improvements to make next:
 
 1. Treated the homepage as good enough for now and shifted focus to the Services page.
 2. Reworked the Services page plan to avoid duplicating homepage content.
-3. Set the Services page structure to a simple title hero, one-column reasons list, six expanded service rows with image placeholders, outside-scope clarification, service-specific FAQ, and quote CTA reminder.
-4. Moved the mobile quote CTA into the hamburger menu to keep the header cleaner.
+3. Set the Services page structure to an integrated service intro, six expanded service rows with image placeholders, a full-width contact CTA, and service-specific FAQ.
+4. Moved the mobile contact CTA into the hamburger menu to keep the header cleaner.
 5. Replaced the gallery lightbox text `X` with a circular crossed-bar close control.
 6. Removed hover lift from buttons and controls; colour and border changes should carry hover states instead.
+7. Changed the Services intro to a centered `Our Services` title with a short supporting paragraph.
+8. Added photos for all six current `Our Services` rows while keeping placeholders available for future service additions.
+9. Replaced the homepage `Our Work` gallery references with the polished PNG image set while keeping the existing display order.
+10. Standardized visible English headings, buttons, card titles, and form labels to title case across the site.
+11. Removed the Services limitation section so the page stays focused on strengths and follow-up conversations.
+12. Moved contact interactions to a global modal with `/contact` as the direct route and `/quote` kept as a legacy fallback.
+13. Added a soft slide-down animation for FAQ answers.
+14. Merged the Services intro into the main service-detail section and moved the full-width contact CTA above the Services FAQ.
+15. Replaced the multi-step lead-capture wizard with a simpler one-page contact form for first messages and follow-up preferences.

@@ -12,8 +12,7 @@ import { pathWithBase } from "../lib/paths";
         <h1>{aboutPage.title}</h1>
         <p>{aboutPage.intro}</p>
         <div class="page-hero-actions">
-          <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
-          <a class="button-secondary" href={pathWithBase("/contact")}>Contact CHARM</a>
+          <a class="button-primary" href={pathWithBase("/contact")}>{site.contactLabel}</a>
         </div>
       </div>
     </div>
@@ -31,7 +30,7 @@ import { pathWithBase } from "../lib/paths";
     <div class="shell">
       <div class="about-card-grid">
         <article class="about-info-card">
-          <h2>Business focus</h2>
+          <h2>Business Focus</h2>
           <ul class="page-check-list">
             {aboutPage.focus.map((item) => <li>{item}</li>)}
           </ul>
@@ -45,7 +44,7 @@ import { pathWithBase } from "../lib/paths";
         </article>
 
         <article class="about-info-card">
-          <h2>Coverage and language</h2>
+          <h2>Coverage and Language</h2>
           <ul class="page-check-list">
             {aboutPage.area.map((item) => <li>{item}</li>)}
             {aboutPage.language.map((item) => <li>{item}</li>)}
@@ -58,7 +57,7 @@ import { pathWithBase } from "../lib/paths";
   <section class="page-section about-process-section">
     <div class="shell">
       <div class="page-section-heading page-section-heading-center">
-        <h2>How it works</h2>
+        <h2>How It Works</h2>
         <p>A simple path for understanding the building, the shared spaces, and the next step.</p>
       </div>
 
@@ -77,7 +76,7 @@ import { pathWithBase } from "../lib/paths";
   <section class="page-section page-final-section">
     <div class="shell">
       <div class="page-section-heading page-section-heading-center">
-        <h2>Frequently asked questions</h2>
+        <h2>Frequently Asked Questions</h2>
       </div>
 
       <div class="page-faq-list">

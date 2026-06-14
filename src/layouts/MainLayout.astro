@@ -1,6 +1,7 @@
 ---
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import ContactForm from "../components/forms/ContactForm.astro";
 import { pathWithBase } from "../lib/paths";
 import "../styles/global.css";
 
@@ -35,6 +36,23 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
       <slot />
     </main>
     <Footer locale={locale} />
+    <div class="contact-modal" data-contact-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Contact CHARM">
+      <div class="contact-modal-shell" role="document">
+        <div class="contact-modal-topbar">
+          <button class="work-lightbox-close contact-modal-close" type="button" data-contact-modal-close aria-label="Close Contact Form">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="contact-modal-card">
+          <ContactForm
+            noteId="contact-modal-form-note"
+            note="This contact form will send to CHARM once email delivery is connected."
+          />
+        </div>
+      </div>
+    </div>
     <script>
       const protectedImageSelector = "img, .home-hero";
 
@@ -69,21 +87,21 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
 
       const revealSelector = [
         ".home-hero-copy > *",
-        ".home-specialties-image",
-        ".home-specialty-item",
+        ".home-service-showcase-image",
+        ".home-service-showcase-content .home-section-heading",
         ".home-section-heading",
         ".home-check-list li",
         ".home-section-link",
         ".home-work-photo",
-        ".home-quote-panel > div",
-        ".home-quote-panel .quote-form",
+        ".home-contact-panel > div",
+        ".home-contact-panel .contact-form",
         ".home-faq-list details",
-        ".services-hero-copy > *",
+        ".services-intro-panel > h1",
+        ".services-intro-panel > p",
         ".services-section-heading",
-        ".services-reason-list li",
+        ".services-detail-image",
         ".services-image-placeholder",
         ".services-detail-copy",
-        ".services-scope-card",
         ".services-faq-list details",
         ".services-final-cta",
         ".page-hero-copy > *",
@@ -132,6 +150,162 @@ const brandIcon = pathWithBase("/brand/charm-logo-icon.png");
           revealItems.forEach((item) => revealObserver.observe(item));
         }
       }
+
+      const faqDetails = Array.from(
+        document.querySelectorAll<HTMLDetailsElement>(".home-faq-list details, .page-faq-list details"),
+      );
+
+      const prepareFaqAnswer = (details: HTMLDetailsElement) => {
+        const existingPanel = details.querySelector<HTMLElement>(":scope > .faq-answer");
+        if (existingPanel) return existingPanel;
+
+        const directAnswer = details.querySelector<HTMLElement>(":scope > p");
+        if (!directAnswer) return null;
+
+        const panel = document.createElement("div");
+        panel.className = "faq-answer";
+        directAnswer.before(panel);
+        panel.append(directAnswer);
+
+        return panel;
+      };
+
+      const animateFaqAnswer = (details: HTMLDetailsElement, open: boolean) => {
+        const panel = prepareFaqAnswer(details);
+        if (!panel) {
+          details.open = open;
+          return;
+        }
+
+        if (prefersReducedMotion.matches) {
+          details.open = open;
+          details.classList.toggle("is-faq-open", open);
+          panel.style.height = open ? "auto" : "0px";
+          return;
+        }
+
+        if (details.dataset.faqAnimating === "true") return;
+
+        details.dataset.faqAnimating = "true";
+
+        const finish = (event: TransitionEvent) => {
+          if (event.propertyName !== "height") return;
+
+          panel.removeEventListener("transitionend", finish);
+          delete details.dataset.faqAnimating;
+
+          if (!open) {
+            details.open = false;
+            panel.style.height = "0px";
+          } else {
+            panel.style.height = "auto";
+          }
+        };
+
+        panel.addEventListener("transitionend", finish);
+
+        if (open) {
+          details.open = true;
+          details.classList.remove("is-faq-open");
+          panel.style.height = "0px";
+          panel.offsetHeight;
+
+          requestAnimationFrame(() => {
+            details.classList.add("is-faq-open");
+            panel.style.height = `${panel.scrollHeight}px`;
+          });
+        } else {
+          panel.style.height = `${panel.scrollHeight}px`;
+          panel.offsetHeight;
+
+          requestAnimationFrame(() => {
+            details.classList.remove("is-faq-open");
+            panel.style.height = "0px";
+          });
+        }
+      };
+
+      faqDetails.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const panel = prepareFaqAnswer(details);
+        if (!summary || !panel) return;
+
+        details.classList.toggle("is-faq-open", details.open);
+        panel.style.height = details.open ? "auto" : "0px";
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+          animateFaqAnswer(details, !details.open);
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        faqDetails.forEach((details) => {
+          const panel = details.querySelector<HTMLElement>(":scope > .faq-answer");
+          if (!panel || !details.open) return;
+          panel.style.height = "auto";
+        });
+      });
+
+      const contactModal = document.querySelector<HTMLElement>("[data-contact-modal]");
+      const contactModalClose = document.querySelector<HTMLButtonElement>("[data-contact-modal-close]");
+      let lastContactFocusedElement: Element | null = null;
+
+      const isContactLink = (anchor: HTMLAnchorElement) => {
+        const url = new URL(anchor.href, window.location.href);
+        if (url.origin !== window.location.origin) return false;
+
+        const pathname = url.pathname.replace(/\/$/, "");
+        return pathname.endsWith("/contact") || pathname.endsWith("/quote");
+      };
+
+      const openContactModal = () => {
+        if (!contactModal || !contactModalClose) return;
+
+        lastContactFocusedElement = document.activeElement;
+        contactModal.removeAttribute("hidden");
+        contactModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("is-contact-modal-open");
+        contactModal.querySelectorAll<HTMLElement>(".form-intro-card, .form-card, .panel.section-card").forEach((item) => {
+          item.classList.add("is-revealed");
+        });
+        contactModalClose.focus();
+      };
+
+      const closeContactModal = () => {
+        if (!contactModal) return;
+
+        contactModal.setAttribute("hidden", "");
+        contactModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("is-contact-modal-open");
+
+        if (lastContactFocusedElement instanceof HTMLElement) {
+          lastContactFocusedElement.focus();
+        }
+      };
+
+      document.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((anchor) => {
+        anchor.addEventListener("click", (event) => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          if (anchor.target && anchor.target !== "_self") return;
+          if (!isContactLink(anchor)) return;
+
+          event.preventDefault();
+          openContactModal();
+        });
+      });
+
+      contactModalClose?.addEventListener("click", closeContactModal);
+
+      contactModal?.addEventListener("click", (event) => {
+        if (event.target === contactModal) closeContactModal();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && document.body.classList.contains("is-contact-modal-open")) {
+          closeContactModal();
+        }
+      });
     </script>
   </body>
 </html>

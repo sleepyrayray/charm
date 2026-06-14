@@ -153,12 +153,11 @@ Use this as a layout and content-flow reference only. Do not copy Davis Janitori
 Borrow:
 
 1. service-business homepage rhythm
-2. strong quote CTA
-3. specialties section
-4. services-offered section
-5. cleaned-work/photo section
-6. quote section near the bottom
-7. collapsed FAQ/common-questions rhythm near the bottom
+2. strong contact CTA
+3. services-offered section paired with a cleaned-space image
+4. cleaned-work/photo section
+5. contact section near the bottom
+6. collapsed FAQ/common-questions rhythm near the bottom
 
 Do not include in V1:
 
@@ -174,7 +173,7 @@ Do not include in V1:
 1. Use the primary logo on desktop.
 2. Consider the icon logo on tight mobile screens.
 3. Keep navigation simple and readable.
-4. The quote CTA should use Charm Turquoise or a high-contrast variant.
+4. The contact CTA should use Charm Turquoise or a high-contrast variant.
 
 ### Homepage
 
@@ -196,11 +195,11 @@ Do not include in V1:
 2. Keep the tone human and local.
 3. Keep FAQ available on About; it may also appear on the homepage while the FAQ set is small.
 
-### Contact And Quote
+### Contact Flow
 
-1. Keep Contact and Request a Quote visually related but functionally distinct.
+1. Use one simple contact form for V1.
 2. Use form styling that feels clean and calm.
-3. Make the quote action easy to find without making every page feel sales-heavy.
+3. Make the contact action easy to find without making every page feel sales-heavy.
 
 ### Footer
 
@@ -251,5 +250,5 @@ Recommended implementation order:
 6. Pivot homepage to Davis-inspired structure with CHARM branding and image placeholders. Done.
 7. Remove glassy-effect styling from the active design system. Done.
 8. Align Services page with the Davis-inspired structure. Done.
-9. Refresh About, Contact, and Quote pages. Done.
+9. Refresh About, Contact, and legacy Quote fallback pages. Done.
 10. Run mobile, accessibility, and contrast checks.

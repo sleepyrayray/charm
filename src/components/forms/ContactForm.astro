@@ -1,0 +1,217 @@
+---
+interface Props {
+  noteId?: string;
+  note?: string;
+  buttonLabel?: string;
+  showIntroTitle?: boolean;
+}
+
+const {
+  noteId = "contact-form-note",
+  note = "Form delivery will be connected once CHARM has a confirmed receiving email or form service.",
+  buttonLabel = "Send Message",
+  showIntroTitle = true,
+} = Astro.props;
+---
+
+<form class="contact-form" aria-describedby={noteId} data-contact-form novalidate>
+  <div class="contact-form-intro">
+    {showIntroTitle && <h3>Contact Us</h3>}
+  </div>
+
+  <label class="form-field">
+    <span class="field-label">Full Name</span>
+    <input class="field" type="text" name="fullName" autocomplete="name" />
+    <small class="field-error" data-error-for="fullName"></small>
+  </label>
+
+  <div class="form-grid-2">
+    <label class="form-field">
+      <span class="field-label">Email</span>
+      <input class="field" type="email" name="email" autocomplete="email" />
+      <small class="field-error" data-error-for="email"></small>
+    </label>
+
+    <label class="form-field">
+      <span class="field-label">Phone</span>
+      <input class="field" type="tel" name="phone" autocomplete="tel" />
+      <small class="field-error" data-error-for="phone"></small>
+    </label>
+  </div>
+
+  <div class="form-grid-2">
+    <label class="form-field">
+      <span class="field-label">Preferred Language</span>
+      <select class="field" name="language">
+        <option value="" disabled selected hidden></option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+      </select>
+      <small class="field-error" data-error-for="language"></small>
+    </label>
+
+    <label class="form-field">
+      <span class="field-label">Preferred Contact Method</span>
+      <select class="field" name="contactMethod">
+        <option value="" disabled selected hidden></option>
+        <option value="Email">Email</option>
+        <option value="Phone">Phone</option>
+        <option value="Either Email or Phone">Either Email or Phone</option>
+      </select>
+      <small class="field-error" data-error-for="contactMethod"></small>
+    </label>
+  </div>
+
+  <label class="form-field">
+    <span class="field-label">Message</span>
+    <textarea class="field" name="message" maxlength="900" rows="2" data-auto-grow></textarea>
+    <small class="field-error" data-error-for="message"></small>
+  </label>
+
+  <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
+
+  <p id={noteId} class="form-note">
+    {note}
+  </p>
+
+  <div class="contact-form-actions">
+    <button class="button-primary" type="submit">{buttonLabel}</button>
+  </div>
+</form>
+
+<script>
+  const contactForms = document.querySelectorAll<HTMLFormElement>("[data-contact-form]");
+
+  const getContactField = (form: HTMLFormElement, name: string) =>
+    form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+
+  const getContactValue = (form: HTMLFormElement, name: string) => getContactField(form, name)?.value.trim() ?? "";
+
+  const syncContactFloatingState = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
+    const fieldWrap = field.closest<HTMLElement>(".form-field");
+    if (!fieldWrap) return;
+
+    if (field.value.trim()) {
+      fieldWrap.setAttribute("data-has-value", "true");
+    } else {
+      fieldWrap.removeAttribute("data-has-value");
+    }
+  };
+
+  const resizeContactTextarea = (field: HTMLTextAreaElement) => {
+    field.style.height = "";
+    field.style.height = `${field.scrollHeight}px`;
+  };
+
+  const setContactErrors = (form: HTMLFormElement, fieldMessages: Record<string, string>) => {
+    form.querySelectorAll("[aria-invalid='true']").forEach((field) => field.removeAttribute("aria-invalid"));
+    form.querySelectorAll<HTMLElement>("[data-error-for]").forEach((error) => {
+      error.textContent = "";
+    });
+
+    Object.entries(fieldMessages).forEach(([name, message]) => {
+      const field = getContactField(form, name);
+      field?.setAttribute("aria-invalid", "true");
+
+      const error = form.querySelector<HTMLElement>(`[data-error-for="${name}"]`);
+      if (error) error.textContent = message;
+    });
+  };
+
+  const validateContactForm = (form: HTMLFormElement) => {
+    const errors: Record<string, string> = {};
+    const emailField = getContactField(form, "email") as HTMLInputElement | null;
+    const contactMethod = getContactValue(form, "contactMethod");
+
+    if (!getContactValue(form, "fullName")) {
+      errors.fullName = "Full name is required.";
+    }
+
+    if (!getContactValue(form, "language")) {
+      errors.language = "Preferred language is required.";
+    }
+
+    if (!contactMethod) {
+      errors.contactMethod = "Preferred contact method is required.";
+    }
+
+    if (contactMethod === "Email" && !getContactValue(form, "email")) {
+      errors.email = "Email is required when email is your preferred contact method.";
+    }
+
+    if (contactMethod === "Phone" && !getContactValue(form, "phone")) {
+      errors.phone = "Phone is required when phone is your preferred contact method.";
+    }
+
+    if (contactMethod === "Either Email or Phone" && !getContactValue(form, "email") && !getContactValue(form, "phone")) {
+      errors.email = "Email or phone number must be provided.";
+      errors.phone = "Email or phone number must be provided.";
+    }
+
+    if (emailField?.value.trim() && !emailField.validity.valid) {
+      errors.email = "Please enter a valid email address.";
+    }
+
+    if (!getContactValue(form, "message")) {
+      errors.message = "Message is required.";
+    }
+
+    return errors;
+  };
+
+  contactForms.forEach((form) => {
+    const floatingFields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(".field"));
+    const autoGrowFields = Array.from(form.querySelectorAll<HTMLTextAreaElement>("[data-auto-grow]"));
+    const status = form.querySelector<HTMLElement>("[data-contact-status]");
+
+    const clearResolvedError = (event: Event) => {
+      const target = event.target;
+
+      if (!(target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLTextAreaElement)) {
+        return;
+      }
+
+      syncContactFloatingState(target);
+      target.removeAttribute("aria-invalid");
+      form.querySelector<HTMLElement>(`[data-error-for="${target.name}"]`)?.replaceChildren();
+
+      if ((target.name === "email" || target.name === "phone" || target.name === "contactMethod") && (getContactValue(form, "email") || getContactValue(form, "phone"))) {
+        getContactField(form, "email")?.removeAttribute("aria-invalid");
+        getContactField(form, "phone")?.removeAttribute("aria-invalid");
+        form.querySelector<HTMLElement>('[data-error-for="email"]')?.replaceChildren();
+        form.querySelector<HTMLElement>('[data-error-for="phone"]')?.replaceChildren();
+      }
+
+      if (status) status.textContent = "";
+    };
+
+    form.addEventListener("input", clearResolvedError);
+    form.addEventListener("change", clearResolvedError);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const errors = validateContactForm(form);
+      setContactErrors(form, errors);
+
+      if (Object.keys(errors).length > 0) {
+        const firstInvalid = Object.keys(errors)
+          .map((name) => getContactField(form, name))
+          .find((field): field is HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement => Boolean(field));
+
+        firstInvalid?.focus();
+        return;
+      }
+
+      if (status) {
+        status.textContent = "Thanks. This form is ready, and email delivery will be connected once CHARM confirms the receiving inbox.";
+      }
+    });
+
+    autoGrowFields.forEach((field) => {
+      field.addEventListener("input", () => resizeContactTextarea(field));
+      resizeContactTextarea(field);
+    });
+
+    floatingFields.forEach(syncContactFloatingState);
+  });
+</script>

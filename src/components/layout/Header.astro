@@ -12,7 +12,7 @@ const { locale = "en", currentPath } = Astro.props;
 const site = locale === "fr" ? frSite : enSite;
 const navigation = locale === "fr" ? frNavigation : enNavigation;
 const routePath = pathWithoutBase(currentPath);
-const quoteHref = pathWithBase(locale === "fr" ? "/fr/quote" : "/quote");
+const contactHref = pathWithBase(locale === "fr" ? "/fr/contact" : "/contact");
 const homeHref = pathWithBase(locale === "fr" ? "/fr" : "/");
 const primaryLogo = pathWithBase("/brand/charm-logo-primary.png");
 const iconLogo = pathWithBase("/brand/charm-logo-icon.png");
@@ -55,7 +55,7 @@ const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
         </nav>
 
         <div class="hidden items-center gap-3 md:flex">
-          <a href={quoteHref} class="button-primary">{site.quoteLabel}</a>
+          <a href={contactHref} class="button-primary">{site.contactLabel}</a>
           <a href={switchHref} class="site-language-link">{site.languageLabel}</a>
         </div>
 
@@ -68,7 +68,7 @@ const menuLabel = locale === "fr" ? "Ouvrir le menu" : "Open menu";
             </summary>
 
             <div class="mobile-nav-dropdown">
-              <a href={quoteHref} class="mobile-nav-link mobile-quote-link">{site.quoteLabel}</a>
+              <a href={contactHref} class="mobile-nav-link mobile-contact-link">{site.contactLabel}</a>
 
               {navigation.map((item) => {
                 const active = routePath === item.href;

@@ -26,7 +26,7 @@ Already completed:
 10. French route structure created for future translation work
 11. base layouts, header, footer, and page shells created
 12. initial placeholder content added for Home, Services, About, and Contact
-13. dedicated Quote route created separately from Contact
+13. dedicated Contact route created, with `/quote` kept as a legacy fallback
 14. FAQ added to the About page
 15. build and Astro checks passing locally
 16. official CHARM brand deck received and saved
@@ -42,20 +42,23 @@ Already completed:
 26. Davis Janitorial selected as a structure reference for the next homepage redesign
 27. client login excluded from V1 unless the business adopts a real portal later
 28. homepage Davis-inspired redesign started with solid sections and cleaned-area placeholders
-29. homepage structure adjusted to use a centered image-style hero, three-column checklist services, embedded quote form, FAQ accordion, and dark footer with the alt logo
-30. Services page aligned with the Davis-inspired structure using a full-width hero, service highlights, category checklists, and clearer scope limits
-31. About, Contact, and Quote pages aligned with the new page system, including About FAQ accordion and separate inquiry/quote flows
-32. homepage cleaned-area photos added for the hero, specialties section, and Our Work gallery
+29. homepage structure adjusted to use a centered image-style hero, services checklist beside the lobby image, contact CTA, FAQ accordion, and dark footer with the alt logo
+30. Services page aligned with the Davis-inspired structure using service highlights, category checklists, and contact-focused follow-up
+31. About and Contact pages aligned with the new page system, including About FAQ accordion and contact flow
+32. homepage cleaned-area photos added for the hero, services image section, and Our Work gallery
 33. Our Work gallery replaced placeholders with a nine-photo grid, hover captions, and a lightbox with thumbnails, counter, arrows, and close control
 34. basic image-copy deterrents added for right-click, dragging, and copying
-35. quote request UI rebuilt as a multi-step estimate wizard with floating labels, field-level validation, contact-method rules, future-date availability fields, review step, and CHARM sparkle progress indicators
+35. lead-capture UI was tested as a multi-step wizard before being simplified back into a one-page contact form
 36. FAQ accordions simplified with divider lines, CHARM sparkle toggles, and no extra homepage About CTA
 37. subtle content-part scroll reveal effect added with stagger timing and reduced-motion support
-38. mobile header updated with the quote CTA inside the hamburger menu with nav and language links
+38. mobile header updated with the contact CTA inside the hamburger menu with nav and language links
 39. desktop content shell widened for roomier homepage sections
 40. button and nav interactions refreshed with solid Antiman-inspired hover states that keep contrast readable
-41. Services page reworked with a simple hero, one-column reasons list, six expanded service rows with image placeholders, service FAQ, and no planning section
-42. mobile quote CTA moved into the hamburger menu, white-button hover colours calmed down, gallery close control restyled, and button hover lift removed
+41. Services page reworked with six expanded service rows with image placeholders, service FAQ, and no planning section
+42. mobile contact CTA moved into the hamburger menu, white-button hover colours calmed down, gallery close control restyled, and button hover lift removed
+43. Services intro merged into the main service content with a centered `Our Services` title and short supporting paragraph
+44. service photos added for all six current `Our Services` rows
+45. multi-step lead-capture wizard replaced with a simpler one-page contact form for first messages
 
 ## Phase 1 - Direction Lock
 
@@ -70,7 +73,7 @@ Tasks:
 4. Confirm brand usage for `CHARM`
 5. Confirm what contact details can be public
 6. Confirm that FAQ can appear on the homepage and at the bottom of the About page while the content set is small
-7. Confirm that Contact and Request a Quote are separate flows
+7. Confirm whether a standalone contact flow is needed later
 8. Confirm the Davis-inspired homepage structure for CHARM
 9. Confirm that image placeholders are acceptable until real cleaned-area photos are added
 10. Confirm that client login is out of scope for V1
@@ -113,8 +116,7 @@ Tasks:
 2. Add services page placeholder content
 3. Add about page placeholder content
 4. Add contact page placeholder content
-5. Add quote page placeholder content
-6. Add temporary FAQ content to About
+5. Add temporary FAQ content to About
 7. Keep all copy free of unconfirmed claims
 
 Done when:
@@ -160,11 +162,10 @@ Tasks:
 2. Keep the services page focused on condo common-area cleaning
 3. Build the about page
 4. Build the contact page
-5. Build the quote request page
 6. Build the navbar
 7. Build the footer
 8. Build FAQ blocks for the homepage and About
-9. Build the quote CTA blocks
+9. Build the contact CTA blocks
 10. Add cleaned-area photo spaces and replace placeholders where selected photos are available
 
 Done when:
@@ -173,16 +174,16 @@ Done when:
 2. navigation works across the whole site
 3. mobile and desktop layouts both function properly
 
-## Phase 6 - Form And Contact Flow
+## Phase 6 - Contact Flow
 
 Goal:
 Make lead capture practical and easy.
 
 Tasks:
 
-1. Build the general contact inquiry form UI
-2. Build the detailed quote request form UI - done for the frontend wizard
-3. Add validation - done for the frontend quote wizard
+1. Build the simple one-page contact form UI - done for the frontend
+2. Add validation - done for the frontend contact form
+3. Open `Contact Us` CTAs in a global modal - done for the frontend
 4. Choose the form delivery method after the receiving inbox, required fields, confirmation message, and spam approach are confirmed
 5. Add contact details once confirmed
 6. Add confirmation/success states
@@ -190,8 +191,8 @@ Tasks:
 Done when:
 
 1. a visitor can submit a general inquiry
-2. a visitor can submit a quote request through the chosen delivery method
-3. both forms are clear, easy to complete, and connected end to end
+2. CHARM receives the message through the chosen delivery method
+3. the form is clear, easy to complete, and connected end to end
 
 ## Phase 7 - SEO And Accessibility
 
@@ -285,7 +286,7 @@ Tasks:
 1. Improve the Google Business Profile
 2. Add the website link everywhere relevant
 3. Start review collection
-4. Track quote requests and inquiries
+4. Track contact inquiries and follow-up outcomes
 5. Improve content based on real questions from leads
 6. Add stronger trust signals over time
 
@@ -296,9 +297,9 @@ Done when:
 
 ## Current Priority Order
 
-1. review the refreshed Services, About, Contact, and Quote pages with real screenshots
+1. review the refreshed Services, About, Contact fallback, and contact modal with real screenshots
 2. replace cleaned-area placeholders with real photos when available
-3. connect the real quote and contact flows
+3. connect the real contact form delivery
 4. strengthen SEO and accessibility basics
 5. add fuller French page content
 

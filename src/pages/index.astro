@@ -1,13 +1,13 @@
 ---
-import QuoteRequestForm from "../components/forms/QuoteRequestForm.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import ContactForm from "../components/forms/ContactForm.astro";
 import { aboutPage } from "../data/en/about";
 import { home } from "../data/en/home";
 import { site } from "../data/en/site";
 import { pathWithBase } from "../lib/paths";
 
 const heroImage = pathWithBase("/images/common-area-hero.jpeg");
-const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
+const servicesImage = pathWithBase("/images/home-specialties.png");
 ---
 
 <MainLayout title="CHARM | Cleaning Services" description={site.description}>
@@ -17,45 +17,34 @@ const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
         <h1 class="home-hero-title">{home.title}</h1>
         <p class="home-hero-text">{home.intro}</p>
         <div class="home-hero-actions">
-          <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
+          <a class="button-primary" href={pathWithBase("/contact")}>{site.contactLabel}</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="home-section home-specialties">
+  <section class="home-section home-service-showcase">
     <div class="shell">
-      <div class="home-specialties-layout">
-        <figure class="home-specialties-image">
-          <img src={specialtiesImage} alt="Clean shared condo common area" width="1536" height="2048" loading="lazy" decoding="async" />
+      <div class="home-service-showcase-layout">
+        <figure class="home-service-showcase-image">
+          <img src={servicesImage} alt="Clean shared condo lobby common area" width="1024" height="1536" loading="lazy" decoding="async" />
         </figure>
 
-        <div class="home-specialties-list">
-          {home.specialties.map((specialty) => (
-            <article class="home-specialty-item">
-              <h3>{specialty.title}</h3>
-              <p>{specialty.description}</p>
-            </article>
-          ))}
+        <div class="home-service-showcase-content">
+          <div class="home-section-heading home-section-heading-center">
+            <h2>Services Offered</h2>
+          </div>
+
+          <ul class="home-check-list home-check-list-single">
+            {home.serviceAreas.map((area) => (
+              <li>{area.title}</li>
+            ))}
+          </ul>
+
+          <div class="home-section-link home-section-link-center">
+            <a class="button-secondary" href={pathWithBase("/services")}>See Service Details</a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section home-services-offered">
-    <div class="shell">
-      <div class="home-section-heading home-section-heading-center">
-        <h2>Services offered</h2>
-      </div>
-
-      <ul class="home-check-list">
-        {home.serviceAreas.map((area) => (
-          <li>{area.title}</li>
-        ))}
-      </ul>
-
-      <div class="home-section-link home-section-link-center">
-        <a class="button-secondary" href={pathWithBase("/services")}>See service details</a>
       </div>
     </div>
   </section>
@@ -63,7 +52,7 @@ const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
   <section class="home-section home-work-section">
     <div class="shell">
       <div class="home-section-heading home-section-heading-center">
-        <h2>Our work</h2>
+        <h2>Our Work</h2>
       </div>
 
       <div class="home-work-gallery" data-work-gallery>
@@ -115,16 +104,16 @@ const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
     <button class="work-lightbox-nav work-lightbox-next" type="button" data-gallery-next aria-label="Next photo">›</button>
   </div>
 
-  <section class="home-quote-band">
+  <section class="home-contact-band">
     <div class="shell">
-      <div class="home-quote-panel">
+      <div class="home-contact-panel">
         <div>
-          <h2>Get an estimate</h2>
-          <p>Send the building details, shared spaces, and cleaning frequency you have in mind.</p>
+          <h2>Contact Us</h2>
         </div>
-        <QuoteRequestForm
-          noteId="home-quote-form-note"
-          note="This homepage quote form will be connected once form delivery is set up."
+        <ContactForm
+          noteId="home-contact-form-note"
+          note="This contact form will send to CHARM once email delivery is connected."
+          showIntroTitle={false}
         />
       </div>
     </div>
@@ -133,7 +122,7 @@ const specialtiesImage = pathWithBase("/images/home-specialties.jpeg");
   <section class="home-section pb-20 sm:pb-24">
     <div class="shell">
       <div class="home-section-heading home-section-heading-center">
-        <h2>Frequently asked questions</h2>
+        <h2>Frequently Asked Questions</h2>
       </div>
 
       <div class="home-faq-list">

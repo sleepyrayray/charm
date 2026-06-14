@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ContactForm from "../components/forms/ContactForm.astro";
 import { contactPage } from "../data/en/contact";
 import { site } from "../data/en/site";
-import { pathWithBase } from "../lib/paths";
 ---
 
 <MainLayout title="Contact | CHARM" description={site.description}>
@@ -19,48 +19,17 @@ import { pathWithBase } from "../lib/paths";
     <div class="shell">
       <div class="form-page-grid">
         <aside class="form-intro-card">
-          <p class="form-kicker">General inquiry</p>
-          <h2>Use Contact for simple questions.</h2>
+          <p class="form-kicker">Contact Form</p>
+          <h2>Send a Simple Message.</h2>
           <p>{contactPage.note}</p>
 
           <ul class="page-check-list">
-            {contactPage.contactFit.map((item) => <li>{item}</li>)}
+            {contactPage.checklist.map((item) => <li>{item}</li>)}
           </ul>
-
-          <a class="button-primary" href={pathWithBase("/quote")}>{site.quoteLabel}</a>
         </aside>
 
         <div class="form-card">
-          <form class="grid gap-4" aria-describedby="contact-form-note">
-            <div class="grid gap-4 sm:grid-cols-2">
-              <label class="grid gap-2 text-sm font-medium">
-                <span>Name</span>
-                <input class="field" type="text" name="name" placeholder="Your name" />
-              </label>
-              <label class="grid gap-2 text-sm font-medium">
-                <span>Phone</span>
-                <input class="field" type="tel" name="phone" placeholder="Phone number" />
-              </label>
-            </div>
-
-            <label class="grid gap-2 text-sm font-medium">
-              <span>Email</span>
-              <input class="field" type="email" name="email" placeholder="Email address" />
-            </label>
-
-            <label class="grid gap-2 text-sm font-medium">
-              <span>Message</span>
-              <textarea class="field min-h-36" name="message" placeholder="Ask a question or leave a short message."></textarea>
-            </label>
-
-            <p id="contact-form-note" class="form-note">
-              This inquiry form is for general messages. Use the quote page for building details and service requests.
-            </p>
-
-            <div class="form-button-row">
-              <button class="button-primary opacity-70" type="button">Contact flow coming next</button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </div>

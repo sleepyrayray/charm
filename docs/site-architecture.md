@@ -32,14 +32,13 @@ This is a structure reference only. The CHARM site should not copy Davis Janitor
 What to borrow:
 
 1. service-business homepage rhythm
-2. clear top navigation with a strong quote CTA
+2. clear top navigation with a strong contact CTA
 3. hero section that explains the service quickly
-4. short specialties section
-5. practical services-offered section
-6. work/photo section showing cleaned spaces
-7. strong quote request section near the bottom
-8. common questions near the end of the page
-9. simple footer with direct navigation and contact paths
+4. practical services-offered section paired with a cleaned-space image
+5. work/photo section showing cleaned spaces
+6. strong contact section near the bottom
+7. common questions near the end of the page
+8. simple footer with direct navigation and contact paths
 
 What not to borrow for V1:
 
@@ -54,7 +53,7 @@ CHARM translation:
 
 1. Use the official CHARM logo and teal/turquoise palette.
 2. Keep the business focus on condo-building common-area cleaning.
-3. Use selected cleaned-area photos where available, starting with the homepage hero, specialties image, and work gallery.
+3. Use selected cleaned-area photos where available, starting with the homepage hero, services image, and work gallery.
 4. Use solid, clean sections instead of glassy surfaces.
 5. Keep the site calm and readable, not overly glossy.
 
@@ -76,7 +75,7 @@ Center or right:
 
 Far right:
 
-1. `Request a Quote` button
+1. `Contact Us` button
 2. `FR` language switcher
 
 ### Mobile Navbar
@@ -89,7 +88,7 @@ Top row:
 
 Mobile menu items:
 
-1. Request a Quote
+1. Contact Us
 2. Home
 3. Services
 4. About
@@ -101,7 +100,7 @@ Mobile menu items:
 1. Sticky on scroll
 2. Use a solid or near-solid white surface for clarity
 3. Keep it compact
-4. On mobile, keep the quote CTA inside the hamburger menu to avoid crowding the header
+4. On mobile, keep the contact CTA inside the hamburger menu to avoid crowding the header
 5. Use Charm Turquoise `#007887` or a high-contrast neutral treatment for the CTA
 6. Use solid brand-colour button states; avoid transparent hover states that reduce contrast on dark teal sections
 7. Keep white-button hover states calm by using Cloud White, Charm Turquoise, and Teal Foam instead of bright Aqua Mist fills
@@ -130,8 +129,8 @@ Content:
 1. Real text brand and service messaging for SEO
 2. Headline
 3. Short supporting paragraph
-4. Primary CTA: `Request a Quote`
-5. Secondary CTA: keep out of the hero for now so the first action stays focused on quote requests.
+4. Primary CTA: `Contact Us`
+5. Secondary CTA: keep out of the hero for now so the first action stays focused on contact.
 6. Optional phone/email line once public contact details are confirmed
 7. Full-width cleaned-area background image
 
@@ -149,27 +148,13 @@ Layout note:
 4. Keep the hero direct and calm
 5. Use the logo star/sparkle motif sparingly as an accent, not as a repeated decoration
 
-### Section 2: Specialties
-
-Goal:
-Show the business focus in a compact, confidence-building way.
-
-Suggested cards:
-
-1. Condo common areas
-2. Recurring cleaning
-3. Clear communication
-
-Layout note:
-This section replaces generic "why us" claims with practical specialties that are already true. Use three cards with no heading for now so the section feels light after the hero.
-
-### Section 3: Services Offered
+### Section 2: Services Offered
 
 Goal:
 Let visitors confirm the service fit quickly.
 
 Format:
-Centered heading and checklist
+Lobby image on the left with a centered `Services Offered` heading and one-column checklist on the right.
 
 Suggested checklist items:
 
@@ -184,10 +169,10 @@ Layout note:
 
 1. Use checklist rows instead of service cards.
 2. Keep labels short and remove extra descriptions from this section.
-3. Use three columns and two rows on desktop when the six service items are shown.
-4. Keep the `See service details` button centered under the checklist.
+3. Keep the six service items in one column beside the image on desktop.
+4. Keep the `See Service Details` button centered under the checklist.
 
-### Section 4: Our Work / Cleaned Areas
+### Section 3: Our Work / Cleaned Areas
 
 Goal:
 Show selected cleaned-area photos without overwhelming the homepage.
@@ -219,29 +204,27 @@ Gallery rules:
 8. Keep meaningful alt text for all gallery images.
 9. Do not imply before/after proof or unconfirmed results.
 
-### Section 5: Quote Request Form
+### Section 4: Contact Form
 
 Goal:
-Let visitors send building details directly from the homepage.
+Let visitors send a short message from the homepage without loading a separate page.
 
 Content:
 
-1. `Get an estimate` heading
-2. short reminder of the details needed
-3. embedded multi-step quote request form
-4. clear note until form delivery is connected
-5. field-level validation messages
-6. centered confirmation action
+1. `Contact Us` heading
+2. simple one-page contact form
+3. clear note until form delivery is connected
 
-Quote form behavior:
+Contact modal behavior:
 
-1. Use compact steps for contact details, property details, areas to clean, cleaning needs, availability, and review.
+1. Open the one-page contact form in a dark overlay with the same close-control language as the homepage gallery lightbox.
 2. Use floating field labels so the form feels polished without extra label clutter.
 3. Use field-level validation messages with a small exclamation icon instead of one large error banner.
 4. Require email when email is the preferred contact method, phone when phone is preferred, or at least one of the two when either method is acceptable.
-5. Keep Province fixed to Quebec for V1.
-6. Use future-date availability fields only, with today and past dates unavailable.
-7. Keep the final submit disabled until form delivery is connected.
+5. Keep the form short: full name, email, phone, preferred language, preferred contact method, and message.
+6. Keep the final submit disabled until form delivery is connected.
+7. Keep `/contact` as a fallback route if JavaScript is unavailable.
+8. Keep `/quote` as a legacy fallback so older links do not break.
 
 ### Section 6: FAQ
 
@@ -252,7 +235,7 @@ Suggested questions:
 
 1. What spaces does CHARM clean?
 2. Do you offer recurring cleaning?
-3. How do quote requests work?
+3. How does contacting CHARM work?
 
 Layout note:
 Show the full current FAQ on the homepage and keep it mirrored on the About page for now. Use a collapsed accordion, keep the question list narrower than the main content width, separate questions with simple divider lines instead of individual cards, and use the CHARM sparkle motif for the closed state with a matching flat line for the open state.
@@ -264,17 +247,17 @@ These sections are useful, but should not return to the homepage for now.
 ### How It Works
 
 Goal:
-Make the quote/request flow feel easy.
+Make the contact and follow-up flow feel easy.
 
 Simple 3-step flow:
 
-1. Tell us about your building
-2. Get a quote or follow-up
+1. Send a short message
+2. Get a follow-up by the preferred contact method
 3. Set up recurring cleaning
 
 Layout note:
 
-This idea should appear inside the About-page FAQ as a practical answer about the quote process.
+This idea should appear inside the About-page FAQ as a practical answer about the contact process.
 
 ### Practical Info / FAQ
 
@@ -286,7 +269,7 @@ Suggested questions:
 1. What areas do you clean?
 2. What kinds of buildings do you work with?
 3. Do you offer recurring cleaning?
-4. Do you handle repairs or technical maintenance?
+4. Can we ask questions before deciding?
 5. Can we contact you in English or French?
 
 Note:
@@ -297,10 +280,9 @@ The full FAQ can appear on the homepage and About page while the content set is 
 ```text
 Navbar
 Hero
-Specialties
-Services Offered
+Services Offered with image
 Our Work / Image Placeholders
-Quote Request Form
+Contact Form
 FAQ
 Footer
 ```
@@ -312,34 +294,22 @@ Give a fuller breakdown of what CHARM actually cleans.
 
 ### Recommended Structure
 
-1. Simple intro hero
-2. `Why choose our services?` one-column reason list
-3. Expanded service detail rows
-4. Outside cleaning scope
-5. Service-specific FAQ
-6. Quote CTA reminder
+1. Integrated `Our Services` intro inside the main service detail section
+2. Service detail rows
+3. Full-width contact CTA band
+4. Service-specific FAQ
 
 ### Suggested Page Sections
 
-#### Services Hero
+#### Services Intro
 
-1. clear page title
-2. short summary paragraph
-
-Layout note:
-Keep this hero simple with no logo and no buttons. Use a bright, clean surface so the page feels connected to the homepage without repeating the homepage hero.
-
-#### Why Choose Our Services
-
-1. focused on condo common areas
-2. easy to plan recurring upkeep
-3. clear cleaning boundaries
-4. local Montreal service
+1. centered `Our Services` heading
+2. short centered paragraph that explains the service focus and benefit
 
 Layout note:
-Use a one-column list with CHARM sparkle icons, similar in spirit to the homepage services checklist but with more explanatory copy.
+Keep the intro on the same light page background as the service rows so it feels like part of the main content, not a separate hero block.
 
-#### Expanded Services
+#### Our Services
 
 Show the six current services in alternating image/text rows:
 
@@ -351,17 +321,8 @@ Show the six current services in alternating image/text rows:
 6. gyms and recreation areas
 
 Layout note:
-Use image placeholders until real photos are provided. On desktop, alternate image and description positions while keeping a simple stacked layout on mobile.
-
-#### Outside Cleaning Scope
-
-1. repairs
-2. technical maintenance
-3. pool water maintenance
-4. unrelated building operations
-
-Layout note:
-Use clear wording that explains limits without sounding negative or defensive.
+Use the provided service photos for the six current services. Keep the placeholder pattern available for future services that do not have photos yet. On desktop, alternate image and description positions while keeping a simple stacked layout on mobile.
+Use equal desktop columns for alternating service rows so every image frame displays at the same size.
 
 #### Services FAQ
 
@@ -369,8 +330,8 @@ Use the same divider-line accordion structure as the homepage FAQ, but with serv
 
 #### CTA
 
-1. short reminder to request a quote
-2. button to the dedicated Quote page
+1. short reminder to send a message
+2. button to the contact form
 
 ## About Page Wireframe
 
@@ -424,69 +385,49 @@ Suggested questions:
 
 1. What kinds of spaces does CHARM clean?
 2. Do you offer recurring cleaning?
-3. How does the quote process work?
-4. Do you handle repairs or technical maintenance?
+3. How does the contact process work?
+4. Can we ask questions before deciding?
 5. Can we contact CHARM in English or French?
 
 Layout note:
-Use the same collapsed accordion pattern as the homepage so the page stays calm and easy to scan.
+Use the same collapsed accordion pattern as the homepage so the page stays calm and easy to scan. FAQ answers should open with a soft slide-down reveal rather than appearing abruptly.
 
-## Contact Page Wireframe
+## Contact Modal Pattern
 
 Goal:
-Make it easy to send a general inquiry without forcing visitors through the full quote request flow.
+Make contact messages easy to start from any page without requiring a separate page load.
 
 ### Recommended Structure
 
-1. Full-width contact hero
-2. General inquiry explainer card
-3. Simple inquiry form
-4. Quote request CTA
-5. Direct contact block once public details are confirmed
+1. Dark overlay matching the homepage gallery lightbox
+2. Circular X close control
+3. One-page contact form only
+4. Escape key and overlay click should close the modal
+5. Dedicated `/contact` page remains as a fallback
+6. `/quote` remains as a legacy fallback route
 
-### Recommended Form Fields
-
-1. Name
-2. Phone
-3. Email
-4. Message
-
-### Quote CTA
-
-The Contact page should include a clear button to `Request a Quote`.
-
-Layout note:
-Contact and Quote should look related, but Contact must stay clearly positioned as a general inquiry page.
-
-## Request A Quote Page Wireframe
+## Contact Fallback Page Wireframe
 
 Goal:
-Collect the practical building details needed for a cleaning quote.
+Collect a short message and the preferred way to follow up.
 
 ### Recommended Structure
 
-1. Full-width quote hero
-2. Quote request explainer card
-3. Detailed quote request form
+1. Simple contact hero
+2. Contact explainer card
+3. One-page contact form
 4. Submission note or next-step expectation
 
 ### Recommended Form Fields
 
 1. full name
-2. building or company name
-3. email and phone
-4. preferred language
-5. preferred contact method
-6. street address, unit, city, fixed Quebec province, and postal code
-7. building type and optional building size
-8. areas to clean
-9. cleaning frequency and optional start timeline
-10. optional notes
-11. optional availability dates and preferred time
-12. review step before confirmation
+2. email and phone
+3. preferred language
+4. preferred contact method
+5. message or questions
 
 Layout note:
-Quote should collect building-specific details and should not feel like the same form as Contact.
+The form should match the global contact modal. Detailed quoting questions can happen later by email or phone.
 
 ### Direct Contact Block
 
@@ -533,8 +474,8 @@ Possible later additions:
 2. French route structure
 3. Mobile-first responsive design
 4. Sticky navbar
-5. Quote CTA on key pages
-6. Separate contact inquiry and quote request forms
+5. Contact CTA on key pages
+6. Simple one-page contact form
 7. Clean footer
 8. Local SEO basics
 9. Fast static pages
@@ -571,7 +512,7 @@ How to combine the official brand system with the Davis-inspired structure:
 ### From Davis Janitorial
 
 1. practical service-business homepage sequence
-2. quote-first conversion flow
+2. contact-first conversion flow
 3. clear service category rhythm
 4. cleaned-work photo section
 5. FAQ/support content near the end
@@ -594,5 +535,5 @@ Next:
 
 1. Review the homepage gallery order and photo crop choices.
 2. Confirm what direct contact details can be shown publicly.
-3. Confirm the form delivery method for Contact and Quote submissions.
+3. Confirm the form delivery method for contact submissions.
 4. Keep client login out of V1.
