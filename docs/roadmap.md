@@ -59,6 +59,7 @@ Already completed:
 43. Services intro merged into the main service content with a centered `Our Services` title and short supporting paragraph
 44. service photos added for all six current `Our Services` rows
 45. multi-step lead-capture wizard replaced with a simpler one-page contact form for first messages
+46. homepage contact section moved to a dark teal band with the helper text inside the form card
 
 ## Phase 1 - Direction Lock
 

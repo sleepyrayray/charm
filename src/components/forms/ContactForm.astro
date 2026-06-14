@@ -4,6 +4,7 @@ interface Props {
   note?: string;
   buttonLabel?: string;
   showIntroTitle?: boolean;
+  introText?: string;
 }
 
 const {
@@ -11,13 +12,17 @@ const {
   note = "Form delivery will be connected once CHARM has a confirmed receiving email or form service.",
   buttonLabel = "Send Message",
   showIntroTitle = true,
+  introText = "Send us a message and we'll get back to you as soon as possible.",
 } = Astro.props;
 ---
 
 <form class="contact-form" aria-describedby={noteId} data-contact-form novalidate>
-  <div class="contact-form-intro">
-    {showIntroTitle && <h3>Contact Us</h3>}
-  </div>
+  {(showIntroTitle || introText) && (
+    <div class="contact-form-intro">
+      {showIntroTitle && <h3>Contact Us</h3>}
+      {introText && <p>{introText}</p>}
+    </div>
+  )}
 
   <label class="form-field">
     <span class="field-label">Full Name</span>

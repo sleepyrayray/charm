@@ -212,8 +212,10 @@ Let visitors send a short message from the homepage without loading a separate p
 Content:
 
 1. `Contact Us` heading
-2. simple one-page contact form
-3. clear note until form delivery is connected
+2. full-width dark teal section background
+3. simple one-page contact form in a white card
+4. short intro text inside the form card: `Send us a message and we'll get back to you as soon as possible.`
+5. clear note until form delivery is connected
 
 Contact modal behavior:
 

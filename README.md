@@ -173,9 +173,10 @@ Recommended contact fields for V1:
 Current contact form behavior:
 
 1. The contact form is one page, not a multi-step wizard.
-2. Validation should happen beside the relevant field.
-3. If the visitor chooses email as the preferred contact method, email is required. If the visitor chooses phone, phone is required. If either is acceptable, at least one of the two is required.
-4. Final form delivery is still pending until a receiving inbox and delivery method are confirmed.
+2. The form can show a short intro message inside the form card: `Send us a message and we'll get back to you as soon as possible.`
+3. Validation should happen beside the relevant field.
+4. If the visitor chooses email as the preferred contact method, email is required. If the visitor chooses phone, phone is required. If either is acceptable, at least one of the two is required.
+5. Final form delivery is still pending until a receiving inbox and delivery method are confirmed.
 
 Removed from V1 form:
 

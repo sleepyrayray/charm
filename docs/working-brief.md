@@ -266,7 +266,7 @@ Page-role rule:
 The site now uses a simple one-page contact form instead of a multi-step quote wizard. The homepage keeps the form inline, `Contact Us` opens the same form in a global modal, `/contact` is the direct fallback route, and `/quote` remains only as a legacy fallback so older links do not break. The full FAQ can appear on the homepage and at the bottom of About while the FAQ set is still small.
 
 Contact form rule:
-Keep the form short and direct. Collect full name, email, phone, preferred language, preferred contact method, and a message. Use floating labels and field-level validation. Keep final form delivery disabled until the real receiving inbox and delivery method are confirmed.
+Keep the form short and direct. Collect full name, email, phone, preferred language, preferred contact method, and a message. Use floating labels and field-level validation. On the homepage, place the form in a white card on a full-width dark teal contact band and keep the helper sentence inside the form card. Keep final form delivery disabled until the real receiving inbox and delivery method are confirmed.
 
 Feature rule:
 Do not add client login, online accounts, or a customer portal in V1.

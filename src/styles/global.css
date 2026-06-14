@@ -1135,6 +1135,10 @@ select.field {
   background: var(--surface);
 }
 
+.home-work-section {
+  padding-bottom: var(--home-section-gap);
+}
+
 .home-section-heading {
   max-width: 43rem;
 }
@@ -1203,16 +1207,11 @@ select.field {
   color: white;
 }
 
-.home-section-heading p,
-.home-contact-panel p {
+.home-section-heading p {
   margin-top: 1rem;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.8;
-}
-
-.home-contact-panel p {
-  color: rgba(255, 255, 255, 0.78);
 }
 
 .home-card-grid {
@@ -1584,17 +1583,13 @@ select.field {
 
 .home-contact-band {
   --home-section-gap: clamp(5rem, 9vw, 7rem);
-  padding-top: var(--home-section-gap);
-  padding-bottom: 2.5rem;
-  background: var(--surface);
+  padding-top: clamp(4rem, 7vw, 5.5rem);
+  padding-bottom: var(--home-section-gap);
+  background: var(--primary-strong);
 }
 
 .home-contact-panel h2 {
-  color: var(--ink);
-}
-
-.home-contact-panel p {
-  color: var(--muted);
+  color: white;
 }
 
 .home-contact-panel {
@@ -1605,8 +1600,8 @@ select.field {
   text-align: center;
 }
 
-.home-contact-panel>div {
-  max-width: 42rem;
+.home-contact-panel .form-note {
+  color: var(--muted);
 }
 
 .home-contact-panel .contact-form {
